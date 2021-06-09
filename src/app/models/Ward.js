@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Bank = new Schema(
+const Ward = new Schema(
   {
     name: { type: String },
+    idDistrict: { type: mongoose.Schema.Types.ObjectId, ref: "districts" },
   },
   {
     timestamps: true,
@@ -11,4 +12,4 @@ const Bank = new Schema(
   }
 );
 
-module.exports = mongoose.model("banks", Bank);
+module.exports = mongoose.model("wards", Ward);

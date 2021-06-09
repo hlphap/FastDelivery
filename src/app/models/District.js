@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Bank = new Schema(
+const District = new Schema(
   {
     name: { type: String },
   },
@@ -11,4 +11,4 @@ const Bank = new Schema(
   }
 );
 
-module.exports = mongoose.model("banks", Bank);
+module.exports = mongoose.model("districts", District);

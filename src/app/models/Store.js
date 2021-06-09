@@ -4,13 +4,13 @@ const Schema = mongoose.Schema;
 const Store = new Schema(
   {
     name: { type: String },
-    idBank: { type: mongoose.Schema.Types.ObjectId, ref: "Bank" },
-    // nameStreet: { type: String },
-    // Ward District
+    idBank: { type: mongoose.Schema.Types.ObjectId, ref: "banks" },
+    idAddress: { type: mongoose.Schema.Types.ObjectId, ref: "addresses" },
     phone: { type: String },
+    accountName: { type: String },
     accountNumber: { type: String },
     branchBank: { type: String },
-    email: { type: String },
+    email: { type: String, unique: true },
     password: { type: String },
   },
   {
@@ -19,4 +19,4 @@ const Store = new Schema(
   }
 );
 
-module.exports = mongoose.model("Store", Store);
+module.exports = mongoose.model("stores", Store);

@@ -1,6 +1,6 @@
 // 8/6
 /*
- * 15API
+ * 15API Chua xong order
  * BANK
  * [GET] all: /banks
  * [POST] /banks
@@ -21,4 +21,25 @@
  * [DELETE] /orders/:id
  */
 
-// 9/6
+// 9/6 OKE
+/*
+ * 15API
+ * ADDRESS
+ * [GET] all: /addresses
+ * [POST] /addresses
+ * [GET] show: /addresses/:id
+ * [PUT] /addresses/:id
+ * [DELETE] /addresses/:id
+ * WARD
+ * [GET] all: /wards
+ * [POST] /wards
+ * [GET] show: /wards/:id
+ * [PUT] /wards/:id
+ * [DELETE] /wards/:id
+ * DISTRICT
+ * [GET] all: /districts
+ * [POST] /districts
+ * [GET] show: /districts/:id
+ * [PUT] /districts/:id
+ * [DELETE] /districts/:id
+ */
