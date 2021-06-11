@@ -1,10 +1,14 @@
 const Store = require("../models/Store");
-
+const addressController = require("./AddressController");
 class StoreController {
   //[GET] stores/
   index(req, res, next) {
     Store.find({})
       .populate("idBank")
+      .populate({
+        path: "idAddress",
+        populate: "idWard",
+      })
       .then((stores) => {
         res.status(200).json(stores);
       })
@@ -21,6 +25,7 @@ class StoreController {
   //[POST] stores/
   create(req, res, next) {
     const formData = req.body;
+    console.log(formData);
     const store = new Store(formData);
     store
       .save()

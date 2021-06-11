@@ -26,6 +26,7 @@ class AddressController {
   create(req, res, next) {
     const formData = req.body;
     const address = new Address(formData);
+    console.log(formData);
     address
       .save()
       .then(() => res.status(200).json({ result: 1 }))

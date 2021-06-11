@@ -43,3 +43,26 @@
  * [PUT] /districts/:id
  * [DELETE] /districts/:id
  */
+
+// 10/6
+/*
+ * 15API
+ * STAFF
+ * [GET] all: /addresses
+ * [POST] /addresses
+ * [GET] show: /addresses/:id
+ * [PUT] /addresses/:id
+ * [DELETE] /addresses/:id
+ * STAFF TYPE
+ * [GET] all: /staff-types
+ * [POST] /staff-types
+ * [GET] show: /staff-types/:id
+ * [PUT] /staff-types/:id
+ * [DELETE] /staff-types/:id
+ * WARE_HOUSING
+ * [GET] all: /ware-housings
+ * [POST] /districts
+ * [GET] show: /districts/:id
+ * [PUT] /districts/:id
+ * [DELETE] /districts/:id
+ */

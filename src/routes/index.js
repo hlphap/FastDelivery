@@ -1,10 +1,11 @@
 //Require Router
 const banksRouter = require("./banks");
 const storesRouter = require("./stores");
-const addressesRouter = require("./addresses");
 const districtsRouter = require("./districts");
 const wardsRouter = require("./wards");
-
+const typeStaffsRouter = require("./type-staffs");
+const staffRouter = require("./staff");
+const warehousesRouter = require("./warehouses");
 //const ordersRouter = require("./orders");
 
 function routes(app) {
@@ -12,7 +13,9 @@ function routes(app) {
   app.use("/stores", storesRouter);
   app.use("/districts", districtsRouter);
   app.use("/wards", wardsRouter);
-  app.use("/addresses", addressesRouter);
+  app.use("/type-staffs", typeStaffsRouter);
+  app.use("/staffs", staffRouter);
+  app.use("/warehouses", warehousesRouter);
   //app.use("/orders", ordersRouter);
 }
 

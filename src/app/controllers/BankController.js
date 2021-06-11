@@ -3,6 +3,7 @@ const Bank = require("../models/Bank");
 class BankController {
   //[GET] banks/
   index(req, res, next) {
+    Address(req, res, next);
     Bank.find({})
       .then((banks) => {
         res.status(200).json(banks);
