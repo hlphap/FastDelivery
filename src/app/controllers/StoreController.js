@@ -1,6 +1,6 @@
 const Store = require("../models/Store");
-const addressController = require("./AddressController");
-const Bank = require("../models/Bank");
+const addressController = require("../controllers/AddressController");
+const next = require("../../../util/error");
 class StoreController {
   //[GET] stores/
   index(req, res, next) {
@@ -19,41 +19,67 @@ class StoreController {
   //[GET] stores/:id
   show(req, res, next) {
     Store.findOne({ _id: req.params.id })
+      .populate("idBank")
+      .populate({
+        path: "idAddress",
+        populate: "idWard",
+      })
       .then((store) => res.status(200).json(store))
       .catch(next);
   }
 
   //[POST] stores/
-  create(req, res, next) {
+  async create(req, res, next) {
     const formData = req.body;
-    const formBank = JSON.parse(formData.idBank);
-    let ad;
-    const bank = new Bank(formBank);
-    bank
+    const formAddress = JSON.parse(formData.idAddress);
+    //Create store
+    formData.idAddress = await addressController.create(formAddress);
+    const store = new Store(formData);
+    store
       .save()
-      .then((b) => {
-        formData.idBank = b.id;
-        const store = new Store(formData);
-        store
-          .save()
-          .then(() => res.status(200).json({ result: 1 }))
-          .catch(next);
-      })
+      .then(() =>
+        res.status(200).json({
+          status: 200,
+          message: "Create success ",
+        })
+      )
       .catch(next);
   }
 
   //[PUT] stores/:id
   update(req, res, next) {
     const formData = req.body;
-    Store.updateOne({ _id: req.params.id }, formData)
-      .then(() => res.status(200).json({ result: 1 }))
+    const formAddress = JSON.parse(formData.idAddress);
+    const updateAddress = addressController.update(
+      formAddress._id,
+      formAddress
+    );
+
+    delete formData.idAddress;
+    const updateStore = new Promise((resolve, reject) => {
+      Store.updateOne({ _id: req.params.id }, formData)
+        .then(() => resolve())
+        .catch(() => reject());
+    });
+
+    Promise.all([updateAddress, updateStore])
+      .then((result) => {
+        res.status(200).json({ status: 200, message: "Update success" });
+      })
       .catch(next);
   }
 
   //[DELETE] stores/:id
-  delete(req, res, next) {
+  async delete(req, res, next) {
+    const idAddress = await Store.findById(req.params.id)
+      .then((store) => store.idAddress)
+      .catch(next);
+    console.log(idAddress);
+    addressController.delete(idAddress);
     Store.deleteOne({ _id: req.params.id })
-      .then(() => res.status(200).json({ result: 1 }))
+      .then(() =>
+        res.status(200).json({ status: 200, message: "Delete success" })
+      )
       .catch(next);
   }
 }

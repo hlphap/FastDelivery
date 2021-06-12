@@ -1,51 +1,52 @@
+const Ward = require("../models/Ward");
+const District = require("../models/District");
 const Address = require("../models/Address");
+const { json } = require("express");
 
 class AddressController {
-  //[GET] addresses/
-  index(req, res, next) {
-    Address.find({})
-      .populate("idWard")
-      .populate({
-        path: "idWard",
-        populate: "idDistrict",
-      })
-      .then((addresses) => {
-        res.status(200).json(addresses);
-      })
-      .catch(next);
-  }
+  async createFullAddress(formData) {
+    const getWard = await Ward.findOne({ _id: formData.idWard })
+      .then((ward) => ward)
+      .catch((err) => ({
+        message: err.messgae,
+        err,
+      }));
 
-  //[GET] addresses/:id
-  show(req, res, next) {
-    Address.findOne({ _id: req.params.id })
-      .then((address) => res.status(200).json(address))
-      .catch(next);
+    const getDistrict = await District.findOne({ _id: getWard.idDistrict })
+      .then((district) => district)
+      .catch((err) => ({
+        message: err.message,
+        err,
+      }));
+    formData.fullAddress = `${formData.noteAddress}, ${getWard.name}, ${getDistrict.name}`;
   }
-
-  //[POST] addresses/
-  create(req, res, next) {
-    const formData = req.body;
+  async create(formData) {
+    await this.createFullAddress(formData);
+    if (formData.hasOwnProperty("_id")) delete formData._id;
     const address = new Address(formData);
-    console.log(formData);
-    address
+    const createAddress = await address
       .save()
-      .then(() => res.status(200).json({ result: 1 }))
-      .catch(next);
+      .then((address) => address.id)
+      .catch((err) => ({
+        message: err.message,
+        err,
+      }));
+    return createAddress;
   }
 
-  //[PUT] addresses/:id
-  update(req, res, next) {
-    const formData = req.body;
-    Address.updateOne({ _id: req.params.id }, formData)
-      .then(() => res.status(200).json({ result: 1 }))
-      .catch(next);
+  //Update Address
+  async update(id, formData) {
+    await this.createFullAddress(formData);
+    return new Promise((resolve, reject) => {
+      Address.updateOne({ _id: id }, formData)
+        .then(() => resolve("Update Address Success"))
+        .catch(() => reject("Update Address Failed"));
+    });
   }
 
-  //[DELETE] addresses/:id
-  delete(req, res, next) {
-    Address.deleteOne({ _id: req.params.id })
-      .then(() => res.status(200).json({ result: 1 }))
-      .catch(next);
+  //Delete Address
+  delete(id) {
+    Address.deleteOne({ _id: id }).then();
   }
 }
 

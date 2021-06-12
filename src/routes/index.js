@@ -16,7 +16,24 @@ function routes(app) {
   app.use("/type-staffs", typeStaffsRouter);
   app.use("/staffs", staffRouter);
   app.use("/warehouses", warehousesRouter);
-  //app.use("/orders", ordersRouter);
+
+  // app.use((req, res, next) => {
+  //   res.status(400).send({
+  //     status: 404,
+  //     error: "Not found",
+  //   });
+  // });
+  app.get("/", (req, res, next) => {
+    throw new Error("Something went wrong!");
+    res.send("Welcome to main route!");
+  });
+  app.use((error, req, res, next) => {
+    console.error(error.stack);
+    res.status(error.status || 500).send({
+      status: error.status || 500,
+      message: error.message || "Internal Server Error",
+    });
+  });
 }
 
 module.exports = routes;
