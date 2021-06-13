@@ -3,6 +3,7 @@ const addressController = require("../controllers/AddressController");
 class StoreController {
   //[GET] stores/
   index(req, res, next) {
+    console.log(req.params);
     Store.find({})
       .populate("idBank")
       .populate({
@@ -26,8 +27,9 @@ class StoreController {
       .populate({
         path: "idAddress",
         populate: {
-          path: "idDistrict",
-          populate: "idWard",
+          path: "idWard",
+          model: "wards",
+          populate: "idDistrict",
         },
       })
       .then((store) => res.status(200).json(store))
@@ -86,6 +88,32 @@ class StoreController {
       .then(() =>
         res.status(200).json({ status: 200, message: "Delete success" })
       )
+      .catch(next);
+  }
+
+  //[GET] stores/login
+  login(req, res, next) {
+    Store.findOne({
+      email: req.query.email,
+      password: req.query.password,
+    })
+      .populate("idBank")
+      .populate({
+        path: "idAddress",
+        populate: {
+          path: "idWard",
+          model: "wards",
+          populate: "idDistrict",
+        },
+      })
+      .then((store) => {
+        if (store == null)
+          next({
+            status: 200,
+            message: "Incorrect email or password",
+          });
+        else res.status(200).json(store);
+      })
       .catch(next);
   }
 }

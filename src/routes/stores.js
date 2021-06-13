@@ -5,6 +5,7 @@ const router = express.Router();
 const storeController = require("../app/controllers/StoreController");
 //CRUD
 router.get("/", storeController.index);
+router.get("/login", storeController.login);
 router.get("/:id", storeController.show);
 router.post("/", storeController.create);
 router.put("/:id", storeController.update);
