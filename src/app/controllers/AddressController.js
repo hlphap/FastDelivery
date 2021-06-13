@@ -8,7 +8,7 @@ class AddressController {
     const getWard = await Ward.findOne({ _id: formData.idWard })
       .then((ward) => ward)
       .catch((err) => ({
-        message: err.messgae,
+        message: err.message,
         err,
       }));
 
@@ -19,6 +19,7 @@ class AddressController {
         err,
       }));
     formData.fullAddress = `${formData.noteAddress}, ${getWard.name}, ${getDistrict.name}`;
+    console.log(formData);
   }
   async create(formData) {
     await this.createFullAddress(formData);

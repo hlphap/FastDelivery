@@ -1,6 +1,5 @@
 const Store = require("../models/Store");
 const addressController = require("../controllers/AddressController");
-const next = require("../../../util/error");
 class StoreController {
   //[GET] stores/
   index(req, res, next) {
@@ -8,7 +7,11 @@ class StoreController {
       .populate("idBank")
       .populate({
         path: "idAddress",
-        populate: "idWard",
+        populate: {
+          path: "idWard",
+          model: "wards",
+          populate: "idDistrict",
+        },
       })
       .then((stores) => {
         res.status(200).json(stores);
@@ -22,7 +25,10 @@ class StoreController {
       .populate("idBank")
       .populate({
         path: "idAddress",
-        populate: "idWard",
+        populate: {
+          path: "idDistrict",
+          populate: "idWard",
+        },
       })
       .then((store) => res.status(200).json(store))
       .catch(next);
