@@ -1,5 +1,5 @@
 const District = require("../models/District");
-
+const Ward = require("../models/Ward");
 class DistrictController {
   //[GET] districts/
   index(req, res, next) {
@@ -15,6 +15,13 @@ class DistrictController {
   show(req, res, next) {
     District.findOne({ _id: req.params.id })
       .then((district) => res.status(200).json(district))
+      .catch(next);
+  }
+
+  //[GET] districts/:id/wards
+  getWardByDistrict(req, res, next) {
+    Ward.find({ idDistrict: req.params.id })
+      .then((wards) => res.status(200).json(wards))
       .catch(next);
   }
 
