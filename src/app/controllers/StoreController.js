@@ -109,7 +109,7 @@ class StoreController {
       .then((store) => {
         if (store == null)
           next({
-            status: 200,
+            status: 401,
             message: "Incorrect email or password",
           });
         else res.status(200).json(store);
