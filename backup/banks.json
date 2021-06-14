@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "60c5a0b508ec8b5522273cbb"
+  },
+  "name": "Agribank"
+},{
+  "_id": {
+    "$oid": "60c5a0cbe1ee1b5330a3b219"
+  },
+  "name": "TP Bank"
+},{
+  "_id": {
+    "$oid": "60c5a0d7e1ee1b5330a3b21a"
+  },
+  "name": "VietcomBank"
+},{
+  "_id": {
+    "$oid": "60c5a8dde1ee1b5330a3b21b"
+  },
+  "name": "VietcomBank"
+}]

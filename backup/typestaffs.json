@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "60c6e1767a76938e1d1d6b3e"
+  },
+  "name": "Management Staff",
+  "note": "Admin - Quản lý tất cả hoạt động của công ty"
+},{
+  "_id": {
+    "$oid": "60c6e230c6b3d644d416ed56"
+  },
+  "name": "Delivery Staff",
+  "note": "Delivery Staff - Nhân viên giao hàng, giao các đơn hàng từ store đến người nhận    "
+}]

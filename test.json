@@ -1,0 +1,7 @@
+{
+    "name": "2123123 - 250 Đơn hàng/ tháng",
+ "orderPerMonthMin": "200",
+    "orderPerMonthMax": "250",
+    "ratioCommission": "30",
+    "note": "Đối với những cửa hàng có số lượng đơn hàng giao 200 - 250 đơn/ tháng sẽ nhận được 30% tổng cước giao hàng trong 10 đơn hàng đầu tiên"
+}

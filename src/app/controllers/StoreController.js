@@ -1,11 +1,12 @@
 const Store = require("../models/Store");
+const CommissionStore = require("../models/CommissionStore")
 const addressController = require("../controllers/AddressController");
 class StoreController {
   //[GET] stores/
   index(req, res, next) {
-    console.log(req.params);
     Store.find({})
       .populate("idBank")
+      .populate("idCommission")
       .populate({
         path: "idAddress",
         populate: {
@@ -24,6 +25,7 @@ class StoreController {
   show(req, res, next) {
     Store.findOne({ _id: req.params.id })
       .populate("idBank")
+      .populate("idCommission")
       .populate({
         path: "idAddress",
         populate: {
@@ -40,7 +42,7 @@ class StoreController {
   async create(req, res, next) {
     const formData = req.body;
     const formAddress = JSON.parse(formData.idAddress);
-    //Create store
+    //Create address
     formData.idAddress = await addressController.create(formAddress);
     const store = new Store(formData);
     store
@@ -48,7 +50,7 @@ class StoreController {
       .then(() =>
         res.status(200).json({
           status: 200,
-          message: "Create success ",
+          message: "Create Store Success ",
         })
       )
       .catch(next);
@@ -82,7 +84,6 @@ class StoreController {
     const idAddress = await Store.findById(req.params.id)
       .then((store) => store.idAddress)
       .catch(next);
-    console.log(idAddress);
     addressController.delete(idAddress);
     Store.deleteOne({ _id: req.params.id })
       .then(() =>
@@ -114,6 +115,16 @@ class StoreController {
           });
         else res.status(200).json(store);
       })
+      .catch(next);
+  }
+
+  //[GET] stores/:id/commission
+  async commission(req, res, next){
+    const idCommission = await Store.findOne({_id: req.params.id})
+      .then((store)=>store.idCommission)
+      .catch(next);
+    CommissionStore.findOne({_id: idCommission})
+      .then((commission) => res.status(200).json(commission))
       .catch(next);
   }
 }

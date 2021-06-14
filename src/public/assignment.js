@@ -65,4 +65,43 @@
  * [GET] show: /districts/:id
  * [PUT] /districts/:id
  * [DELETE] /districts/:id
+ * Commission  Store
+Get All Commission (store) //Xong
+Put Commission Store //Xong
+Post Commission Store //Xong
+Delete Commission Store //Xong
+
+Commsion Staff
+Get All Commission (store) //Xong
+Put Commission Store //Xong
+Post Commission Store //Xong
+Delete Commission Store //Xong
+
+Store
+Get Commission Store (phía trên store)
+
+Staff (app Stafff)
+Get Staff  (xong)
+Put Staff  (xong)
+Post Staff  (xong)
+Delete Staff  (xong)
+Login (xong)
+
+Type-Staff
+Get TypeStaffs (xong)
+Put TypeStaffs (xong)
+Post TypeStaffs (xong)
+Delete TypeStaffs (xong)
+
+Database
+Staff_Type (có sẵn) // Xong
+Bank (có sẵn) //Xong
+Ward (có sẵn) // Xong
+District (có sẵn) //Xong
+Status (có sẵn) // Xong
+Range(có sẵn)
+DeliveryMethod (có sẵn)
+PriceList (có sẵn)
  */
+
+

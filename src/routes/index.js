@@ -4,9 +4,10 @@ const storesRouter = require("./stores");
 const districtsRouter = require("./districts");
 const wardsRouter = require("./wards");
 const typeStaffsRouter = require("./type-staffs");
-const staffRouter = require("./staff");
+const staffsRouter = require("./staff");
 const warehousesRouter = require("./warehouses");
-//const ordersRouter = require("./orders");
+const cmStoresRouter = require("./cmstores");
+const cmStaffsRouter = require("./cmstaff");
 
 function routes(app) {
   app.use("/banks", banksRouter);
@@ -14,8 +15,12 @@ function routes(app) {
   app.use("/districts", districtsRouter);
   app.use("/wards", wardsRouter);
   app.use("/type-staffs", typeStaffsRouter);
-  app.use("/staffs", staffRouter);
+  app.use("/staffs", staffsRouter);
   app.use("/warehouses", warehousesRouter);
+  app.use("/cmstores", cmStoresRouter);
+  app.use("/cmstaffs", cmStaffsRouter);
+
+
 
   app.use((req, res, next) => {
     throw new Error("Something went wrong!");

@@ -1,9 +1,13 @@
 const mongoose = require("mongoose");
 
 async function connect() {
+  let connectionStringAtlas = "mongodb+srv://hlphap:IdYmhh1aT3OxlUr9@learnjs.szfw4.mongodb.net/fastdelivery?retryWrites=true&w=majority";
+  let connectStringLocal = "mongodb://localhost:27017/fastdeliverydb?readPreference=primary&appname=MongoDB%20Compass&ssl=false";
+  let connectString = connectStringLocal;
+
   try {
     await mongoose.connect(
-      "mongodb+srv://hlphap:IdYmhh1aT3OxlUr9@learnjs.szfw4.mongodb.net/fastdelivery?retryWrites=true&w=majority",
+      connectString,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -11,7 +15,7 @@ async function connect() {
         useCreateIndex: true,
       }
     );
-    console.log("connected");
+    console.log("Connected Success");
   } catch (error) {
     console.log(error);
   }

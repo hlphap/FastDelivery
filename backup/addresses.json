@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "60c5b0d1387b7839b24c7dfc"
+  },
+  "fullAddress": "hoainam, Phường Đa Kao, Quận 1",
+  "noteAddress": "hoainam",
+  "idWard": {
+    "$oid": "60b7a51231c6ba3de5e7cb6b"
+  },
+  "createdAt": {
+    "$date": "2021-06-13T07:16:33.183Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-13T07:16:33.183Z"
+  }
+},{
+  "_id": {
+    "$oid": "60c5c603a37ad340f85fe6de"
+  },
+  "fullAddress": "123, Phường Hiệp Bình Chánh, Thành phố Thủ Đức",
+  "noteAddress": "123",
+  "idWard": {
+    "$oid": "60b7a51231c6ba3de5e7cbd0"
+  },
+  "createdAt": {
+    "$date": "2021-06-13T08:46:59.764Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-13T08:46:59.764Z"
+  }
+}]

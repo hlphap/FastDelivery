@@ -21,6 +21,7 @@ class DistrictController {
   //[GET] districts/:id/wards
   getWardByDistrict(req, res, next) {
     Ward.find({ idDistrict: req.params.id })
+      .populate("idDistrict")
       .then((wards) => res.status(200).json(wards))
       .catch(next);
   }

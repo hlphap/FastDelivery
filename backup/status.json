@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "60c6e2537a76938e1d1d6b3f"
+  },
+  "name": "Chưa lấy hàng từ Store",
+  "note": "Đang chờ nhân viên đến store lấy hàng"
+},{
+  "_id": {
+    "$oid": "60c6e2d5c6b3d644d416ed57"
+  },
+  "name": "Đang giao",
+  "note": "Đã lấy hàng từ Store đang tiến hành giao hàng"
+},{
+  "_id": {
+    "$oid": "60c6e2eec6b3d644d416ed58"
+  },
+  "name": "Đã giao",
+  "note": "Đã giao hàng thành công đến người nhận"
+}]

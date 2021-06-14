@@ -19,9 +19,8 @@ class AddressController {
         err,
       }));
     formData.fullAddress = `${formData.noteAddress}, ${getWard.name}, ${getDistrict.name}`;
-    console.log(formData);
   }
-  
+
   async create(formData) {
     await this.createFullAddress(formData);
     if (formData.hasOwnProperty("_id")) delete formData._id;

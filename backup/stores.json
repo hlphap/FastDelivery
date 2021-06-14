@@ -1,0 +1,47 @@
+[{
+  "_id": {
+    "$oid": "60c5b0d1387b7839b24c7dfd"
+  },
+  "email": "hoainam1@gmail.com",
+  "password": "123456",
+  "name": "KD House's",
+  "phone": "123",
+  "accountNumber": "123",
+  "accountName": "hoainam",
+  "idBank": {
+    "$oid": "60c5a0b508ec8b5522273cbb"
+  },
+  "idAddress": {
+    "$oid": "60c5b0d1387b7839b24c7dfc"
+  },
+  "branchBank": "1",
+  "createdAt": {
+    "$date": "2021-06-13T07:16:33.202Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-13T15:55:34.330Z"
+  }
+},{
+  "_id": {
+    "$oid": "60c5c603a37ad340f85fe6df"
+  },
+  "email": "hoainam2@gmail.com",
+  "password": "123456",
+  "name": "hoainam",
+  "phone": "123123",
+  "accountNumber": "123",
+  "accountName": "hoainam2",
+  "idBank": {
+    "$oid": "60c5a0b508ec8b5522273cbb"
+  },
+  "idAddress": {
+    "$oid": "60c5c603a37ad340f85fe6de"
+  },
+  "branchBank": "HCM",
+  "createdAt": {
+    "$date": "2021-06-13T08:46:59.777Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-13T08:46:59.777Z"
+  }
+}]
