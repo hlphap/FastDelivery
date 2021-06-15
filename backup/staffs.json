@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "60c7591d75bb12145dee52de"
+  },
+  "fullName": "Huỳnh Long Pháp",
+  "gender": "Nam",
+  "dateOfBirth": "27/04/2000",
+  "idNumber": "221482959",
+  "phone": "0352796298",
+  "actualSalary": "70000000",
+  "email": "longphappy@gmail.com",
+  "password": "123123",
+  "idTypeStaff": {
+    "$oid": "60c6e230c6b3d644d416ed56"
+  },
+  "idCommission": {
+    "$oid": "60c6ea607a76938e1d1d6b42"
+  },
+  "idAddress": {
+    "$oid": "60c75a1cde1d0d0fd00a7bae"
+  },
+  "basicSalary": "15000000"
+}]

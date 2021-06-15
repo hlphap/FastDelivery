@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "60c6ea607a76938e1d1d6b42"
+  },
+  "name": "50 Đơn hàng/ tháng",
+  "orderPerMonthMin": "10",
+  "orderPerMonthMax": "50",
+  "ratioCommission": "10",
+  "note": "Đối với những cửa hàng có số lượng đơn hàng giao >50đơn/ tháng sẽ nhận được 10% tổng cước giao hàng trong 10 đơn hàng đầu tiên"
+},{
+  "_id": {
+    "$oid": "60c6eb6dc6b3d644d416ed5a"
+  },
+  "name": "50 - 100 Đơn hàng/ tháng",
+  "orderPerMonthMin": "50",
+  "orderPerMonthMax": "100",
+  "ratioCommission": "15",
+  "note": "Đối với những cửa hàng có số lượng đơn hàng giao từ 50 - 100 đơn hàng/ tháng sẽ nhận được 15% tổng cước giao hàng trong 10 đơn hàng đầu tiên"
+},{
+  "_id": {
+    "$oid": "60c6eb79c6b3d644d416ed5b"
+  },
+  "name": "100 - 150 Đơn hàng/ tháng",
+  "orderPerMonthMin": "100",
+  "orderPerMonthMax": "150",
+  "ratioCommission": "20",
+  "note": "Đối với những cửa hàng có số lượng đơn hàng giao từ 100 - 150 đơn hàng/ tháng sẽ nhận được 20% tổng cước giao hàng trong 10 đơn hàng đầu tiên"
+},{
+  "_id": {
+    "$oid": "60c6ebebc6b3d644d416ed5c"
+  },
+  "name": "150 - 200 Đơn hàng/ tháng",
+  "orderPerMonthMin": "150",
+  "orderPerMonthMax": "200",
+  "ratioCommission": "25",
+  "note": "Đối với những cửa hàng có số lượng đơn hàng giao từ 150 - 200 đơn hàng/ tháng sẽ nhận được 25% tổng cước giao hàng trong 10 đơn hàng đầu tiên"
+}]

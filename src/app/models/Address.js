@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const Address = new Schema(
   {
-    fullAddress: { type: String },
-    noteAddress: { type: String },
+    fullAddress: { type: String, default: ""},
+    noteAddress: { type: String, default: ""},
     idWard: { type: mongoose.Schema.Types.ObjectId, ref: "wards" },
   },
   {

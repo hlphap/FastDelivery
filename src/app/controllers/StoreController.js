@@ -98,6 +98,7 @@ class StoreController {
       email: req.query.email,
       password: req.query.password,
     })
+      .populate("idCommission")
       .populate("idBank")
       .populate({
         path: "idAddress",
