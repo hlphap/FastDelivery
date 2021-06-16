@@ -23,6 +23,12 @@ class OrderController {
                     populate: "idBank"
                 }
             )
+            .populate(
+                {
+                    path: "idStore",
+                    populate: "idCommission"
+                }
+            )
              .populate(
                 {
                     path: "recieverIdAddress",
@@ -43,6 +49,8 @@ class OrderController {
         const store = await Store.findOne({_id: req.query.idStore})
             .then((store)=> store)
             .catch(next);
+
+
     }
 }
 
