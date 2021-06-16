@@ -4,5 +4,7 @@ const router = express.Router();
 const orderController = require("../app/controllers/OrderController");
 
 router.get("/", orderController.index);
+router.get("/fee", orderController.fee);
+
 
 module.exports = router;
