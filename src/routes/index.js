@@ -8,6 +8,8 @@ const staffsRouter = require("./staff");
 const warehousesRouter = require("./warehouses");
 const cmStoresRouter = require("./cmstores");
 const cmStaffsRouter = require("./cmstaff");
+const dvMethodsRouter = require("./dvmethods");
+const ordersRouter = require("./orders");
 
 function routes(app) {
   app.use("/banks", banksRouter);
@@ -19,12 +21,14 @@ function routes(app) {
   app.use("/warehouses", warehousesRouter);
   app.use("/cmstores", cmStoresRouter);
   app.use("/cmstaffs", cmStaffsRouter);
+  app.use("/dvmethods", dvMethodsRouter);
+  app.use("/orders", ordersRouter);
 
 
 
-  app.use((req, res, next) => {
-    throw new Error("Something went wrong!");
-  });
+  // app.use((req, res, next) => {
+  //   throw new Error("Something went wrong!");
+  // });
   app.use((error, req, res, next) => {
     console.log(error.stack);
     res.status(error.status || 500).send({

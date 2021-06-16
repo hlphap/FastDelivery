@@ -1,13 +1,20 @@
-[{
-  "_id": {
-    "$oid": "60c6e3077a76938e1d1d6b40"
-  },
-  "name": "Giao hàng nhanh",
-  "note": "Giao hàng nhanh trong vòng 24h"
-},{
-  "_id": {
-    "$oid": "60c6e33dc6b3d644d416ed59"
-  },
-  "name": "Giao hàng tiêu chuẩn",
-  "note": "Giao hàng nhanh trong vòng 48h"
-}]
+[
+    {
+        "name": "Giao hàng nhanh",
+        "innerDistrictFee": "23000",
+        "outerDistrictFee": "33000",
+        "surCharges": "3000",
+        "feeChangeAddressDelivery": "5000",
+        "feeStorageCharges": "5000",
+        "feeReturn": "10000"
+    },
+    {
+        "name": "Giao hàng tiêu chuẩn",
+        "innerDistrictFee": "20000",
+        "outerDistrictFee": "30000",
+        "surCharges": "2000",
+        "feeChangeAddressDelivery": "5000",
+        "feeStorageCharges": "5000",
+        "feeReturn": "10000"
+    }
+]
