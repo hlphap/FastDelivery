@@ -49,7 +49,7 @@ class OrderController {
     //[GET] /orders/fee
     async fee(req, res, next){
         let fee = 0;
-        let surCharges = 0;
+        let surCharge = 0;
         let commission = 0;
         const formQuery = req.query;
         const result = await Fee(formQuery, next);
@@ -131,12 +131,12 @@ function Fee(formData, next){
                 if (idDistrictReciever === idDistrictStore){
                     fee = Number(deliveryMethod.innerDistrictFee);
                     if (formData.totalWeight > 3){
-                        surCharges = deliveryMethod.surCharges * (Number(formData.totalWeight) - 3) / 0.5;
+                        surCharge = deliveryMethod.surCharge * (Number(formData.totalWeight) - 3) / 0.5;
                     }
                 }else{
                     fee = Number(deliveryMethod.outerDistrictFee);
                     if (formData.totalWeight > 3){
-                        surCharges = deliveryMethod.surCharges * (Number(formData.totalWeight) - 3) / 0.5;
+                        surCharge = deliveryMethod.surCharge * (Number(formData.totalWeight) - 3) / 0.5;
                     }
                 }
                 //Add Commission
@@ -144,11 +144,11 @@ function Fee(formData, next){
                     console.log("Phap");
                     commission = store.idCommission.ratioCommission * fee / 100;
                 }
-                let totalFee = fee + surCharges - commission;
+                let totalFee = fee + surCharge - commission;
                 return {
                     nameMethodDelivery: deliveryMethod.name,
                     fee: fee,
-                    surCharges: surCharges,
+                    surCharge: surCharge,
                     commission: commission,
                     totalFee: totalFee,
                     feeChangeAddressDelivery: 0,
