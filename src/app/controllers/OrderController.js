@@ -34,7 +34,7 @@ class OrderController {
             )
              .populate(
                 {
-                    path: "recieverIdAddress",
+                    path: "receiverIdAddress",
                     populate:  {
                             path: "idWard",
                             populate: "idDistrict"
@@ -61,9 +61,9 @@ class OrderController {
          //1 Call Function Fee
         const fee = await ChangeFee(formData, next);
 
-        //1.5 Create recieverIdAddress to Addresses
-        const formRecieverAddress = JSON.parse(formData.recieverIdAddress);
-        formData.recieverIdAddress = await addressController.create(formRecieverAddress);
+        //1.5 Create receiverIdAddress to Addresses
+        const formReceiverAddress = JSON.parse(formData.receiverIdAddress);
+        formData.receiverIdAddress = await addressController.create(formReceiverAddress);
 
         //6. Create Order
         const order = new Order(formData);
@@ -119,10 +119,10 @@ function Fee(formData, next){
             .then((store)=> store)
             .catch(next);
 
-        //Get idDistrict Reciever Address
-        const formRecieverAddress = JSON.parse(formData.recieverIdAddress);
+        //Get idDistrict Receiver Address
+        const formReceiverAddress = JSON.parse(formData.receiverIdAddress);
 
-        const ward = Ward.findOne({_id: formRecieverAddress.idWard})
+        const ward = Ward.findOne({_id: formReceiverAddress.idWard})
             .populate("idDistrict")
             .then(ward => ward)
             .catch(next);
@@ -130,9 +130,9 @@ function Fee(formData, next){
         return Promise.all([deliveryMethod, store, ward])
             .then(([deliveryMethod, store, ward])=> {
                 const idDistrictStore = store.idAddress.idWard.idDistrict._id;
-                const idDistrictReciever = ward.idDistrict._id;
+                const idDistrictReceiver = ward.idDistrict._id;
                 //standardFee no Commission
-                if (idDistrictReciever === idDistrictStore){
+                if (idDistrictReceiver === idDistrictStore){
                     standardFee = Number(deliveryMethod.innerDistrictFee);
                     if (formData.totalWeight > 3){
                         surCharge = deliveryMethod.surCharge * (Number(formData.totalWeight) - 3) / 0.5;
