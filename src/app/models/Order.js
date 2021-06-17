@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const Order = new Schema({
         idStore: {type: mongoose.Schema.Types.ObjectId, ref: "stores"},
         idStaff: {type: mongoose.Schema.Types.ObjectId, ref: "staffs"},
-
         orderName: {type: String, default: "No Name"},
         recieverName: {type: String, require: true},
         recieverIdAddress: {type: mongoose.Schema.Types.ObjectId, ref: "addresses"},
