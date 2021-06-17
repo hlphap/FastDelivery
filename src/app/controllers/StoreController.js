@@ -1,6 +1,7 @@
 const Store = require("../models/Store");
 const CommissionStore = require("../models/CommissionStore")
 const addressController = require("../controllers/AddressController");
+const Order = require("../models/Order");
 class StoreController {
   //[GET] stores/
   index(req, res, next) {
@@ -126,6 +127,47 @@ class StoreController {
       .catch(next);
     CommissionStore.findOne({_id: idCommission})
       .then((commission) => res.status(200).json(commission))
+      .catch(next);
+  }
+
+  //[GET] stores/:id/orders
+  orders(req,res,next){
+    Order.find({idStore: req.params.id})
+      .populate(
+            {
+                path: "idStore",
+                populate:  {
+                    path: "idAddress",
+                    populate: {
+                        path: "idWard",
+                        populate: "idDistrict"
+                    }
+                }
+            }
+        )
+        .populate(
+            {
+                path: "idStore",
+                populate: "idBank"
+            }
+        )
+        .populate(
+            {
+                path: "idStore",
+                populate: "idCommission"
+            }
+        )
+          .populate(
+            {
+                path: "receiverIdAddress",
+                populate:  {
+                        path: "idWard",
+                        populate: "idDistrict"
+                }
+            }
+        )
+        .populate("idDeliveryMethod")
+      .then((orders)=>res.status(200).json(orders))
       .catch(next);
   }
 }

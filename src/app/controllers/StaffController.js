@@ -1,6 +1,7 @@
 const Staff = require("../models/Staff");
 const addressController = require("./AddressController");
 const CommissionStaff = require("../models/CommissionStaff")
+const Order = require("../models/Order")
 
 class StaffController {
   //[GET] staffs/
@@ -136,6 +137,46 @@ class StaffController {
       .catch(next);
     CommissionStaff.findOne({_id: idCommission})
       .then((commission) => res.status(200).json(commission))
+      .catch(next);
+  }
+
+  orders(req, res, next){
+    Order.find({idStaff: req.params.id})
+      .populate(
+            {
+                path: "idStore",
+                populate:  {
+                    path: "idAddress",
+                    populate: {
+                        path: "idWard",
+                        populate: "idDistrict"
+                    }
+                }
+            }
+        )
+        .populate(
+            {
+                path: "idStore",
+                populate: "idBank"
+            }
+        )
+        .populate(
+            {
+                path: "idStore",
+                populate: "idCommission"
+            }
+        )
+          .populate(
+            {
+                path: "receiverIdAddress",
+                populate:  {
+                        path: "idWard",
+                        populate: "idDistrict"
+                }
+            }
+        )
+        .populate("idDeliveryMethod")
+      .then((orders)=>res.status(200).json(orders))
       .catch(next);
   }
 }

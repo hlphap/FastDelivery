@@ -6,6 +6,7 @@ const DeliveryMethod = require("../models/DeliveryMethod");
 const addressController = require("./AddressController");
 const StoreController = require("./StoreController");
 class OrderController {
+   // [GET] orders/
     index(req, res, next){
         Order.find({})
             .populate(
@@ -91,6 +92,7 @@ class OrderController {
 
 }
 
+//Tinh phi giao hang
 function Fee(formData, next){
         let standardFee = 0;
         let surCharge = 0;
@@ -163,20 +165,15 @@ function Fee(formData, next){
             .catch(next);
 }
 
+//Create Order and List Fee
 async function ChangeFee(formData, next){
     const fee = await Fee(formData);
-    //1. Get feeDelivery
     formData.standardFee = fee.standardFee;
     formData.surCharge = fee.surCharge;
     formData.commission = fee.commission;
-    //2. Get feeChangeAddressDelivery
     formData.feeChangeAddressDelivery = fee.feeChangeAddressDelivery;
-    //3. Get feeStorageCharges
     formData.feeStorageCharges = fee.feeStorageCharges;
-    //4. Get feeReturn
     formData.feeReturn = fee.feeReturn;
     formData.totalFee = fee.totalFee;
-    console.log(formData);
-
 }
 module.exports = new OrderController();
