@@ -2,6 +2,8 @@ const Order = require("../models/Order");
 const Store = require("../models/Store");
 const Ward = require("../models/Ward");
 const DeliveryMethod = require("../models/DeliveryMethod");
+
+const addressController = require("./AddressController");
 const StoreController = require("./StoreController");
 class OrderController {
     index(req, res, next){
@@ -50,13 +52,55 @@ class OrderController {
         let surCharges = 0;
         let commission = 0;
         const formQuery = req.query;
-        //Get Delivery Method
-        const deliveryMethod = DeliveryMethod.findOne({_id: formQuery.idDeliveryMethod})
+        const result = await Fee(formQuery, next);
+        if (result!=null)
+            res.status(200).json(result);
+    }
+
+    //[POST] //orders
+    async create(req, res, next){
+        const formData = req.body;
+         //1 Call Function Fee
+        const fee = await Fee(formData, next);
+
+        //1.5 Create recieverIdAddress to Addresses
+        const formRecieverAddress = JSON.parse(formData.recieverIdAddress);
+        formData.recieverIdAddress = await addressController.create(formRecieverAddress);
+
+        //2. Get feeDelivery
+        formData.feeDelivery = fee.totalFee;
+
+        //3. Get feeChangeAddressDelivery
+        formData.feeChangeAddressDelivery = fee.feeChangeAddressDelivery;
+
+        //4. Get feeStorageCharges
+        formData.feeStorageCharges = fee.feeStorageCharges;
+
+        //5. Get feeReturn
+        formData.feeReturn = fee.feeReturn;
+
+        //6. Create Order
+        const order = new Order(formData);
+        order
+            .save()
+            .then(()=>
+                res.status(200).json({
+                    status: 200,
+                    message: "Create Order Success",
+                })
+            )
+            .catch(next);
+    }
+}
+
+function Fee(formData, next){
+    //Get Delivery Method
+        const deliveryMethod = DeliveryMethod.findOne({_id: formData.idDeliveryMethod})
             .then(deliveryMethod=> deliveryMethod)
             .catch(next);
 
         //Get Store
-        const store = Store.findOne({_id: formQuery.idStore})
+        const store = Store.findOne({_id: formData.idStore})
             .populate("idCommission")
             .populate(
                 {
@@ -72,36 +116,36 @@ class OrderController {
             .catch(next);
 
         //Get idDistrict Reciever Address
-        const formRecieverAddress = JSON.parse(formQuery.recieverIdAddress);
+        const formRecieverAddress = JSON.parse(formData.recieverIdAddress);
 
         const ward = Ward.findOne({_id: formRecieverAddress.idWard})
             .populate("idDistrict")
             .then(ward => ward)
             .catch(next);
 
-        Promise.all([deliveryMethod, store, ward])
+        return Promise.all([deliveryMethod, store, ward])
             .then(([deliveryMethod, store, ward])=> {
                 const idDistrictStore = store.idAddress.idWard.idDistrict._id;
                 const idDistrictReciever = ward.idDistrict._id;
                 //Fee no Commission
                 if (idDistrictReciever === idDistrictStore){
                     fee = Number(deliveryMethod.innerDistrictFee);
-                    if (formQuery.totalWeight > 3){
-                        surCharges = deliveryMethod.surCharges * (Number(formQuery.totalWeight) - 3) / 0.5;
+                    if (formData.totalWeight > 3){
+                        surCharges = deliveryMethod.surCharges * (Number(formData.totalWeight) - 3) / 0.5;
                     }
                 }else{
                     fee = Number(deliveryMethod.outerDistrictFee);
-                    if (formQuery.totalWeight > 3){
-                        surCharges = deliveryMethod.surCharges * (Number(formQuery.totalWeight) - 3) / 0.5;
+                    if (formData.totalWeight > 3){
+                        surCharges = deliveryMethod.surCharges * (Number(formData.totalWeight) - 3) / 0.5;
                     }
                 }
                 //Add Commission
-                if (formQuery.isUseCommission){
+                if (formData.isUseCommission){
                     console.log("Phap");
                     commission = store.idCommission.ratioCommission * fee / 100;
                 }
                 let totalFee = fee + surCharges - commission;
-                res.status(200).json({
+                return {
                     nameMethodDelivery: deliveryMethod.name,
                     fee: fee,
                     surCharges: surCharges,
@@ -110,10 +154,9 @@ class OrderController {
                     feeChangeAddressDelivery: 0,
                     feeStorageCharges: 0,
                     feeReturn: 0,
-                })
+                }
             })
             .catch(next);
-    }
 }
 
 module.exports = new OrderController();
