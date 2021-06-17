@@ -2,18 +2,24 @@
   "_id": {
     "$oid": "60c6e2537a76938e1d1d6b3f"
   },
-  "name": "Chưa lấy hàng từ Store",
-  "note": "Đang chờ nhân viên đến store lấy hàng"
+  "name": "Chưa xử lý",
+  "note": "Chưa xử lý"
 },{
   "_id": {
     "$oid": "60c6e2d5c6b3d644d416ed57"
   },
-  "name": "Đang giao",
-  "note": "Đã lấy hàng từ Store đang tiến hành giao hàng"
+  "name": "Đã xử lý",
+  "note": "Nhân viên đang đến nhận đơn hàng"
 },{
   "_id": {
     "$oid": "60c6e2eec6b3d644d416ed58"
   },
-  "name": "Đã giao",
-  "note": "Đã giao hàng thành công đến người nhận"
+  "name": "Đã lấy hàng từ cửa hàng",
+  "note": "Đang giao đến người nhận"
+},{
+  "_id": {
+    "$oid": "60cb0617eb12ef48f8f4abf7"
+  },
+  "name": "Đã nhận hàng",
+  "note": ""
 }]

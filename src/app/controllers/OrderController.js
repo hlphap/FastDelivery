@@ -2,9 +2,11 @@ const Order = require("../models/Order");
 const Store = require("../models/Store");
 const Ward = require("../models/Ward");
 const DeliveryMethod = require("../models/DeliveryMethod");
+const Status = require("../models/Status");
 
 const addressController = require("./AddressController");
-const StoreController = require("./StoreController");
+const storeController = require("./StoreController");
+const detailStatusController = require("./DetailStatusController");
 class OrderController {
    // [GET] orders/
     index(req, res, next){
@@ -58,15 +60,14 @@ class OrderController {
     //[POST] //orders
     async create(req, res, next){
         const formData = req.body;
-        console.log(formData);
          //1 Call Function Fee
         const fee = await ChangeFee(formData, next);
 
-        //1.5 Create receiverIdAddress to Addresses
+        //2 Create receiverIdAddress to Addresses
         const formReceiverAddress = JSON.parse(formData.receiverIdAddress);
         formData.receiverIdAddress = await addressController.create(formReceiverAddress);
 
-        //6. Create Order
+        //3. Create Order
         const order = new Order(formData);
         order
             .save()
@@ -77,11 +78,18 @@ class OrderController {
                 })
             )
             .catch(next);
+
+        //4 Create Detail Status
+        detailStatusController.create({idOrder: order.id})
     }
 
     //[PUT] //orders/:id/assignment
     assignmentOrderToStaff(req, res, next){
         const formData = req.body;
+        const formDetailStatus = formData;
+        formDetailStatus.idStatus = "60c6e2d5c6b3d644d416ed57";
+        formDetailStatus.idOrder = req.params.id;
+        detailStatusController.create(formDetailStatus);
         Order.updateOne({_id: req.params.id}, formData)
             .then(()=> res.status(200).json({
                 status: 200,
@@ -89,7 +97,6 @@ class OrderController {
             }))
             .catch(next);
     }
-
 }
 
 //Tinh phi giao hang
@@ -147,7 +154,6 @@ function Fee(formData, next){
                 }
                 //Add Commission
                 if (formData.isUseCommission){
-                    console.log("Phap");
                     commission = store.idCommission.ratioCommission * standardFee / 100;
                 }
                 let totalFee = standardFee + surCharge - commission + feeChangeAddressDelivery + feeStorageCharges + feeReturn;
