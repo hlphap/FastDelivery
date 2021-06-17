@@ -57,6 +57,7 @@ class OrderController {
     //[POST] //orders
     async create(req, res, next){
         const formData = req.body;
+        console.log(formData);
          //1 Call Function Fee
         const fee = await ChangeFee(formData, next);
 
@@ -77,7 +78,16 @@ class OrderController {
             .catch(next);
     }
 
-    //[PUT] //orders
+    //[PUT] //orders/:id/assignment
+    assignmentOrderToStaff(req, res, next){
+        const formData = req.body;
+        Order.updateOne({_id: req.params.id}, formData)
+            .then(()=> res.status(200).json({
+                status: 200,
+                message: "Assignment To Staff Success",
+            }))
+            .catch(next);
+    }
 
 }
 
