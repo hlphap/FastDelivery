@@ -17,10 +17,13 @@ const Order = new Schema({
         idDeliveryMethod: {type: mongoose.Schema.Types.ObjectId, ref : "deliverymethods"},
         isUseCommission : {type: Boolean, default: false},
 
-        feeDelivery: {type: String, default: "0"},
+        standardFee: {type: String, default: "0"},
+        surCharge: {type: String, default: "0"},
+        commission: {type: String, default: "0"},
         feeChangeAddressDelevery: {type: String, default: "0"},
         feeStorageCharges: {type: String, default: "0"},
         feeReturn: {type: String, default: "0"},
+        totalFee: {type: String, default: 0},
     },
     {
         versionKey: false,
