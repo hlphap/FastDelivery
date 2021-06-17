@@ -137,6 +137,8 @@ class OrderController {
                     }
                 }
             )
+             .populate("idDeliveryMethod")
+             .populate("idStaff")
              .then(orders => res.status(200).json(orders))
             .catch(next);
     }
