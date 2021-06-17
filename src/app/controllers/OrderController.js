@@ -90,11 +90,54 @@ class OrderController {
         formDetailStatus.idStatus = "60c6e2d5c6b3d644d416ed57";
         formDetailStatus.idOrder = req.params.id;
         detailStatusController.create(formDetailStatus);
+
+        //Update Order
+        formData.isHandling = true;
         Order.updateOne({_id: req.params.id}, formData)
             .then(()=> res.status(200).json({
                 status: 200,
                 message: "Assignment To Staff Success",
             }))
+            .catch(next);
+    }
+
+    //[GET] /orders/handling
+    handling(req, res, next){
+        Order.find({isHandling: false})
+        .populate(
+                {
+                    path: "idStore",
+                    populate:  {
+                        path: "idAddress",
+                        populate: {
+                            path: "idWard",
+                            populate: "idDistrict"
+                        }
+                    }
+                }
+            )
+            .populate(
+                {
+                    path: "idStore",
+                    populate: "idBank"
+                }
+            )
+            .populate(
+                {
+                    path: "idStore",
+                    populate: "idCommission"
+                }
+            )
+             .populate(
+                {
+                    path: "receiverIdAddress",
+                    populate:  {
+                            path: "idWard",
+                            populate: "idDistrict"
+                    }
+                }
+            )
+             .then(orders => res.status(200).json(orders))
             .catch(next);
     }
 }

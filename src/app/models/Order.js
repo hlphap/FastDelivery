@@ -24,6 +24,7 @@ const Order = new Schema({
         feeStorageCharges: {type: String, default: "0"},
         feeReturn: {type: String, default: "0"},
         totalFee: {type: String, default: 0},
+        isHandling: {type: Boolean, default: false}
     },
     {
         versionKey: false,
