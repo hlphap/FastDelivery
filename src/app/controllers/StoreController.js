@@ -179,28 +179,28 @@ class StoreController {
         return orders.reduce((result, order)=>{
             if (order.createdAt.getMonth()== new Date().getMonth()){
               if (order.isHandling){
-                result.present.orderMoney+=Number(order.orderMoney);
-                result.present.surCharge+=Number(order.surCharge);
-                result.present.standardFee+=Number(order.standardFee);
-                result.present.commission+=Number(order.commission);
-                result.present.feeChangeAddressDelivery+=Number(order.feeChangeAddressDelivery);
-                result.present.feeStorageCharges+=Number(order.feeStorageCharges);
-                result.present.feeReturn+=Number(order.feeReturn);
-                result.present.totalFee+=Number(order.totalFee);
+                result.delivered.orderMoney+=Number(order.orderMoney);
+                result.delivered.surCharge+=Number(order.surCharge);
+                result.delivered.standardFee+=Number(order.standardFee);
+                result.delivered.commission+=Number(order.commission);
+                result.delivered.feeChangeAddressDelivery+=Number(order.feeChangeAddressDelivery);
+                result.delivered.feeStorageCharges+=Number(order.feeStorageCharges);
+                result.delivered.feeReturn+=Number(order.feeReturn);
+                result.delivered.totalFee+=Number(order.totalFee);
               }else{
-                result.future.orderMoney+=Number(order.orderMoney);
-                result.future.surCharge+=Number(order.surCharge);
-                result.future.standardFee+=Number(order.standardFee);
-                result.future.commission+=Number(order.commission);
-                result.future.feeChangeAddressDelivery+=Number(order.feeChangeAddressDelivery);
-                result.future.feeStorageCharges+=Number(order.feeStorageCharges);
-                result.future.feeReturn+=Number(order.feeReturn);
-                result.future.totalFee+=Number(order.totalFee);
+                result.delivering.orderMoney+=Number(order.orderMoney);
+                result.delivering.surCharge+=Number(order.surCharge);
+                result.delivering.standardFee+=Number(order.standardFee);
+                result.delivering.commission+=Number(order.commission);
+                result.delivering.feeChangeAddressDelivery+=Number(order.feeChangeAddressDelivery);
+                result.delivering.feeStorageCharges+=Number(order.feeStorageCharges);
+                result.delivering.feeReturn+=Number(order.feeReturn);
+                result.delivering.totalFee+=Number(order.totalFee);
               }
             }
             return result;
         }, {
-          present: {
+          delivered: {
             orderMoney : 0,
             standardFee : 0,
             surCharge : 0,
@@ -210,7 +210,7 @@ class StoreController {
             feeReturn: 0,
             totalFee: 0,
           },
-          future:{
+          delivering:{
             orderMoney : 0,
             standardFee : 0,
             surCharge : 0,
