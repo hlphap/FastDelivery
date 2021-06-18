@@ -170,6 +170,61 @@ class StoreController {
       .then((orders)=>res.status(200).json(orders))
       .catch(next);
   }
+
+  //[GET] stores/:id/statistics
+  async statistics(req, res, next){
+    //Get order in Month
+    const a = await Order.find({idStore: req.params.id})
+      .then((orders)=>{
+        return orders.reduce((result, order)=>{
+            if (order.createdAt.getMonth()== new Date().getMonth()){
+              if (order.isHandling){
+                result.present.orderMoney+=Number(order.orderMoney);
+                result.present.surCharge+=Number(order.surCharge);
+                result.present.standardFee+=Number(order.standardFee);
+                result.present.commission+=Number(order.commission);
+                result.present.feeChangeAddressDelivery+=Number(order.feeChangeAddressDelivery);
+                result.present.feeStorageCharges+=Number(order.feeStorageCharges);
+                result.present.feeReturn+=Number(order.feeReturn);
+                result.present.totalFee+=Number(order.totalFee);
+              }else{
+                result.future.orderMoney+=Number(order.orderMoney);
+                result.future.surCharge+=Number(order.surCharge);
+                result.future.standardFee+=Number(order.standardFee);
+                result.future.commission+=Number(order.commission);
+                result.future.feeChangeAddressDelivery+=Number(order.feeChangeAddressDelivery);
+                result.future.feeStorageCharges+=Number(order.feeStorageCharges);
+                result.future.feeReturn+=Number(order.feeReturn);
+                result.future.totalFee+=Number(order.totalFee);
+              }
+            }
+            return result;
+        }, {
+          present: {
+            orderMoney : 0,
+            standardFee : 0,
+            surCharge : 0,
+            commission : 0,
+            feeChangeAddressDelivery : 0,
+            feeStorageCharges: 0,
+            feeReturn: 0,
+            totalFee: 0,
+          },
+          future:{
+            orderMoney : 0,
+            standardFee : 0,
+            surCharge : 0,
+            commission : 0,
+            feeChangeAddressDelivery : 0,
+            feeStorageCharges: 0,
+            feeReturn: 0,
+            totalFee: 0,
+          }
+        })
+      })
+      .then(statistics=>res.status(200).json(statistics))
+      .catch(next);
+  }
 }
 
 module.exports = new StoreController();
