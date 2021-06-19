@@ -1,5 +1,6 @@
 const Store = require("../models/Store");
-const CommissionStore = require("../models/CommissionStore")
+const CommissionStore = require("../models/CommissionStore");
+const DetailStatus = require("../models/DetailStatus");
 const addressController = require("../controllers/AddressController");
 const Order = require("../models/Order");
 class StoreController {
@@ -177,7 +178,7 @@ class StoreController {
     const a = await Order.find({idStore: req.params.id})
       .then((orders)=>{
         return orders.reduce((result, order)=>{
-            if (order.createdAt.getMonth()== new Date().getMonth()){
+            if (order.updatedAt.getMonth()== new Date().getMonth()){
               if (order.isHandling){
                 result.delivered.orderMoney+=Number(order.orderMoney);
                 result.delivered.surCharge+=Number(order.surCharge);

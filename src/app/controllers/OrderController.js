@@ -61,7 +61,7 @@ class OrderController {
     async create(req, res, next){
         const formData = req.body;
          //1 Call Function Fee
-        const fee = await ChangeFee(formData, next);
+        const fee = await ChangeFee(formData,false, next);
 
         //2 Create receiverIdAddress to Addresses
         const formReceiverAddress = JSON.parse(formData.receiverIdAddress);
@@ -99,6 +99,45 @@ class OrderController {
                 message: "Assignment To Staff Success",
             }))
             .catch(next);
+    }
+
+    //[PUT] //orders/:id
+    async update(req,res,next){
+        //Update Address
+        const formData = req.body;
+        const formAddress = JSON.parse(formData.receiverIdAddress);
+
+        //Check Ward Changed
+        const isWardChanged = await Order.findOne({_id: req.params.id})
+            .populate("receiverIdAddress")
+            .then(order=>{
+                if (order.idWard == formAddress.idWard)
+                    return false;
+                else
+                    return true;
+            })
+
+        console.log(formAddress);
+         //Config Fee
+        await ChangeFee(formData,isWardChanged, next);
+
+        //Update Address
+        const updateAddress = addressController.update(formAddress._id,formAddress);
+
+        delete formData.receiverIdAddress;
+
+        //Update Information
+        const updateOrder = new Promise((resolve, reject) => {
+        Order.updateOne({ _id: req.params.id }, formData)
+            .then(() => resolve())
+            .catch(() => reject());
+        });
+
+        Promise.all([updateAddress, updateOrder])
+        .then((result) => {
+            res.status(200).json({ status: 200, message: "Update success" });
+        })
+        .catch(next);
     }
 
     //[GET] /orders/handling
@@ -144,14 +183,15 @@ class OrderController {
     }
 }
 
-//Tinh phi giao hang
-function Fee(formData, next){
+//All Fee Delivery
+function Fee(formData, isChangedAddress, next){
         let standardFee = 0;
         let surCharge = 0;
         let commission = 0;
         let feeChangeAddressDelivery = 0;
         let feeStorageCharges = 0;
         let feeReturn = 0;
+
     //Get Delivery Method
         const deliveryMethod = DeliveryMethod.findOne({_id: formData.idDeliveryMethod})
             .then(deliveryMethod=> deliveryMethod)
@@ -201,6 +241,11 @@ function Fee(formData, next){
                 if (formData.isUseCommission){
                     commission = store.idCommission.ratioCommission * standardFee / 100;
                 }
+
+                //Add Fee Changed Address
+                if (isChangedAddress)
+                    feeChangeAddressDelivery = Number(deliveryMethod.feeChangeAddressDelivery);
+
                 let totalFee = standardFee + surCharge - commission + feeChangeAddressDelivery + feeStorageCharges + feeReturn;
                 return {
                     nameMethodDelivery: deliveryMethod.name,
@@ -216,9 +261,9 @@ function Fee(formData, next){
             .catch(next);
 }
 
-//Create Order and List Fee
-async function ChangeFee(formData, next){
-    const fee = await Fee(formData);
+//Create Fee For Order
+async function ChangeFee(formData, isChangedAddress, next){
+    const fee = await Fee(formData, isChangedAddress, next);
     formData.standardFee = fee.standardFee;
     formData.surCharge = fee.surCharge;
     formData.commission = fee.commission;
