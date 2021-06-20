@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const Order = new Schema({
+        idPresentStatus: {type: mongoose.Schema.Types.ObjectId, ref: "detailstatuses"},
+
         idStore: {type: mongoose.Schema.Types.ObjectId, ref: "stores"},
         idStaff: {type: mongoose.Schema.Types.ObjectId, ref: "staffs"},
         orderName: {type: String, default: "No Name"},

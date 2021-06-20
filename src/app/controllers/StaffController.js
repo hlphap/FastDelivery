@@ -221,7 +221,7 @@ class StaffController {
       .catch(next);
 
     if (staff.idTypeStaff.level == 0){
-    //Doanh thu
+    //Revenue
     const deliveryRevenue = Order.find({})
         .then((orders)=>{
           return orders.reduce((deliveryRevenue, order)=>{
@@ -234,7 +234,7 @@ class StaffController {
           },0)
         })
 
-      //Luong
+      //Salary
       const salaryAmount = Staff.find({})
         .then((staffs)=>{
           return staffs.reduce((salaryAmount, staff)=>{

@@ -3,6 +3,7 @@ const Store = require("../models/Store");
 const Ward = require("../models/Ward");
 const DeliveryMethod = require("../models/DeliveryMethod");
 const Status = require("../models/Status");
+const DetailStatus = require("../models/DetailStatus");
 
 const addressController = require("./AddressController");
 const storeController = require("./StoreController");
@@ -180,6 +181,25 @@ class OrderController {
              .populate("idStaff")
              .then(orders => res.status(200).json(orders))
             .catch(next);
+    }
+
+    //[GET] /orders/:id/tracking
+    tracking(req, res, next){
+        const detailStatuses = detailStatusController.tracking(req.params.id);
+        detailStatuses
+            .then((detailStatuses)=>res.status(200).json(detailStatuses));
+    }
+
+    //[GET] /orders/:id/statusesNext
+    statusesNext(req, res, next){
+        const a = Order.findById({_id : req.params.id})
+
+
+    }
+
+    //[PUT] /orders/:id/updateStatus
+    updateStatus(req, res, next){
+
     }
 }
 
