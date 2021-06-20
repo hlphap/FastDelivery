@@ -1,7 +1,9 @@
 const Staff = require("../models/Staff");
+const Order = require("../models/Order");
+const CommissionStaff = require("../models/CommissionStaff");
+const TypeStaff = require("../models/TypeStaff");
+
 const addressController = require("./AddressController");
-const CommissionStaff = require("../models/CommissionStaff")
-const Order = require("../models/Order")
 
 class StaffController {
   //[GET] staffs/
@@ -64,7 +66,7 @@ class StaffController {
     const formData = req.body;
     const formAddress = JSON.parse(formData.idAddress);
 
-    console.log(formAddress);
+    //console.log(formAddress);
     const updateAddress = addressController.update(
       formAddress._id,
       formAddress
@@ -103,8 +105,8 @@ class StaffController {
       .catch(next);
   }
 
-  //[GET] staffs/login
-  login(req,res,next){
+  //[GET] staffs/login/delivery
+  loginStaffDelivery(req,res,next){
     Staff.findOne({
       email: req.query.email,
       password: req.query.password,
@@ -120,12 +122,43 @@ class StaffController {
       }
     })
     .then((staff)=>{
-      if (staff == null)
-        next({
+      if (staff != null && staff.idTypeStaff.level == 1){
+        res.status(200).json(staff);
+      }else{
+         next({
           status: 401,
           message: "Incorrect email or password",
         });
-      else res.status(200).json(staff);
+      }
+    })
+    .catch(next);
+  }
+
+  //[GET] staffs/login/manager
+  loginStaffManager(req,res,next){
+    Staff.findOne({
+      email: req.query.email,
+      password: req.query.password,
+    })
+    .populate("idCommission")
+    .populate("idTypeStaff")
+    .populate({
+      path: "idAddress",
+      populate: {
+        path: "idWard",
+        model: "wards",
+        populate: "idDistrict",
+      }
+    })
+    .then((staff)=>{
+      if (staff != null && staff.idTypeStaff.level == 0){
+        res.status(200).json(staff);
+      }else{
+         next({
+          status: 401,
+          message: "Incorrect email or password",
+        });
+      }
     })
     .catch(next);
   }

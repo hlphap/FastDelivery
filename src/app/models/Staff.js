@@ -12,7 +12,7 @@ const Staff = new Schema(
     actualSalary: { type: String, default: "0" },
     email: { type: String, require: true, unique: true },
     password: { type: String, require: true },
-    idTypeStaff : {type:mongoose.Schema.Types.ObjectId, ref : "typestaffs", require: true},
+    idTypeStaff : {type:mongoose.Schema.Types.ObjectId, ref : "typestaffs", default: "60c6e230c6b3d644d416ed56"},
     idCommission : {type:mongoose.Schema.Types.ObjectId, ref : "commissionstaffs", require: true},
     idAddress : {type:mongoose.Schema.Types.ObjectId, ref : "addresses", require: true}
   },
