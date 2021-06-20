@@ -315,12 +315,12 @@ function Fee(formData, isChangedAddress, next){
                 }
                 //Add Commission
                 if (formData.isUseCommission){
-                    commission = store.idCommission.ratioCommission * standardFee / 100;
+                    commission += store.idCommission.ratioCommission * standardFee / 100;
                 }
 
                 //Add Fee Changed Address
                 if (isChangedAddress)
-                    feeChangeAddressDelivery = Number(deliveryMethod.feeChangeAddressDelivery);
+                    feeChangeAddressDelivery += Number(deliveryMethod.feeChangeAddressDelivery);
 
                 let totalFee = standardFee + surCharge - commission + feeChangeAddressDelivery + feeStorageCharges + feeReturn;
                 return {
