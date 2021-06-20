@@ -5,6 +5,7 @@ const router = express.Router();
 const staffController = require("../app/controllers/StaffController");
 
 //CRUD
+router.get("/:id/statistic", staffController.statistic);
 router.get("/login/delivery", staffController.loginStaffDelivery);
 router.get("/login/manager", staffController.loginStaffManager)
 router.get("/:id/orders", staffController.orders);

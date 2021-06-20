@@ -172,7 +172,7 @@ class StaffController {
       .then((commission) => res.status(200).json(commission))
       .catch(next);
   }
-
+  //[GET] staffs/:id/orders
   orders(req, res, next){
     Order.find({idStaff: req.params.id})
       .populate(
@@ -211,6 +211,47 @@ class StaffController {
         .populate("idDeliveryMethod")
       .then((orders)=>res.status(200).json(orders))
       .catch(next);
+  }
+
+  //[GET] staffs/:id/statistic
+  async statistic(req, res, next){
+    const staff = await Staff.findOne({_id: req.params.id})
+      .populate("idTypeStaff")
+      .then((staff)=>staff)
+      .catch(next);
+
+    if (staff.idTypeStaff.level == 0){
+    //Doanh thu
+    const deliveryRevenue = Order.find({})
+        .then((orders)=>{
+          return orders.reduce((deliveryRevenue, order)=>{
+            if (order.updatedAt.getMonth()== new Date().getMonth()){
+              if (order.isHandling){
+                deliveryRevenue += Number(order.totalFee);
+              }
+            }
+            return deliveryRevenue;
+          },0)
+        })
+
+      //Luong
+      const salaryAmount = Staff.find({})
+        .then((staffs)=>{
+          return staffs.reduce((salaryAmount, staff)=>{
+            return salaryAmount + Number(staff.actualSalary);
+          },0)
+        })
+
+      Promise.all([deliveryRevenue, salaryAmount])
+        .then(([deliveryRevenue,salaryAmount])=>{
+          let profit = deliveryRevenue - salaryAmount;
+          res.status(200).json({
+            deliveryRevenue: deliveryRevenue,
+            salaryAmount: salaryAmount,
+            profit: profit,
+          })
+        })
+    }
   }
 }
 

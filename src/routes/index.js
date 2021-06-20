@@ -10,6 +10,7 @@ const cmStoresRouter = require("./cmstores");
 const cmStaffsRouter = require("./cmstaff");
 const dvMethodsRouter = require("./dvmethods");
 const ordersRouter = require("./orders");
+const newStaffsRouter = require("./new-staffs");
 
 function routes(app) {
   app.use("/banks", banksRouter);
@@ -23,6 +24,7 @@ function routes(app) {
   app.use("/cmstaffs", cmStaffsRouter);
   app.use("/dvmethods", dvMethodsRouter);
   app.use("/orders", ordersRouter);
+  app.use("/new-staffs",newStaffsRouter);
 
 
   // app.use((req, res, next) => {
