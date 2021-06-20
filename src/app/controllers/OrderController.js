@@ -192,9 +192,12 @@ class OrderController {
 
     //[GET] /orders/:id/statusesNext
     statusesNext(req, res, next){
-        const a = Order.findById({_id : req.params.id})
-
-
+        Order.findById({_id : req.params.id})
+            .populate({
+                path: "idPresentStatus",
+                populate: "idStatus",
+            })
+            .then(statuses=> res.json(statuses))
     }
 
     //[PUT] /orders/:id/updateStatus

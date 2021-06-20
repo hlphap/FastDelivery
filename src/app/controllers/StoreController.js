@@ -134,6 +134,10 @@ class StoreController {
   //[GET] stores/:id/orders
   orders(req,res,next){
     Order.find({idStore: req.params.id})
+      .populate({
+        path: "idPresentStatus",
+        populate: "idStatus",
+      })
       .populate(
             {
                 path: "idStore",

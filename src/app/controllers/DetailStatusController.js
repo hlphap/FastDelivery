@@ -1,7 +1,6 @@
 const DetailStatus = require("../models/DetailStatus");
 const Order = require("../models/Order");
 class DetailStatusController{
-
     create (formData){
         //Created History
         const detailstatus = DetailStatus(formData);
@@ -9,8 +8,9 @@ class DetailStatusController{
             .save()
             .then((status)=> {
                 //Update Status Present
+                console.log(status);
                 Order.updateOne({_id: status.idOrder},{idPresentStatus: status._id})
-                .save();
+                .then();
             })
             .catch((err) => ({
                 message: err.message,
