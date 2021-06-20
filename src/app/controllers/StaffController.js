@@ -221,21 +221,35 @@ class StaffController {
   async statistic(req, res, next){
     const staff = await Staff.findOne({_id: req.params.id})
       .populate("idTypeStaff")
-      .then((staff)=>staff)
+      .then(staff=>staff)
       .catch(next);
 
     if (staff.idTypeStaff.level == 0){
     //Revenue
     const deliveryRevenue = Order.find({})
+        .populate({
+          path: "idPresentStatus",
+          populate: "idStatus",
+        })
         .then((orders)=>{
-          return orders.reduce((deliveryRevenue, order)=>{
+          return orders.reduce((result, order)=>{
             if (order.updatedAt.getMonth()== new Date().getMonth()){
-              if (order.isHandling){
-                deliveryRevenue += Number(order.totalFee);
+              result.countAllOrder++;
+              result.revenue += Number(order.totalFee);
+              if (order.idPresentStatus != null){
+                if (order.idPresentStatus.idStatus.nameEnglish == "OrderDeliveredSuccessfully")
+                  result.countOrderSuccess++;
+                else if (order.idPresentStatus.idStatus.nameEnglish == "DeliveryFailed")
+                  result.countOrderFailed++;
               }
             }
-            return deliveryRevenue;
-          },0)
+            return result;
+          },{
+            revenue: 0,
+            countAllOrder : 0,
+            countOrderSuccess: 0,
+            countOrderFailed: 0,
+          })
         })
 
       //Salary
@@ -248,14 +262,17 @@ class StaffController {
 
       Promise.all([deliveryRevenue, salaryAmount])
         .then(([deliveryRevenue,salaryAmount])=>{
-          let profit = deliveryRevenue - salaryAmount;
+          let profit = deliveryRevenue.revenue - salaryAmount;
           res.status(200).json({
-            deliveryRevenue: deliveryRevenue,
+            deliveryRevenue: deliveryRevenue.revenue,
             salaryAmount: salaryAmount,
             profit: profit,
+            countAllOrder: deliveryRevenue.countAllOrder,
+            countOrderSuccess: deliveryRevenue.countOrderSuccess,
+            countOrderFailed: deliveryRevenue.countOrderFailed,
           })
         })
-    }
+      }
   }
 }
 
