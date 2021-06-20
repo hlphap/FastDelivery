@@ -9,9 +9,11 @@ class WarehouseController {
       .populate("idAddress")
       .populate({
         path: "idAddress",
-        populate: "idWard",
+        populate: {
+          path: "idWard",
+          populate: "idDistrict",
+        },
       })
-      .populate("idDistrict")
       .then((warehouses) => res.status(200).json(warehouses))
       .catch(next);
   }
@@ -22,9 +24,11 @@ class WarehouseController {
       .populate("idAddress")
       .populate({
         path: "idAddress",
-        populate: "idWard",
+        populate: {
+          path: "idWard",
+          populate: "idDistrict",
+        },
       })
-      .populate("idDistrict")
       .then((warehouse) => res.status(200).json(warehouse))
       .catch(next);
   }
