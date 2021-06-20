@@ -192,12 +192,20 @@ class OrderController {
 
     //[GET] /orders/:id/statusesNext
     statusesNext(req, res, next){
+
         Order.findById({_id : req.params.id})
             .populate({
                 path: "idPresentStatus",
                 populate: "idStatus",
             })
-            .then(statuses=> res.json(statuses))
+            .then(statuses=> statuses.idPresentStatus)
+            .then(presentStatus=>{
+                switch(presentStatus.idStatus.nameEnglish){
+                case "NoProcess":{
+
+                }
+                }
+            })
     }
 
     //[PUT] /orders/:id/updateStatus

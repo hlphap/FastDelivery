@@ -175,6 +175,10 @@ class StaffController {
   //[GET] staffs/:id/orders
   orders(req, res, next){
     Order.find({idStaff: req.params.id})
+      .populate({
+        path: "idPresentStatus",
+        populate: "idStatus",
+      })
       .populate(
             {
                 path: "idStore",
