@@ -81,7 +81,7 @@ class OrderController {
             .catch(next);
 
         //4 Create Detail Status
-        detailStatusController.create({idOrder: order.id})
+        detailStatusController.create({idOrder: order.id});
     }
 
     //[PUT] //orders/:id/assignment
@@ -90,7 +90,9 @@ class OrderController {
         const formDetailStatus = formData;
         formDetailStatus.idStatus = "60c6e2d5c6b3d644d416ed57";
         formDetailStatus.idOrder = req.params.id;
+
         detailStatusController.create(formDetailStatus);
+        //formDetailStatus : idStaff
 
         //Update Order
         formData.isHandling = true;
@@ -192,7 +194,6 @@ class OrderController {
 
     //[GET] /orders/:id/statusesNext
     statusesNext(req, res, next){
-
         const promise = Order.findById({_id : req.params.id})
             .populate({
                 path: "idPresentStatus",
@@ -241,7 +242,13 @@ class OrderController {
 
     //[PUT] /orders/:id/updateStatus
     updateStatus(req, res, next){
-
+        const formData = req.body;
+        formData.idOrder = req.params.id;
+        detailStatusController.create(formData);
+        res.status(200).json({
+            status: "200",
+            message: "Update status success",
+        })
     }
 }
 

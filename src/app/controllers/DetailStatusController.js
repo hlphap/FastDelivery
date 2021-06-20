@@ -8,7 +8,6 @@ class DetailStatusController{
             .save()
             .then((status)=> {
                 //Update Status Present
-                console.log(status);
                 Order.updateOne({_id: status.idOrder},{idPresentStatus: status._id})
                 .then();
             })
