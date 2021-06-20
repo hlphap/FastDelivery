@@ -250,6 +250,13 @@ class OrderController {
             message: "Update status success",
         })
     }
+
+    //[DELETE] /orders/:id/detailstatuses/:idDetailStatus
+    deleteStatus(req, res, next){
+        DetailStatus.deleteOne({_id : req.params.idDetailStatus})
+           .then(() => res.status(200).json({ status: 200, message: "Delete success" }))
+      .catch(next);
+    }
 }
 
 //All Fee Delivery
