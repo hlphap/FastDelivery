@@ -5,6 +5,7 @@ const Status = new Schema(
   {
     name: { type: String },
     note: { type: String },
+    nameEnglish: {type: String},
   },
   {
     timestamps: true,

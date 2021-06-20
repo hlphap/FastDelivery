@@ -193,19 +193,50 @@ class OrderController {
     //[GET] /orders/:id/statusesNext
     statusesNext(req, res, next){
 
-        Order.findById({_id : req.params.id})
+        const promise = Order.findById({_id : req.params.id})
             .populate({
                 path: "idPresentStatus",
                 populate: "idStatus",
             })
             .then(statuses=> statuses.idPresentStatus)
             .then(presentStatus=>{
+                let resultNextStatus = [];
+                let a;
                 switch(presentStatus.idStatus.nameEnglish){
-                case "NoProcess":{
-
+                    case "NoProcess":{
+                        a = Status.find({nameEnglish: "Processed"})
+                            .then((status)=>{
+                                statuses.forEach(status=>{
+                                    resultNextStatus.push(status)
+                                })
+                            });
+                        break;
+                    }
+                    case "Processed":{
+                       a =  Status.find({nameEnglish: "OrderedFromTheStore"})
+                            .then((statuses)=>{
+                                statuses.forEach(status=>{
+                                    resultNextStatus.push(status)
+                                })
+                            });
+                        break;
+                    }
+                    case "OrderedFromTheStore":{
+                       a =  Status.find({ $or: [
+                                {nameEnglish: "OrderDeliveredSuccessfully"},
+                                {nameEnglish: "DeliveryFailed"}
+                            ]})
+                            .then((statuses)=>{
+                                statuses.forEach(status=>{
+                                    resultNextStatus.push(status)
+                                })
+                            });
+                        break;
+                    }
                 }
-                }
+               a.then(()=>res.json(resultNextStatus));
             })
+            .catch(next);
     }
 
     //[PUT] /orders/:id/updateStatus
