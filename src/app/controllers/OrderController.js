@@ -46,6 +46,10 @@ class OrderController {
                 }
             )
             .populate("idDeliveryMethod")
+            .populate({
+                path: "idPresentStatus",
+                populate: "idStatus",
+            })
             .then(orders => res.status(200).json(orders))
             .catch(next);
     }
