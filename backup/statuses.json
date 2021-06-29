@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "60c6e2537a76938e1d1d6b3f"
+  },
+  "name": "Chưa xử lý",
+  "note": "Chưa xử lý",
+  "nameEnglish": "NoProcess"
+},{
+  "_id": {
+    "$oid": "60c6e2d5c6b3d644d416ed57"
+  },
+  "name": "Đã xử lý",
+  "note": "Nhân viên đang đến nhận đơn hàng",
+  "nameEnglish": "Processed"
+},{
+  "_id": {
+    "$oid": "60c6e2eec6b3d644d416ed58"
+  },
+  "name": "Đã lấy hàng từ cửa hàng",
+  "note": "Đã lấy hàng từ cửa hàng",
+  "nameEnglish": "OrderedFromTheStore"
+},{
+  "_id": {
+    "$oid": "60cb0617eb12ef48f8f4abf7"
+  },
+  "name": "Giao hàng thành công",
+  "note": "",
+  "nameEnglish": "OrderDeliveredSuccessfully"
+},{
+  "_id": {
+    "$oid": "60cdc71701720339ecf8e03d"
+  },
+  "name": "Giao hàng thất bại",
+  "note": "",
+  "nameEnglish": "DeliveryFailed"
+}]

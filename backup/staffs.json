@@ -1,23 +1,51 @@
 [{
   "_id": {
-    "$oid": "60c7591d75bb12145dee52de"
+    "$oid": "60d031bb02ac4a76acba5684"
+  },
+  "gender": "Nam",
+  "dateOfBirth": "04/04/1999",
+  "basicSalary": "4000000",
+  "actualSalary": "5500000",
+  "idTypeStaff": {
+    "$oid": "60c6e1767a76938e1d1d6b3e"
   },
   "fullName": "Huỳnh Long Pháp",
-  "gender": "Nam",
-  "dateOfBirth": "27/04/2000",
   "idNumber": "221482959",
   "phone": "0352796298",
-  "actualSalary": "70000000",
-  "email": "longphappy@gmail.com",
-  "password": "123123",
+  "email": "admin@gmail.com",
+  "password": "admin",
+  "idAddress": {
+    "$oid": "60d031bb02ac4a76acba5683"
+  },
+  "createdAt": {
+    "$date": "2021-06-21T06:29:15.694Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-21T06:29:15.694Z"
+  }
+},{
+  "_id": {
+    "$oid": "60db2df8a15a467ffb9c1f41"
+  },
+  "gender": "nam",
+  "dateOfBirth": "29/6/2016",
+  "basicSalary": "1200000",
+  "actualSalary": "1200000",
   "idTypeStaff": {
     "$oid": "60c6e230c6b3d644d416ed56"
   },
-  "idCommission": {
-    "$oid": "60c6ea607a76938e1d1d6b42"
-  },
+  "fullName": "Hoai Nam",
+  "idNumber": "09123123",
+  "phone": "0923222",
+  "email": "hoainam1@gmail.com",
+  "password": "123456",
   "idAddress": {
-    "$oid": "60c75a1cde1d0d0fd00a7bae"
+    "$oid": "60db2df8a15a467ffb9c1f40"
   },
-  "basicSalary": "15000000"
+  "createdAt": {
+    "$date": "2021-06-29T14:28:08.325Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-29T14:28:08.325Z"
+  }
 }]

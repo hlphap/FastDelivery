@@ -1,20 +1,40 @@
-[
-    {
-        "name": "Giao hàng nhanh",
-        "innerDistrictFee": "23000",
-        "outerDistrictFee": "33000",
-        "surCharges": "3000",
-        "feeChangeAddressDelivery": "5000",
-        "feeStorageCharges": "5000",
-        "feeReturn": "10000"
-    },
-    {
-        "name": "Giao hàng tiêu chuẩn",
-        "innerDistrictFee": "20000",
-        "outerDistrictFee": "30000",
-        "surCharges": "2000",
-        "feeChangeAddressDelivery": "5000",
-        "feeStorageCharges": "5000",
-        "feeReturn": "10000"
-    }
-]
+[{
+  "_id": {
+    "$oid": "60ca15d4e8277e1cdcb52f42"
+  },
+  "name": "Giao hàng nhanh",
+  "innerDistrictFee": "23000",
+  "outerDistrictFee": "33000",
+  "feeChangeAddressDelivery": "5000",
+  "feeStorageCharges": "5000",
+  "feeReturn": "10000",
+  "surCharge": "3000"
+},{
+  "_id": {
+    "$oid": "60ca15d4e8277e1cdcb52f43"
+  },
+  "name": "Giao hàng tiêu chuẩn",
+  "innerDistrictFee": "20000",
+  "outerDistrictFee": "30000",
+  "feeChangeAddressDelivery": "5000",
+  "feeStorageCharges": "5000",
+  "feeReturn": "10000",
+  "surCharge": "2000"
+},{
+  "_id": {
+    "$oid": "60db3cbb548bb22b1411c5d0"
+  },
+  "name": "Giao hàng nhanh 2",
+  "innerDistrictFee": "23000",
+  "outerDistrictFee": "33000",
+  "feeChangeAddressDelivery": "5000",
+  "feeStorageCharges": "5000",
+  "feeReturn": "10000",
+  "surCharge": "3000",
+  "createdAt": {
+    "$date": "2021-06-29T15:31:07.858Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-29T15:31:34.227Z"
+  }
+}]

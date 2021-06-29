@@ -6,7 +6,10 @@
   "orderPerMonthMin": "10",
   "orderPerMonthMax": "50",
   "ratioCommission": "10",
-  "note": "Đối với những cửa hàng có số lượng đơn hàng giao >50đơn/ tháng sẽ nhận được 10% tổng cước giao hàng trong 10 đơn hàng đầu tiên"
+  "note": "Đối với những cửa hàng có số lượng đơn hàng giao >50đơn/ tháng sẽ nhận được 10% tổng cước giao hàng trong 10 đơn hàng đầu tiên",
+  "updatedAt": {
+    "$date": "2021-06-18T14:06:53.384Z"
+  }
 },{
   "_id": {
     "$oid": "60c6eb6dc6b3d644d416ed5a"
@@ -34,4 +37,19 @@
   "orderPerMonthMax": "200",
   "ratioCommission": "25",
   "note": "Đối với những cửa hàng có số lượng đơn hàng giao từ 150 - 200 đơn hàng/ tháng sẽ nhận được 25% tổng cước giao hàng trong 10 đơn hàng đầu tiên"
+},{
+  "_id": {
+    "$oid": "60cb1f91eb12ef48f8f4abf8"
+  },
+  "name": "Không có hoa hồng",
+  "orderPerMonthMin": "0",
+  "orderPerMonthMax": "0",
+  "ratioCommission": "0",
+  "note": "No note",
+  "createdAt": {
+    "$date": "2021-06-15T08:01:23.311Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-15T08:01:23.311Z"
+  }
 }]

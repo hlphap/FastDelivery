@@ -1,134 +1,111 @@
-[
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5ef"
-    },
-    "name": "Quận 1"
+[{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f0"
-    },
-    "name": "Quận 12"
+  "name": "Quận 1"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f1"
-    },
-    "name": "Quận Gò Vấp"
+  "name": "Quận 12"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f2"
-    },
-    "name": "Quận Bình Thạnh"
+  "name": "Quận Gò Vấp"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f3"
-    },
-    "name": "Quận Tân Bình"
+  "name": "Quận Bình Thạnh"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f4"
-    },
-    "name": "Quận Tân Phú"
+  "name": "Quận Tân Bình"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f5"
-    },
-    "name": "Quận Phú Nhuận"
+  "name": "Quận Tân Phú"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f6"
-    },
-    "name": "Thành phố Thủ Đức"
+  "name": "Quận Phú Nhuận"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f7"
-    },
-    "name": "Quận 3"
+  "name": "Thành phố Thủ Đức"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f8"
-    },
-    "name": "Quận 10"
+  "name": "Quận 3"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5f9"
-    },
-    "name": "Quận 11"
+  "name": "Quận 10"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f9"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5fa"
-    },
-    "name": "Quận 4"
+  "name": "Quận 11"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5fb"
-    },
-    "name": "Quận 5"
+  "name": "Quận 4"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5fc"
-    },
-    "name": "Quận 6"
+  "name": "Quận 5"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5fd"
-    },
-    "name": "Quận 8"
+  "name": "Quận 6"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5fe"
-    },
-    "name": "Quận Bình Tân"
+  "name": "Quận 8"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a5ff"
-    },
-    "name": "Quận 7"
+  "name": "Quận Bình Tân"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a600"
-    },
-    "name": "Huyện Củ Chi"
+  "name": "Quận 7"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a601"
-    },
-    "name": "Huyện Hóc Môn"
+  "name": "Huyện Củ Chi"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a602"
-    },
-    "name": "Huyện Bình Chánh"
+  "name": "Huyện Hóc Môn"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a603"
-    },
-    "name": "Huyện Nhà Bè"
+  "name": "Huyện Bình Chánh"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a603"
   },
-  {
-    "_id": {
-      "$oid": "60b7a50631c6ba3de5e7a604"
-    },
-    "name": "Huyện Cần Giờ"
-  }
-]
+  "name": "Huyện Nhà Bè"
+},{
+  "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a604"
+  },
+  "name": "Huyện Cần Giờ"
+}]

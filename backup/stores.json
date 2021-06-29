@@ -1,53 +1,53 @@
 [{
   "_id": {
-    "$oid": "60c5b0d1387b7839b24c7dfd"
+    "$oid": "60db251520f8f77ce07e09d9"
+  },
+  "idCommission": {
+    "$oid": "60cb1f91eb12ef48f8f4abf8"
   },
   "email": "hoainam1@gmail.com",
   "password": "123456",
-  "name": "KD House's",
-  "phone": "123",
-  "accountNumber": "123",
-  "accountName": "hoainam",
-  "idBank": {
-    "$oid": "60c5a0b508ec8b5522273cbb"
-  },
+  "name": "Hoai Nam Store",
+  "phone": "090356270",
+  "accountNumber": "123123123",
+  "accountName": "hoai Name",
   "idAddress": {
-    "$oid": "60c5b0d1387b7839b24c7dfc"
+    "$oid": "60db251520f8f77ce07e09d8"
   },
-  "branchBank": "1",
-  "createdAt": {
-    "$date": "2021-06-13T07:16:33.202Z"
-  },
-  "updatedAt": {
-    "$date": "2021-06-13T15:55:34.330Z"
-  },
-  "idCommission": {
-    "$oid": "60c6ea607a76938e1d1d6b42"
-  }
-},{
-  "_id": {
-    "$oid": "60c5c603a37ad340f85fe6df"
-  },
-  "email": "hoainam2@gmail.com",
-  "password": "123456",
-  "name": "hoainam",
-  "phone": "123123",
-  "accountNumber": "123",
-  "accountName": "hoainam2",
   "idBank": {
-    "$oid": "60c5a0b508ec8b5522273cbb"
-  },
-  "idAddress": {
-    "$oid": "60c5c603a37ad340f85fe6de"
+    "$oid": "60db20b7b6bfff231c705fd9"
   },
   "branchBank": "HCM",
   "createdAt": {
-    "$date": "2021-06-13T08:46:59.777Z"
+    "$date": "2021-06-29T13:50:13.407Z"
   },
   "updatedAt": {
-    "$date": "2021-06-13T08:46:59.777Z"
+    "$date": "2021-06-29T13:50:13.407Z"
+  }
+},{
+  "_id": {
+    "$oid": "60db265e20f8f77ce07e09db"
   },
   "idCommission": {
-    "$oid": "60c6ea607a76938e1d1d6b42"
+    "$oid": "60cb1f91eb12ef48f8f4abf8"
+  },
+  "email": "hoainam2@gmail.com",
+  "password": "123456",
+  "name": "KD House",
+  "phone": "090302234",
+  "accountNumber": "321123123",
+  "accountName": "Hoai Nam",
+  "idAddress": {
+    "$oid": "60db265e20f8f77ce07e09da"
+  },
+  "idBank": {
+    "$oid": "60db20b7b6bfff231c705f9c"
+  },
+  "branchBank": "HCM",
+  "createdAt": {
+    "$date": "2021-06-29T13:55:42.060Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-29T13:55:42.060Z"
   }
 }]

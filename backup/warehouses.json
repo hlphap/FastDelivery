@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "60db3148a15a467ffb9c1f47"
+  },
+  "name": "WareHousing 1",
+  "idAddress": {
+    "$oid": "60db3148a15a467ffb9c1f46"
+  },
+  "createdAt": {
+    "$date": "2021-06-29T14:42:16.971Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-29T14:42:16.971Z"
+  }
+}]

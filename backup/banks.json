@@ -1,158 +1,157 @@
 [{
   "_id": {
     "$oid": "60db20b7b6bfff231c705f9b"
-    },
+  },
   "vn_name": "Ngân hàng An Bình",
   "name": "ABBank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705f9c"
-    },
+  },
   "vn_name": "Ngân hàng Á Châu",
   "name": "ACB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705f9d"
-    },
+  },
   "vn_name": "Ngân hàng NN & PTNT VN",
   "name": "Agribank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fa1"
-    },
+  },
   "vn_name": "Ngân hàng TMCP Bảo Việt",
   "name": "Baoviet Bank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fa5"
-    },
+  },
   "vn_name": "Ngân hàng Đầu tư và Phát triển Việt Nam",
   "name": "BIDV"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705faf"
-    },
+  },
   "vn_name": "The Chase Manhattan Bank",
   "name": "CHASE"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fb0"
-    },
+  },
   "vn_name": "Ngân hàng TNHH MTV CIMB Việt Nam",
   "name": "CIMB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fb8"
-    },
+  },
   "vn_name": "Ngân hàng Đông Á",
   "name": "Dong A Bank, DAB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fb9"
-    },
+  },
   "vn_name": "Ngân hàng Xuất nhập khẩu Việt Nam",
   "name": "Eximbank, EIB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fbc"
-    },
+  },
   "vn_name": "Ngân hàng Phát triển TP HCM",
   "name": "HDBank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fcb"
-    },
+  },
   "vn_name": "Ngân hàng Quân Đội",
   "name": "MB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fd0"
-    },
+  },
   "vn_name": "Ngân hàng Nam Á",
   "name": "Nam A Bank, NAB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fd1"
-    },
+  },
   "vn_name": "Ngân hàng Bắc Á",
   "name": "NASBank, NASB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fd4"
-    },
+  },
   "vn_name": "Ngân hàng Đại Dương",
   "name": "Ocean Bank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fd5"
-    },
+  },
   "vn_name": "Ngân hàng Phương Đông",
   "name": "Oricombank, OCB, PhuongDong Bank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fd9"
-    },
+  },
   "vn_name": "Ngân hàng Sài Gòn Thương Tín",
   "name": "Sacombank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fda"
-    },
+  },
   "vn_name": "Ngân hàng Sài Gòn Công Thương",
   "name": "Saigonbank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fdc"
-    },
+  },
   "vn_name": "Ngân hàng TMCP Sài Gòn",
   "name": "SCB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fe1"
-    },
+  },
   "vn_name": "Ngân hàng Sài Gòn - Hà Nội",
   "name": "SHB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fe7"
-    },
+  },
   "vn_name": "Ngân hàng Kỹ thương Việt Nam",
   "name": "Techcombank, TCB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fec"
-    },
+  },
   "vn_name": "Ngân hàng Phát triển Việt Nam",
   "name": "VDB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705fed"
-    },
+  },
   "vn_name": "Ngân hàng Quốc tế",
   "name": "VIBank, VIB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705ff0"
-    },
+  },
   "vn_name": "Ngân hàng Việt Á",
   "name": "VietA Bank, VAB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705ff3"
-    },
+  },
   "vn_name": "Ngân hàng TMCP Ngoại Thương",
   "name": "Vietcombank, VCB"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705ff4"
-    },
+  },
   "vn_name": "Ngân hàng công thương Việt Nam",
   "name": "Vietinbank"
 },{
   "_id": {
     "$oid": "60db20b7b6bfff231c705ff6"
-    },
+  },
   "vn_name": "Ngân hàng Thương mại cổ phần Việt Nam Thịnh Vượng",
   "name": "VPBank"
-}
-]
+}]

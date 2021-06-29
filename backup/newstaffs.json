@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "60ce9ed414356d553cee900d"
+  },
+  "email": "longphappy@gmail.com",
+  "phone": "0352796298",
+  "createdAt": {
+    "$date": "2021-06-20T01:50:12.451Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-20T01:50:12.451Z"
+  }
+},{
+  "_id": {
+    "$oid": "60d030b302ac4a76acba5682"
+  },
+  "email": "hoainam2@gmail.com",
+  "phone": "123123321",
+  "createdAt": {
+    "$date": "2021-06-21T06:24:51.534Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-21T06:24:51.534Z"
+  }
+}]

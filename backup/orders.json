@@ -1,40 +1,83 @@
-[
-    {
-        "idStore": "60c5b0d1387b7839b24c7dfd",
-        "idStaff": "",
-        "orderName": "First Delivery",
-        "recieverName": "Huynh Long Phap",
-        "recieverIdAddress": "60ca185978ceea290c4859ce",
-        "recieverPhone": "0352796298",
-        "recieverEmail": "longphappy@gmail.com",
-        "orderMoney": "0",
-        "totalWeight": "5",
-        "note": "No",
-        "idDeliveryMethod": "60ca15d4e8277e1cdcb52f42",
-        "isUseCommission": false,
-        "feeDelivery": "5000",
-
-        "feeChangeAddressDelivery": "0",
-        "feeStorageCharges": "0",
-        "feeReturn": "0"
-    },
-    {
-        "idStore": "60c5b0d1387b7839b24c7dfd",
-        "idStaff": "",
-        "orderName": "Second Delivery",
-        "recieverName": "Nguyễn Văn Hoài Nam",
-        "recieverIdAddress": "60ca190a78ceea290c4859cf",
-        "recieverPhone": "0352796298",
-        "recieverEmail": "hoainam@gmail.com",
-        "orderMoney": "0",
-        "totalWeight": "5",
-        "note": "No",
-        "idDeliveryMethod": "60ca15d4e8277e1cdcb52f42",
-        "isUseCommission": false,
-        "feeDelivery": "5000",
-
-        "feeChangeAddressDelivery": "0",
-        "feeStorageCharges": "0",
-        "feeReturn": "0"
-    }
-]
+[{
+  "_id": {
+    "$oid": "60db273620f8f77ce07e09dd"
+  },
+  "orderName": "Clock",
+  "orderMoney": "400000",
+  "note": "No",
+  "isUseCommission": false,
+  "standardFee": "30000",
+  "surCharge": "8000",
+  "commission": "0",
+  "feeChangeAddressDelivery": "0",
+  "feeStorageCharges": "0",
+  "feeReturn": "0",
+  "totalFee": "38000",
+  "isHandling": true,
+  "idStore": {
+    "$oid": "60db251520f8f77ce07e09d9"
+  },
+  "totalWeight": "5",
+  "receiverName": "Hoai Nam",
+  "receiverPhone": "1233211231",
+  "receiverEmail": "hoainam@gmail.com",
+  "receiverIdAddress": {
+    "$oid": "60db273620f8f77ce07e09dc"
+  },
+  "idDeliveryMethod": {
+    "$oid": "60ca15d4e8277e1cdcb52f43"
+  },
+  "createdAt": {
+    "$date": "2021-06-29T13:59:18.737Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-29T15:03:11.685Z"
+  },
+  "idPresentStatus": {
+    "$oid": "60db362fa15a467ffb9c1f48"
+  },
+  "idStaff": {
+    "$oid": "60db2df8a15a467ffb9c1f41"
+  }
+},{
+  "_id": {
+    "$oid": "60db27fb20f8f77ce07e09e0"
+  },
+  "orderName": "Organe",
+  "orderMoney": "35000",
+  "note": "None",
+  "isUseCommission": false,
+  "standardFee": "33000",
+  "surCharge": "42000",
+  "commission": "0",
+  "feeChangeAddressDelivery": "0",
+  "feeStorageCharges": "0",
+  "feeReturn": "0",
+  "totalFee": "75000",
+  "isHandling": true,
+  "idStore": {
+    "$oid": "60db251520f8f77ce07e09d9"
+  },
+  "totalWeight": "10",
+  "receiverName": "Hoai Nam",
+  "receiverPhone": "09752637",
+  "receiverEmail": "123@gmail.com",
+  "receiverIdAddress": {
+    "$oid": "60db27fb20f8f77ce07e09df"
+  },
+  "idDeliveryMethod": {
+    "$oid": "60ca15d4e8277e1cdcb52f42"
+  },
+  "createdAt": {
+    "$date": "2021-06-29T14:02:35.641Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-29T14:31:00.360Z"
+  },
+  "idPresentStatus": {
+    "$oid": "60db2ea4a15a467ffb9c1f45"
+  },
+  "idStaff": {
+    "$oid": "60db2df8a15a467ffb9c1f41"
+  }
+}]
