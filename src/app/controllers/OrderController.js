@@ -11,7 +11,7 @@ const detailStatusController = require("./DetailStatusController");
 class OrderController {
    // [GET] orders/
     index(req, res, next){
-        Order.find({})
+        Order.find({isHandling: true})
             .populate(
                 {
                     path: "idStore",
