@@ -1,9 +1,8 @@
 const Ward = require("../models/Ward");
 const District = require("../models/District");
 const Address = require("../models/Address");
-const { json } = require("express");
-
 class AddressController {
+  //Create Full Address
   async createFullAddress(formData) {
     const getWard = await Ward.findOne({ _id: formData.idWard })
       .then((ward) => ward)
@@ -21,6 +20,7 @@ class AddressController {
     formData.fullAddress = `${formData.noteAddress}, ${getWard.name}, ${getDistrict.name}`;
   }
 
+  //Create Address
   async create(formData) {
     await this.createFullAddress(formData);
     if (formData.hasOwnProperty("_id")) delete formData._id;

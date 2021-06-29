@@ -20,6 +20,12 @@ class StaffController {
         }
       })
       .then((staffs) => {
+        return staffs.filter((staff)=>{
+          if (staff.idTypeStaff.level!="0")
+            return staff;
+        })
+      })
+      .then((staffs)=>{
         res.status(200).json(staffs);
       })
       .catch(next);

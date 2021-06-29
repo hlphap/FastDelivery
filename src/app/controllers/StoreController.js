@@ -1,8 +1,8 @@
 const Store = require("../models/Store");
 const CommissionStore = require("../models/CommissionStore");
-const DetailStatus = require("../models/DetailStatus");
-const addressController = require("../controllers/AddressController");
 const Order = require("../models/Order");
+
+const addressController = require("../controllers/AddressController");
 class StoreController {
   //[GET] stores/
   index(req, res, next) {
@@ -44,8 +44,11 @@ class StoreController {
   async create(req, res, next) {
     const formData = req.body;
     const formAddress = JSON.parse(formData.idAddress);
-    //Create address
+
+    //Create Address
     formData.idAddress = await addressController.create(formAddress);
+
+    //Create Store
     const store = new Store(formData);
     store
       .save()
@@ -180,10 +183,14 @@ class StoreController {
   async statistics(req, res, next){
     //Get order in Month
     const a = await Order.find({idStore: req.params.id})
+      .populate({
+        path: "idPresentStatus",
+        populate: "idStatus"
+      })
       .then((orders)=>{
         return orders.reduce((result, order)=>{
             if (order.updatedAt.getMonth()== new Date().getMonth()){
-              if (order.isHandling){
+              if (order.idPresentStatus.idStatus.nameEnglish=="OrderDeliveredSuccessfully" || order.idPresentStatus.idStatus.nameEnglish=="DeliveryFailed"){
                 result.delivered.orderMoney+=Number(order.orderMoney);
                 result.delivered.surCharge+=Number(order.surCharge);
                 result.delivered.standardFee+=Number(order.standardFee);

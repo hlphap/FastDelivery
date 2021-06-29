@@ -3,11 +3,13 @@ const router = express.Router();
 
 //Controller
 const storeController = require("../app/controllers/StoreController");
-//CRUD
+
 router.get("/:id/statistics", storeController.statistics);
 router.get("/:id/orders", storeController.orders);
 router.get("/:id/commission", storeController.commission);
 router.get("/login", storeController.login);
+
+//CRUD
 router.get("/", storeController.index);
 router.get("/:id", storeController.show);
 router.post("/", storeController.create);
