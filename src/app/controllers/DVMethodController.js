@@ -18,9 +18,36 @@ class DVMethodController{
     //[POST] /dvmethods
     create(req, res, next){
         const formData = req.body;
-        console.log(formData);
+        const dvmethod = new DeliveryMethod(formData);
+        dvmethod
+            .save()
+            .then(()=> res.status(200).json({
+                status: 200,
+                message: "Create Delivery Method Successfully",
+            }))
+            .catch(next);
     }
 
+    //[PUT] /dvmethods/:id
+    update(req,res, next){
+        const formData = req.body;
+        DeliveryMethod.updateOne({_id: req.params.id}, formData)
+            .then(()=> res.status(200).json({
+                status: 200,
+                message: "Update Delivery Method Successfully"
+            }))
+            .catch(next);
+    }
+
+    //[DELETE] /dvmethods/:id
+    delete(req, res, next){
+        DeliveryMethod.deleteOne({_id: req.params.id})
+            .then(()=>res.status(200).json({
+                status: 200,
+                message: "Delete Delivery Method Successfully",
+            }))
+            .catch(next);
+    }
 }
 
 module.exports = new DVMethodController();

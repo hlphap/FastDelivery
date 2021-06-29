@@ -9,6 +9,9 @@ const DeliveryMethod = new Schema({
     feeChangeAddressDelivery: {type: String},
     feeStorageCharges: {type: String},
     feeReturn: {type: String},
+},{
+    timestamps: true,
+    versionKey: false,
 })
 
 module.exports = mongoose.model("deliverymethods", DeliveryMethod);
