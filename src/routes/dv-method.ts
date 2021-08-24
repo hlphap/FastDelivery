@@ -11,4 +11,14 @@ router.route("/")
         DVMethodControllers.create
     )
 
+router.route("/:dvMethodID")
+    .put(
+        validateParam(dvMethodSchema.id, "dvMethodID"),
+        DVMethodControllers.update
+    )
+    .delete(
+        validateParam(dvMethodSchema.id, "dvMethodID"),
+        DVMethodControllers.deleteOne
+    )
+
 export default router;
