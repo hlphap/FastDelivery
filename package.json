@@ -1,25 +1,25 @@
 {
-  "name": "restfulapi_template",
+  "name": "fastdelivery-v2.0",
   "version": "1.0.0",
-  "description": "Template RestfullAPI with NodeJS",
-  "main": "index.js",
+  "description": "Fast Delivery v2.0",
+  "main": "server.ts",
   "scripts": {
     "dev": "nodemon --exec ts-node server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hlphap/restfullapi-template.git"
+    "url": "git+https://github.com/hlphap/fast-delivery.git"
   },
   "keywords": [
-    "template-nodejs"
+    "fast delivery"
   ],
   "author": "Phap Huynh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hlphap/restfullapi-template/issues"
+    "url": "https://github.com/hlphap/fast-delivery/issues"
   },
-  "homepage": "https://github.com/hlphap/restfullapi-template#readme",
+  "homepage": "https://github.com/hlphap/fast-delivery#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",

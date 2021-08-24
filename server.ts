@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import {routes} from "./src/routes/index";
 import db from "./src/configs/index"
-import { string } from "joi";
 
 //Enviroment
 dotenv.config();
