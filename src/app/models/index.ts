@@ -1,4 +1,4 @@
-import DVMethod from "./dvmethods"
+import DVMethod from "./dvmethod"
 
 export {
     DVMethod
