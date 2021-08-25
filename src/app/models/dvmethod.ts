@@ -6,27 +6,35 @@ const Schema = mongoose.Schema;
 const DeliveryMethod = new Schema({
     name: {
         type: String,
+        required: true,
     },
     innerDistrictFee: {
-        type: String,
+        type: Number,
+        default: 10000,
     },
     outerDistrictFee: {
-        type: String,
+        type: Number,
+        default: 10000,
     },
     surChargeInner: {
-        type: String,
+        type: Number,
+        default: 10000,
     },
     surChargeOuter: {
-        type: String,
+        type: Number,
+        default: 10000,
     },
     feeChangeAddressDelivery: {
-        type: String
+        type: Number,
+        default: 10000,
     },
     feeStorageCharges: {
-        type: String
+        type: Number,
+        default: 10000,
     },
     feeReturn: {
-        type: String
+        type: Number,
+        default: 10000,
     },
 },{
     timestamps: true,

@@ -1,14 +1,14 @@
 import { Document } from "mongoose";
 
 interface IDVMethod extends Document {
-    name: string,
-    innerDistrictFee: string,
-    outerDistrictFee: string,
-    surChargeInner: string,
-    surChargeOuter: string,
-    feeChangeAddressDelivery: string,
-    feeStorageCharges: string,
-    feeReturn: string,
+    name: String,
+    innerDistrictFee: Number,
+    outerDistrictFee: Number,
+    surChargeInner: Number,
+    surChargeOuter: Number,
+    feeChangeAddressDelivery: Number,
+    feeStorageCharges: Number,
+    feeReturn: Number,
 }
 
 export default IDVMethod;

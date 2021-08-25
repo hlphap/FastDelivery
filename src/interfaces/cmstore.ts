@@ -4,7 +4,6 @@ interface ICMStore extends Document {
     name: {
         type: String,
         require: true,
-        default: "Commission Store Default"
     },
     orderPerMonthMin: {
         type: Number,

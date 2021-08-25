@@ -6,8 +6,7 @@ const Schema = mongoose.Schema;
 const CommissionStore = new Schema({
     name: {
         type: String,
-        require: true,
-        default: "Commission Store Default"
+        required: true,
     },
     orderPerMonthMin: {
         type: Number,

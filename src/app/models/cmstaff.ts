@@ -6,8 +6,7 @@ const Schema = mongoose.Schema;
 const CommissionStaff = new Schema({
     name: {
         type: String,
-        require: true,
-        default: "Commission Staff Default"
+        required: true,
     },
     orderPerMonthMin: {
         type: Number,
