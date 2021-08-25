@@ -7,7 +7,7 @@ const router = Router();
 router.route("/")
     .get(DVMethodControllers.getAll)
     .post(
-        validateBody(dvMethodSchema.createDVMethod),
+        //validateBody(dvMethodSchema.createDVMethod),
         DVMethodControllers.create
     )
 
