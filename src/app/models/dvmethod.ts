@@ -41,4 +41,9 @@ const DeliveryMethod = new Schema({
     versionKey: false,
 })
 
-export default mongoose.model<IDVMethod>("dvmethods", DeliveryMethod);
+const DVMethod = mongoose.model<IDVMethod>("dvmethods", DeliveryMethod)
+
+export {
+    DVMethod,
+    DeliveryMethod,
+};

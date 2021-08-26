@@ -3,11 +3,15 @@ import ICMStore from "./cmstore";
 import ICMStaff from "./cmstaff";
 import IStaff from "./staff";
 import ITypeStaff from "./type-staff";
+import IDistrict from "./district";
+import IWard from "./ward";
 
 export {
     IDVMethod,
     ICMStore,
     ICMStaff,
     IStaff,
-    ITypeStaff
+    ITypeStaff,
+    IDistrict,
+    IWard,
 }

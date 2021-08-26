@@ -1,4 +1,5 @@
 import mongoose,{ Document } from "mongoose";
+import ITypeStaff from "./type-staff";
 
 interface IStaff extends Document {
     fullName: string,
@@ -6,11 +7,11 @@ interface IStaff extends Document {
     dateOfBirth: string,
     idNumber: string,
     phone: string,
-    basicSalary: string,
-    actualSalary: string,
+    basicSalary: number,
+    actualSalary: number,
     email: string,
     password: string,
-    idTypeStaff: mongoose.Schema.Types.ObjectId,
+    typeStaff: ITypeStaff,
     idCommission:  mongoose.Schema.Types.ObjectId,
     idAddress:  mongoose.Schema.Types.ObjectId,
 }

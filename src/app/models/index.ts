@@ -1,8 +1,10 @@
-import DVMethod from "./dvmethod";
-import CMStaff from "./cmstaff";
-import CMStore from "./cmstore";
-import Staff from "./staff";
-import TypeStaff from "./type-staff"
+import { DVMethod } from "./dvmethod";
+import { CMStaff } from "./cmstaff";
+import { CMStore } from "./cmstore";
+import { Staff } from "./staff";
+import { TypeStaff } from "./type-staff";
+import { District } from "./district";
+import { Ward } from "./ward";
 
 export {
     DVMethod,
@@ -10,4 +12,6 @@ export {
     CMStore,
     Staff,
     TypeStaff,
+    District,
+    Ward,
 };

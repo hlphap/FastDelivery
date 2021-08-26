@@ -1,9 +1,12 @@
 import mongoose from "mongoose";
 import { IStaff } from "../../interfaces";
 
+import { TypeStaffSchema } from "./type-staff";
+import { CommissionStaffSchema } from "./cmstaff";
+
 const Schema = mongoose.Schema;
 
-const Staff = new Schema({
+const StaffSchema = new Schema({
     fullName: {
         type: String,
         require: true,
@@ -25,11 +28,11 @@ const Staff = new Schema({
         required: true,
     },
     basicSalary: {
-        type: String,
+        type: Number,
         default: "0",
     },
     actualSalary: {
-        type: String,
+        type: Number,
         default: "0",
     },
     email: {
@@ -41,14 +44,12 @@ const Staff = new Schema({
         type: String,
         required: true,
     },
-    idTypeStaff: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "typestaffs",
+    typeStaff: {
+        type: TypeStaffSchema,
         required: true,
     },
-    idCommission: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "commissionstaffs",
+    commission: {
+        type: CommissionStaffSchema,
         required: true,
     },
     idAddress: {
@@ -61,4 +62,9 @@ const Staff = new Schema({
     versionKey: false,
 })
 
-export default mongoose.model<IStaff>("staffs", Staff);
+const Staff = mongoose.model<IStaff>("staffs", StaffSchema);
+
+export {
+    StaffSchema,
+    Staff,
+}

@@ -3,7 +3,7 @@ import { ITypeStaff } from "../../interfaces";
 
 const Schema = mongoose.Schema;
 
-const TypeStaff = new Schema({
+const TypeStaffSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -21,4 +21,9 @@ const TypeStaff = new Schema({
     versionKey: false,
 })
 
-export default mongoose.model<ITypeStaff>("typestaffs", TypeStaff);
+const TypeStaff = mongoose.model<ITypeStaff>("typestaffs", TypeStaffSchema);
+
+export {
+    TypeStaffSchema,
+    TypeStaff,
+}

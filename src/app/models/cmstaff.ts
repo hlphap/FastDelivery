@@ -3,7 +3,7 @@ import { ICMStaff } from "../../interfaces";
 
 const Schema = mongoose.Schema;
 
-const CommissionStaff = new Schema({
+const CommissionStaffSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -34,4 +34,9 @@ const CommissionStaff = new Schema({
     versionKey: false,
 })
 
-export default mongoose.model<ICMStaff>("cmstaffs", CommissionStaff);
+const CMStaff = mongoose.model<ICMStaff>("cmstaffs", CommissionStaffSchema);
+
+export {
+    CommissionStaffSchema,
+    CMStaff,
+}
