@@ -1,6 +1,6 @@
 import Router from "express-promise-router";
 import { CMStaffControllers } from "../app/controllers";
-import { validateParam, validateBody, cmStoreSchema} from "../middlewares";
+import { validateParam, validateBody, cmStaffSchema} from "../middlewares";
 
 const router = Router();
 
@@ -12,7 +12,7 @@ router.route("/")
     )
 
 router.route("/:cmStaffID")
-    .all(validateParam(cmStoreSchema.id, "cmStaffID"))
+    .all(validateParam(cmStaffSchema.id, "cmStaffID"))
     .put(
         //validate body not complete
         CMStaffControllers.update

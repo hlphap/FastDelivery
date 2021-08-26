@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import CMStore from "../models/cmstore"
+import { CMStore } from "../models/"
 
 const getAll = async (req: Request, res: Response, next: NextFunction) => {
     const cmstores = await CMStore.find({});

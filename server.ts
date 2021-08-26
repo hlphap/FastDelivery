@@ -1,7 +1,7 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
-import {routes} from "./src/routes/index";
+import routes from "./src/routes/index";
 import db from "./src/configs/index"
 
 //Environment

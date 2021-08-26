@@ -1,5 +1,5 @@
 import {Request, Response, NextFunction} from "express"
-import CMStaff from "../models/cmstaff"
+import { CMStaff } from "../models/"
 
 const getAll = async (req: Request, res: Response, next: NextFunction) => {
     const cmstaffs = await CMStaff.find({});
