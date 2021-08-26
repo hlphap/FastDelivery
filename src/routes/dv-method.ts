@@ -12,12 +12,12 @@ router.route("/")
     )
 
 router.route("/:dvMethodID")
+    .all(validateParam(dvMethodSchema.id, "dvMethodID"))
     .put(
-        validateParam(dvMethodSchema.id, "dvMethodID"),
+        //Incomplete validateBody
         DVMethodControllers.update
     )
     .delete(
-        validateParam(dvMethodSchema.id, "dvMethodID"),
         DVMethodControllers.deleteOne
     )
 

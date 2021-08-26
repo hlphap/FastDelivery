@@ -4,7 +4,7 @@ import morgan from "morgan";
 import {routes} from "./src/routes/index";
 import db from "./src/configs/index"
 
-//Enviroment
+//Environment
 dotenv.config();
 
 //Connect Database

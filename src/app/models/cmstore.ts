@@ -20,6 +20,10 @@ const CommissionStore = new Schema({
         type: Number,
         default: 3,
     },
+    image: {
+        type: String,
+        default: "None",
+    },
     note: {
         type: String,
         default: "Note Commission Store"
