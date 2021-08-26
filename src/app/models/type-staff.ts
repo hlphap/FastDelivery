@@ -11,6 +11,10 @@ const TypeStaff = new Schema({
     note: {
         type: String,
         required: true,
+    },
+    level: {
+        type: Number,
+        default: 0,
     }
 },{
     timestamps: true,
