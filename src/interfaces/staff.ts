@@ -4,6 +4,7 @@ import ICommission from "./cmstore";
 import IAddress from "./address";
 
 interface IStaff extends Document {
+    [x: string]: any;
     fullName: string,
     gender: string,
     dateOfBirth: string,

@@ -1,10 +1,12 @@
 import Router from "express-promise-router";
 import {StaffControllers} from "../app/controllers/";
-import { validateParam, staffSchema } from "../middlewares";
+import { validateParam, staffSchema, passport } from "../middlewares";
+
+
 const router = Router();
 
 router.route("/")
-    .get(
+    .get(passport.authenticate("jwt", {session: false}),
         StaffControllers.getAll
     )
     .post(

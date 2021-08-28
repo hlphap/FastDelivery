@@ -1,5 +1,7 @@
 import {Request, Response, NextFunction} from "express";
 import { Staff } from "../models";
+import { SignJWT } from "../../functions";
+import { Sign } from "crypto";
 
 const getAll = async (req: Request, res: Response, next: NextFunction) => {
     const staffs = await Staff.find({});
@@ -13,6 +15,12 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
     const newStaff = new Staff(staff);
 
     await newStaff.save();
+
+    //Encode token
+    const token = SignJWT(newStaff);
+
+    //Set token to header
+    res.setHeader('Authorization', token)
 
     return res.status(200).json({
         status: 200,
