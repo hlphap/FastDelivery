@@ -1,5 +1,7 @@
 import mongoose,{ Document } from "mongoose";
 import ITypeStaff from "./type-staff";
+import ICommission from "./cmstore";
+import IAddress from "./address";
 
 interface IStaff extends Document {
     fullName: string,
@@ -12,8 +14,8 @@ interface IStaff extends Document {
     email: string,
     password: string,
     typeStaff: ITypeStaff,
-    idCommission:  mongoose.Schema.Types.ObjectId,
-    idAddress:  mongoose.Schema.Types.ObjectId,
+    commission: ICommission,
+    address:  IAddress,
 }
 
 export default IStaff;

@@ -1,10 +1,10 @@
 import {Request, Response, NextFunction} from "express";
-import { Staff } from "../models/";
+import { Staff } from "../models";
 
 const getAll = async (req: Request, res: Response, next: NextFunction) => {
     const staffs = await Staff.find({});
 
-    return res.status(200).json(staffs);
+    return res.status(200).json(staffs)
 }
 
 const create = async (req: Request, res: Response, next: NextFunction) => {
@@ -21,11 +21,42 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
 }
 
 const update = async (req: Request, res: Response, next: NextFunction) => {
-    console.log("Called update");
+    const { staffID } = req.params;
+
+    const staff = req.body;
+
+    const foundStaff = await Staff.findOne({_id: staffID});
+
+    if (!foundStaff){
+        return res.status(400).json({
+            status: 400,
+            message: "Staff Not Found"
+        })
+    } else{
+        foundStaff.overwrite(staff);
+        await foundStaff.save();
+        return res.status(200).json({
+            status: 200,
+            message: "Update Staff Successfully",
+        })
+    }
+
 }
 
 const deleteOne = async (req: Request, res: Response, next: NextFunction) => {
-    console.log("Called deleteOne");
+    const { staffID } = req.params;
+
+    const staffDeleted = await Staff.findByIdAndDelete(staffID);
+
+    if (staffDeleted){
+        return res.status(200).json({
+            status: 200,
+            message: "Delete Staff Successfully",
+        })
+    } else{
+        const err = new Error("Deleted failed");
+        next(err);
+    }
 }
 
 export default {
