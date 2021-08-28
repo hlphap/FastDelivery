@@ -6,7 +6,7 @@ import { validateParam, staffSchema, passport } from "../middlewares";
 const router = Router();
 
 router.route("/")
-    .get(passport.authenticate("jwt", {session: false}),
+    .get(
         StaffControllers.getAll
     )
     .post(

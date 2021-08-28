@@ -1,0 +1,3106 @@
+[{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb73"
+  },
+  "name": "Phường Cầu Kho",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb6f"
+  },
+  "name": "Phường Phạm Ngũ Lão",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb7e"
+  },
+  "name": "Phường Tân Thới Nhất",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba8"
+  },
+  "name": "Phường 03",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb71"
+  },
+  "name": "Phường Cô Giang",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb74"
+  },
+  "name": "Phường Thạnh Xuân",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb80"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb8d"
+  },
+  "name": "Phường 11",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb8e"
+  },
+  "name": "Phường 03",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb91"
+  },
+  "name": "Phường 27",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbad"
+  },
+  "name": "Phường 06",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbbe"
+  },
+  "name": "Phường 05",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc5"
+  },
+  "name": "Phường 15",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd0"
+  },
+  "name": "Phường Hiệp Bình Chánh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbdd"
+  },
+  "name": "Phường Phước Long A",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe8"
+  },
+  "name": "Phường Cát Lái",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbfe"
+  },
+  "name": "Phường 09",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc20"
+  },
+  "name": "Phường 02",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc49"
+  },
+  "name": "Phường 05",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc7d"
+  },
+  "name": "Xã Thới Tam Thôn",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc7f"
+  },
+  "name": "Xã Tân Xuân",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc83"
+  },
+  "name": "Xã Bà Điểm",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbbd"
+  },
+  "name": "Phường 04",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd4"
+  },
+  "name": "Phường Bình Thọ",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbdc"
+  },
+  "name": "Phường Phước Long B",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc45"
+  },
+  "name": "Phường 10",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc63"
+  },
+  "name": "Thị trấn Củ Chi",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc6a"
+  },
+  "name": "Xã Phú Hòa Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc6e"
+  },
+  "name": "Xã Phước Hiệp",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc75"
+  },
+  "name": "Xã Bình Mỹ",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc8c"
+  },
+  "name": "Xã Bình Hưng",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb77"
+  },
+  "name": "Phường Thới An",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb7a"
+  },
+  "name": "Phường Tân Thới Hiệp",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb8a"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbae"
+  },
+  "name": "Phường 08",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb1"
+  },
+  "name": "Phường 15",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc8"
+  },
+  "name": "Phường 17",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe0"
+  },
+  "name": "Phường Long Trường",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe4"
+  },
+  "name": "Phường An Phú",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc05"
+  },
+  "name": "Phường 06",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc33"
+  },
+  "name": "Phường 09",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc35"
+  },
+  "name": "Phường 12",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc3c"
+  },
+  "name": "Phường 03",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc46"
+  },
+  "name": "Phường 04",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc50"
+  },
+  "name": "Phường Bình Hưng Hoà A",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc52"
+  },
+  "name": "Phường Bình Trị Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc77"
+  },
+  "name": "Xã Tân Thông Hội",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb83"
+  },
+  "name": "Phường 16",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb94"
+  },
+  "name": "Phường 25",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb9b"
+  },
+  "name": "Phường 02",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb9d"
+  },
+  "name": "Phường 03",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbaa"
+  },
+  "name": "Phường 07",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb0"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb9"
+  },
+  "name": "Phường Phú Trung",
+  "district": {
+    "_id": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbba"
+  },
+  "name": "Phường Hòa Thạnh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbda"
+  },
+  "name": "Phường Tăng Nhơn Phú A",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe1"
+  },
+  "name": "Phường Phước Bình",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbeb"
+  },
+  "name": "Phường Thủ Thiêm",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf2"
+  },
+  "name": "Phường 10",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc04"
+  },
+  "name": "Phường 05",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc1b"
+  },
+  "name": "Phường 18",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc5f"
+  },
+  "name": "Phường Phú Thuận",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc73"
+  },
+  "name": "Xã Hòa Phú",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc7e"
+  },
+  "name": "Xã Xuân Thới Sơn",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc81"
+  },
+  "name": "Xã Trung Chánh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc86"
+  },
+  "name": "Xã Vĩnh Lộc A",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc87"
+  },
+  "name": "Xã Vĩnh Lộc B",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb6c"
+  },
+  "name": "Phường Bến Nghé",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb87"
+  },
+  "name": "Phường 05",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb9f"
+  },
+  "name": "Phường 21",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba1"
+  },
+  "name": "Phường 19",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba2"
+  },
+  "name": "Phường 28",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb5"
+  },
+  "name": "Phường Tân Quý",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd5"
+  },
+  "name": "Phường Trường Thọ",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbee"
+  },
+  "name": "Phường 11",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf5"
+  },
+  "name": "Phường 03",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf6"
+  },
+  "name": "Phường 02",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbfa"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc1f"
+  },
+  "name": "Phường 16",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc34"
+  },
+  "name": "Phường 06",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc3f"
+  },
+  "name": "Phường 08",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc42"
+  },
+  "name": "Phường 03",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc53"
+  },
+  "name": "Phường Bình Trị Đông A",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc55"
+  },
+  "name": "Phường Tân Tạo",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc58"
+  },
+  "name": "Phường An Lạc A",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc5d"
+  },
+  "name": "Phường Bình Thuận",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc71"
+  },
+  "name": "Xã Thái Mỹ",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb6b"
+  },
+  "name": "Phường Đa Kao",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb7d"
+  },
+  "name": "Phường Đông Hưng Thuận",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb81"
+  },
+  "name": "Phường 17",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb98"
+  },
+  "name": "Phường 06",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb7"
+  },
+  "name": "Phường Phú Thọ Hòa",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbbb"
+  },
+  "name": "Phường Hiệp Tân",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc2"
+  },
+  "name": "Phường 01",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc4"
+  },
+  "name": "Phường 08",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe9"
+  },
+  "name": "Phường Thạnh Mỹ Lợi",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc38"
+  },
+  "name": "Phường 02",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc39"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc3a"
+  },
+  "name": "Phường 04",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb6e"
+  },
+  "name": "Phường Nguyễn Thái Bình",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb9c"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba3"
+  },
+  "name": "Phường 02",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbbc"
+  },
+  "name": "Phường Tân Thới Hòa",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc0"
+  },
+  "name": "Phường 07",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd8"
+  },
+  "name": "Phường Tân Phú",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe5"
+  },
+  "name": "Phường An Khánh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc00"
+  },
+  "name": "Phường 08",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc02"
+  },
+  "name": "Phường 04",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc22"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc27"
+  },
+  "name": "Phường 02",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc30"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc5b"
+  },
+  "name": "Phường Tân Kiểng",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc70"
+  },
+  "name": "Xã Phước Vĩnh An",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc8f"
+  },
+  "name": "Xã Hưng Long",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb79"
+  },
+  "name": "Phường An Phú Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb7c"
+  },
+  "name": "Phường Tân Hưng Thuận",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb8c"
+  },
+  "name": "Phường 8",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb8f"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb96"
+  },
+  "name": "Phường 07",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba9"
+  },
+  "name": "Phường 11",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb6"
+  },
+  "name": "Phường Tân Thành",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd2"
+  },
+  "name": "Phường Linh Tây",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd7"
+  },
+  "name": "Phường Long Thạnh Mỹ",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbef"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf4"
+  },
+  "name": "Phường 05",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc29"
+  },
+  "name": "Phường 07",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc31"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc4b"
+  },
+  "name": "Phường 06",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc4d"
+  },
+  "name": "Phường 16",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc56"
+  },
+  "name": "Phường Tân Tạo A",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc61"
+  },
+  "name": "Phường Tân Phong",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc64"
+  },
+  "name": "Xã Phú Mỹ Hưng",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc7b"
+  },
+  "name": "Xã Đông Thạnh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb8b"
+  },
+  "name": "Phường 9",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb97"
+  },
+  "name": "Phường 24",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb3"
+  },
+  "name": "Phường Tây Thạnh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb4"
+  },
+  "name": "Phường Sơn Kỳ",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc3"
+  },
+  "name": "Phường 02",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbcc"
+  },
+  "name": "Phường Linh Trung",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbcd"
+  },
+  "name": "Phường Tam Bình",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe6"
+  },
+  "name": "Phường Bình Trưng Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe7"
+  },
+  "name": "Phường Bình Trưng Tây",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf3"
+  },
+  "name": "Phường 04",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc17"
+  },
+  "name": "Phường 09",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc23"
+  },
+  "name": "Phường 04",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc25"
+  },
+  "name": "Phường 03",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc6b"
+  },
+  "name": "Xã Trung Lập Hạ",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc79"
+  },
+  "name": "Xã Tân Hiệp",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc85"
+  },
+  "name": "Xã Phạm Văn Hai",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb6a"
+  },
+  "name": "Phường Tân Định",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb84"
+  },
+  "name": "Phường 12",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb82"
+  },
+  "name": "Phường 6",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb85"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb88"
+  },
+  "name": "Phường 07",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba5"
+  },
+  "name": "Phường 12",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb2"
+  },
+  "name": "Phường Tân Sơn Nhì",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf0"
+  },
+  "name": "Phường Võ Thị Sáu",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbfb"
+  },
+  "name": "Phường 12",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc2f"
+  },
+  "name": "Phường 10",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc3d"
+  },
+  "name": "Phường 07",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc5c"
+  },
+  "name": "Phường Tân Hưng",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc67"
+  },
+  "name": "Xã An Nhơn Tây",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc6d"
+  },
+  "name": "Xã Phước Thạnh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc7c"
+  },
+  "name": "Xã Tân Thới Nhì",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb89"
+  },
+  "name": "Phường 04",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb93"
+  },
+  "name": "Phường 12",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb99"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbab"
+  },
+  "name": "Phường 05",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbcb"
+  },
+  "name": "Phường Bình Chiểu",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd1"
+  },
+  "name": "Phường Linh Chiểu",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbed"
+  },
+  "name": "Phường 12",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf7"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc1c"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc2a"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc43"
+  },
+  "name": "Phường 11",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc4a"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc4c"
+  },
+  "name": "Phường 15",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc4e"
+  },
+  "name": "Phường 07",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc4f"
+  },
+  "name": "Phường Bình Hưng Hòa",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc60"
+  },
+  "name": "Phường Tân Phú",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc6f"
+  },
+  "name": "Xã Tân An Hội",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc72"
+  },
+  "name": "Xã Tân Thạnh Tây",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc80"
+  },
+  "name": "Xã Xuân Thới Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb6d"
+  },
+  "name": "Phường Bến Thành",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb70"
+  },
+  "name": "Phường Cầu Ông Lãnh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb72"
+  },
+  "name": "Phường Nguyễn Cư Trinh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ef"
+  },
+  "name": "Quận 1"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb95"
+  },
+  "name": "Phường 05",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb9e"
+  },
+  "name": "Phường 17",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc9"
+  },
+  "name": "Phường 13",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd3"
+  },
+  "name": "Phường Linh Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf1"
+  },
+  "name": "Phường 09",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc1d"
+  },
+  "name": "Phường 04",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc2c"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc2d"
+  },
+  "name": "Phường 05",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc3e"
+  },
+  "name": "Phường 10",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc44"
+  },
+  "name": "Phường 09",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc47"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc57"
+  },
+  "name": "Phường  An Lạc",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc76"
+  },
+  "name": "Xã Tân Phú Trung",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc7a"
+  },
+  "name": "Xã Nhị Bình",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc88"
+  },
+  "name": "Xã Bình Lợi",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc8e"
+  },
+  "name": "Xã An Phú Tây",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb76"
+  },
+  "name": "Phường Hiệp Thành",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb90"
+  },
+  "name": "Phường 11",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb92"
+  },
+  "name": "Phường 26",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb9a"
+  },
+  "name": "Phường 15",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba6"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba7"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc1"
+  },
+  "name": "Phường 03",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe2"
+  },
+  "name": "Phường Phú Hữu",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf8"
+  },
+  "name": "Phường 15",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc16"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc18"
+  },
+  "name": "Phường 06",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc1e"
+  },
+  "name": "Phường 03",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc24"
+  },
+  "name": "Phường 09",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc28"
+  },
+  "name": "Phường 08",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc36"
+  },
+  "name": "Phường 05",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc37"
+  },
+  "name": "Phường 11",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc6c"
+  },
+  "name": "Xã Trung An",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc78"
+  },
+  "name": "Thị trấn Hóc Môn",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba0"
+  },
+  "name": "Phường 22",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f2"
+  },
+  "name": "Quận Bình Thạnh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbac"
+  },
+  "name": "Phường 10",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc6"
+  },
+  "name": "Phường 10",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbca"
+  },
+  "name": "Phường Linh Xuân",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbce"
+  },
+  "name": "Phường Tam Phú",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd9"
+  },
+  "name": "Phường Hiệp Phú",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbdb"
+  },
+  "name": "Phường Tăng Nhơn Phú B",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbdf"
+  },
+  "name": "Phường Long Phước",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbe3"
+  },
+  "name": "Phường Thảo Điền",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc01"
+  },
+  "name": "Phường 02",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc1a"
+  },
+  "name": "Phường 10",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc26"
+  },
+  "name": "Phường 12",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc32"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc48"
+  },
+  "name": "Phường 12",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc51"
+  },
+  "name": "Phường Bình Hưng Hoà B",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc59"
+  },
+  "name": "Phường Tân Thuận Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc5a"
+  },
+  "name": "Phường Tân Thuận Tây",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc62"
+  },
+  "name": "Phường Phú Mỹ",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc66"
+  },
+  "name": "Xã Trung Lập Thượng",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc82"
+  },
+  "name": "Xã Xuân Thới Thượng",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a601"
+  },
+  "name": "Huyện Hóc Môn"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc8a"
+  },
+  "name": "Xã Tân Nhựt",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc91"
+  },
+  "name": "Xã Tân Quý Tây",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc93"
+  },
+  "name": "Xã Quy Đức",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb7f"
+  },
+  "name": "Phường 15",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbb8"
+  },
+  "name": "Phường Phú Thạnh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f4"
+  },
+  "name": "Quận Tân Phú"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbc7"
+  },
+  "name": "Phường 11",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbd6"
+  },
+  "name": "Phường Long Bình",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbde"
+  },
+  "name": "Phường Trường Thạnh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbea"
+  },
+  "name": "Phường An Lợi Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbec"
+  },
+  "name": "Phường 14",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f7"
+  },
+  "name": "Quận 3"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbf9"
+  },
+  "name": "Phường 13",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbfc"
+  },
+  "name": "Phường 11",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbff"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc03"
+  },
+  "name": "Phường 07",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc41"
+  },
+  "name": "Phường 01",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc54"
+  },
+  "name": "Phường Bình Trị Đông B",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fe"
+  },
+  "name": "Quận Bình Tân"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc5e"
+  },
+  "name": "Phường Tân Quy",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5ff"
+  },
+  "name": "Quận 7"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc65"
+  },
+  "name": "Xã An Phú",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc69"
+  },
+  "name": "Xã Phạm Văn Cội",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc8b"
+  },
+  "name": "Xã Tân Kiên",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc92"
+  },
+  "name": "Xã Bình Chánh",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb75"
+  },
+  "name": "Phường Thạnh Lộc",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb78"
+  },
+  "name": "Phường Tân Chánh Hiệp",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb7b"
+  },
+  "name": "Phường Trung Mỹ Tây",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f0"
+  },
+  "name": "Quận 12"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cb86"
+  },
+  "name": "Phường 10",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f1"
+  },
+  "name": "Quận Gò Vấp"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cba4"
+  },
+  "name": "Phường 04",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbaf"
+  },
+  "name": "Phường 09",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f3"
+  },
+  "name": "Quận Tân Bình"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbbf"
+  },
+  "name": "Phường 09",
+  "district": {
+   "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f5"
+  },
+  "name": "Quận Phú Nhuận"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbcf"
+  },
+  "name": "Phường Hiệp Bình Phước",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f6"
+  },
+  "name": "Thành phố Thủ Đức"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cbfd"
+  },
+  "name": "Phường 10",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5f8"
+  },
+  "name": "Quận 10"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc19"
+  },
+  "name": "Phường 08",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc21"
+  },
+  "name": "Phường 15",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fa"
+  },
+  "name": "Quận 4"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc2b"
+  },
+  "name": "Phường 11",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51231c6ba3de5e7cc2e"
+  },
+  "name": "Phường 06",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fb"
+  },
+  "name": "Quận 5"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc3b"
+  },
+  "name": "Phường 08",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fc"
+  },
+  "name": "Quận 6"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc40"
+  },
+  "name": "Phường 02",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a5fd"
+  },
+  "name": "Quận 8"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc68"
+  },
+  "name": "Xã Nhuận Đức",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc74"
+  },
+  "name": "Xã Tân Thạnh Đông",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a600"
+  },
+  "name": "Huyện Củ Chi"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc84"
+  },
+  "name": "Thị trấn Tân Túc",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc89"
+  },
+  "name": "Xã Lê Minh Xuân",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc8d"
+  },
+  "name": "Xã Phong Phú",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+},{
+  "_id": {
+    "$oid": "60b7a51331c6ba3de5e7cc90"
+  },
+  "name": "Xã Đa Phước",
+  "district": {
+    "_id": {
+    "$oid": "60b7a50631c6ba3de5e7a602"
+  },
+  "name": "Huyện Bình Chánh"
+  }
+}]
