@@ -5,7 +5,9 @@ import cmStaffRouter from "./cm-staffs";
 import staffRouter from "./staffs";
 import typeStaffRouter from "./type-staffs";
 import districtRouter from "./districts";
-import wardRouter from "./wards"
+import wardRouter from "./wards";
+import bankRouter from "./banks";
+import wareHouseRouter from "./warehouses";
 
 
 function routes(app: Application) {
@@ -16,6 +18,8 @@ function routes(app: Application) {
     app.use("/api/typestaffs", typeStaffRouter)
     app.use("/api/districts", districtRouter)
     app.use("/api/wards", wardRouter)
+    app.use("/api/banks", bankRouter)
+    app.use("/api/warehouses", wareHouseRouter)
 }
 
 export default routes;

@@ -6,6 +6,8 @@ import { TypeStaff } from "./type-staff";
 import { District } from "./district";
 import { Ward } from "./ward";
 import { Address } from "./address";
+import { Bank } from "./bank";
+import { WareHouse } from "./warehouse";
 
 export {
     DVMethod,
@@ -16,4 +18,6 @@ export {
     District,
     Ward,
     Address,
+    Bank,
+    WareHouse,
 };

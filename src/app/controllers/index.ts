@@ -6,6 +6,8 @@ import TypeStaffControllers from "./typestaff-controllers";
 import StaffControllers from "./staff-controllers";
 import DistrictControllers from "./district-controllers";
 import WardControllers from "./ward-controllers";
+import BankControllers from "./bank-controllers";
+import WareHouseControllers from "./warehouse-controllers";
 
 export {
     DVMethodControllers,
@@ -15,4 +17,6 @@ export {
     TypeStaffControllers,
     DistrictControllers,
     WardControllers,
+    BankControllers,
+    WareHouseControllers
 }

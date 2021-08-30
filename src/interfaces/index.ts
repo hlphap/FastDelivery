@@ -6,6 +6,8 @@ import ITypeStaff from "./type-staff";
 import IDistrict from "./district";
 import IWard from "./ward";
 import IAddress from "./address";
+import IBank from "./bank";
+import IWareHouse from "./warehouse";
 
 export {
     IDVMethod,
@@ -16,4 +18,6 @@ export {
     IDistrict,
     IWard,
     IAddress,
+    IBank,
+    IWareHouse,
 }
