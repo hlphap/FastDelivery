@@ -3,7 +3,8 @@ import dvMethodSchema from "./validator/dv-method-schema";
 import cmStoreSchema from "./validator/cm-store-schema";
 import cmStaffSchema from "./validator/cm-staff-schema";
 import staffSchema from "./validator/staff-schema";
-import wareHouseSchema from "./validator/warehouse-schema"
+import wareHouseSchema from "./validator/warehouse-schema";
+import storeSchema from "./validator/store-schema"
 
 import passport from "./authentication/passport";
 
@@ -15,5 +16,6 @@ export {
     cmStaffSchema,
     staffSchema,
     wareHouseSchema,
+    storeSchema,
     passport,
 }

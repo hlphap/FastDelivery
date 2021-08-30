@@ -3,7 +3,7 @@ import { ICMStore } from "../../interfaces";
 
 const Schema = mongoose.Schema;
 
-const CommissionStoreSchema = new Schema({
+const CMStoreSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -34,9 +34,9 @@ const CommissionStoreSchema = new Schema({
     versionKey: false,
 })
 
-const CMStore = mongoose.model<ICMStore>("cmstores", CommissionStoreSchema);
+const CMStore = mongoose.model<ICMStore>("cmstores", CMStoreSchema);
 
 export {
-    CommissionStoreSchema,
+    CMStoreSchema,
     CMStore,
 }

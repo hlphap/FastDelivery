@@ -8,6 +8,7 @@ import { Ward } from "./ward";
 import { Address } from "./address";
 import { Bank } from "./bank";
 import { WareHouse } from "./warehouse";
+import { Store } from "./store";
 
 export {
     DVMethod,
@@ -20,4 +21,5 @@ export {
     Address,
     Bank,
     WareHouse,
+    Store,
 };
