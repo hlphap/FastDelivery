@@ -4,7 +4,7 @@ import { DistrictSchema } from "./district"
 
 const Schema = mongoose.Schema;
 
-const WardSchema = new Schema({
+const WardSchema = new Schema<IWard>({
     name: {
         type: String,
         required: true,

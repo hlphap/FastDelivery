@@ -3,7 +3,7 @@ import { WardControllers } from "../app/controllers";
 
 const router = Router();
 
-router.route("/")
-    .get(WardControllers.getAll);
+router.route("/:districtID")
+    .get(WardControllers.getWardOfDistrict);
 
 export default router;
