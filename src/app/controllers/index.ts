@@ -9,6 +9,7 @@ import WardControllers from "./ward-controllers";
 import BankControllers from "./bank-controllers";
 import WareHouseControllers from "./warehouse-controllers";
 import StoreControllers from "./store-controllers";
+import StatusControllers from "./status-controllers";
 
 export {
     DVMethodControllers,
@@ -21,4 +22,5 @@ export {
     BankControllers,
     WareHouseControllers,
     StoreControllers,
+    StatusControllers,
 }

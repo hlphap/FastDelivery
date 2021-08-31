@@ -9,6 +9,7 @@ import wardRouter from "./wards";
 import bankRouter from "./banks";
 import wareHouseRouter from "./warehouses";
 import storeRouter from "./stores";
+import statusRouter from "./status";
 
 
 function routes(app: Application) {
@@ -22,6 +23,7 @@ function routes(app: Application) {
     app.use("/api/banks", bankRouter);
     app.use("/api/warehouses", wareHouseRouter);
     app.use("/api/stores", storeRouter);
+    app.use("/api/status", statusRouter);
 }
 
 export default routes;

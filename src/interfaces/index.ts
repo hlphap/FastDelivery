@@ -9,6 +9,7 @@ import IAddress from "./address";
 import IBank from "./bank";
 import IWareHouse from "./warehouse";
 import IStore from "./store";
+import IStatus from "./status";
 
 export {
     IDVMethod,
@@ -22,4 +23,5 @@ export {
     IBank,
     IWareHouse,
     IStore,
+    IStatus,
 }

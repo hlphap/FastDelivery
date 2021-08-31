@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "612d7fc077d0e053a85bb33b"
+  },
+  "name": "Chưa xử lý",
+  "note": "Chưa xử lý đơn hàng",
+  "beforeStatus": [],
+  "afterStatus": [
+    {
+      "$oid": "612d80bd77d0e053a85bb33e"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "612d80bd77d0e053a85bb33e"
+  },
+  "name": "Đang xử lý",
+  "note": "Đang phân công nhân viên vận chuyển đến lấy hàng",
+  "beforeStatus": [
+    {
+      "$oid": "612d7fc077d0e053a85bb33b"
+    }
+  ],
+  "afterStatus": [
+    {
+      "$oid": "612d814577d0e053a85bb33f"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "612d814577d0e053a85bb33f"
+  },
+  "name": "Đang dến nhận hàng",
+  "note": "Nhân viên vận chuyển đang đến cửa hàng nhận hàng",
+  "beforeStatus": [
+    {
+      "$oid": "612d80bd77d0e053a85bb33e"
+    }
+  ],
+  "afterStatus": [
+    {
+      "$oid": "612d818477d0e053a85bb340"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "612d818477d0e053a85bb340"
+  },
+  "name": "Đã lấy hàng",
+  "note": "Nhân viên vận chuyển đã lấy hàng",
+  "beforeStatus": [
+    {
+      "$oid": "612d814577d0e053a85bb33f"
+    }
+  ],
+  "afterStatus": [
+    {
+      "$oid": "612d81bf77d0e053a85bb341"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "612d81bf77d0e053a85bb341"
+  },
+  "name": "Đang giao hàng",
+  "note": "Nhân viên vận chuyển đang tiến hành giao hàng đến người nhận",
+  "beforeStatus": [
+    {
+      "$oid": "612d818477d0e053a85bb340"
+    }
+  ],
+  "afterStatus": [
+    {
+      "$oid": "612d820377d0e053a85bb342"
+    },
+    {
+      "$oid": "612d872577d0e053a85bb34a"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "612d820377d0e053a85bb342"
+  },
+  "name": "Người nhận không nhận hàng",
+  "note": "Người nhận không nhận hàng",
+  "beforeStatus": [
+    {
+      "$oid": "612d81bf77d0e053a85bb341"
+    }
+  ],
+  "afterStatus": [
+    {
+      "$oid": "612d824077d0e053a85bb343"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "612d824077d0e053a85bb343"
+  },
+  "name": "Giao hàng thành công",
+  "note": "Người nhận đã nhận hàng từ nhân viên vận chuyển",
+  "beforeStatus": [
+    {
+      "$oid": "612d81bf77d0e053a85bb341"
+    }
+  ],
+  "afterStatus": []
+},{
+  "_id": {
+    "$oid": "612d872577d0e053a85bb34a"
+  },
+  "name": "Giao hàng thất bại",
+  "note": "Giao hàng thất bại",
+  "beforeStatus": [
+    {
+      "$oid": "612d820377d0e053a85bb342"
+    }
+  ],
+  "afterStatus": []
+}]
