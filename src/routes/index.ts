@@ -10,6 +10,7 @@ import bankRouter from "./banks";
 import wareHouseRouter from "./warehouses";
 import storeRouter from "./stores";
 import statusRouter from "./status";
+import orderRouter from "./orders";
 
 
 function routes(app: Application) {
@@ -24,6 +25,7 @@ function routes(app: Application) {
     app.use("/api/warehouses", wareHouseRouter);
     app.use("/api/stores", storeRouter);
     app.use("/api/status", statusRouter);
+    app.use("/api/orders", orderRouter);
 }
 
 export default routes;

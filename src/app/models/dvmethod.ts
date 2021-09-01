@@ -3,7 +3,7 @@ import { IDVMethod } from "../../interfaces";
 
 const Schema = mongoose.Schema;
 
-const DeliveryMethod = new Schema({
+const DVMethodSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -41,9 +41,9 @@ const DeliveryMethod = new Schema({
     versionKey: false,
 })
 
-const DVMethod = mongoose.model<IDVMethod>("dvmethods", DeliveryMethod)
+const DVMethod = mongoose.model<IDVMethod>("dvmethods", DVMethodSchema)
 
 export {
     DVMethod,
-    DeliveryMethod,
+    DVMethodSchema,
 };

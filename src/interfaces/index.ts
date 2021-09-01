@@ -10,6 +10,7 @@ import IBank from "./bank";
 import IWareHouse from "./warehouse";
 import IStore from "./store";
 import IStatus from "./status";
+import {IOrder, IFee} from "./order";
 
 export {
     IDVMethod,
@@ -24,4 +25,6 @@ export {
     IWareHouse,
     IStore,
     IStatus,
+    IOrder,
+    IFee,
 }

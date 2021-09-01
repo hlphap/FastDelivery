@@ -10,6 +10,7 @@ import BankControllers from "./bank-controllers";
 import WareHouseControllers from "./warehouse-controllers";
 import StoreControllers from "./store-controllers";
 import StatusControllers from "./status-controllers";
+import OrderControllers from "./order-controllers";
 
 export {
     DVMethodControllers,
@@ -23,4 +24,5 @@ export {
     WareHouseControllers,
     StoreControllers,
     StatusControllers,
+    OrderControllers,
 }
