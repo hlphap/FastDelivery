@@ -1,7 +1,7 @@
 import {Request, Response, NextFunction} from "express";
 import { Staff } from "../models";
 import { SignJWT } from "../../functions";
-import { Sign } from "crypto";
+import { IStaff } from "../../interfaces";
 
 const getAll = async (req: Request, res: Response, next: NextFunction) => {
     const staffs = await Staff.find({});
@@ -67,9 +67,17 @@ const deleteOne = async (req: Request, res: Response, next: NextFunction) => {
     }
 }
 
+const managerSignIn = async (req: Request, res: Response, next: NextFunction) => {
+    const staff = <IStaff>req.user;
+    const token = SignJWT(staff);
+    res.setHeader("Authorization", token);
+    res.status(200).json(staff);
+}
+
 export default {
     getAll,
     create,
     update,
-    deleteOne
+    deleteOne,
+    managerSignIn,
 }

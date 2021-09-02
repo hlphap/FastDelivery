@@ -5,6 +5,8 @@ import { validateParam, staffSchema, passport } from "../middlewares";
 
 const router = Router();
 
+
+//Manager
 router.route("/")
     .get(
         StaffControllers.getAll
@@ -14,6 +16,12 @@ router.route("/")
         StaffControllers.create
     )
 
+router.route("/manager-signin")
+        .post(
+        passport.authenticate("local", {session: false}),
+        StaffControllers.managerSignIn
+    )
+
 router.route("/:staffID")
     .all(validateParam(staffSchema.id, "staffID"))
     .put(
@@ -21,5 +29,7 @@ router.route("/:staffID")
         StaffControllers.update
     )
     .delete(StaffControllers.deleteOne)
+
+
 
 export default router;
