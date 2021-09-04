@@ -7,6 +7,12 @@ const getAll = async (req: Request, res: Response, next: NextFunction) => {
     return res.status(200).json(orders);
 }
 
+const getOrderNotYetHandle = async (req: Request, res: Response, next: NextFunction) => {
+    const orders = await Order.find({"tracking": {$size: 1}});
+
+    return res.status(200).json(orders);
+}
+
 const create = async (req: Request, res: Response, next: NextFunction) => {
     const order = req.body;
 
@@ -58,5 +64,6 @@ export default {
     create,
     update,
     deleteOne,
+    getOrderNotYetHandle,
 }
 
