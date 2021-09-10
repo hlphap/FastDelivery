@@ -2,13 +2,13 @@ import express, { Application, Request, Response, NextFunction } from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import routes from "./src/routes/index";
-import db from "./src/configs/index"
+import { connect } from "./src/configs/index"
 
 //Environment
 dotenv.config();
 
 //Connect Database
-db.connect();
+connect();
 
 //App
 const app: Application = express();

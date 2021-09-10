@@ -11,9 +11,11 @@ router.route("/")
 router.route("/handle")
     .get(OrderControllers.getOrderNotYetHandle)
 
+router.route("/:orderID/status")
+    .put(OrderControllers.updateStatus);
+
 router.route("/:orderID")
     .put(OrderControllers.update)
     .delete(OrderControllers.deleteOne)
-
 
 export default router;

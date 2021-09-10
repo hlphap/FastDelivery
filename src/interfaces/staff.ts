@@ -17,6 +17,8 @@ interface IStaff extends Document {
     typeStaff: ITypeStaff,
     commission: ICommission,
     address:  IAddress,
+
+    work: Array<mongoose.Schema.Types.ObjectId>,
 }
 
 export default IStaff;

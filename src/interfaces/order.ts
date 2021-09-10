@@ -1,4 +1,5 @@
 import mongoose, { Document } from "mongoose";
+import { IStore } from ".";
 import IAddress from "./address";
 import IDVMethod from "./dvmethod";
 import IStatus from "./status";
@@ -14,7 +15,7 @@ interface IFee extends Document {
 }
 
 interface IOrder extends Document {
-    ownerStoreID: mongoose.Schema.Types.ObjectId;
+    ownerStoreID: mongoose.Schema.Types.ObjectId | IStore;
 
     //Information order
     orderName: string;
@@ -38,7 +39,7 @@ interface IOrder extends Document {
     //Status
     tracking: {
         status: IStatus,
-        chargeStaffID: mongoose.Schema.Types.ObjectId;
+        chargeStaffID?: mongoose.Schema.Types.ObjectId;
     }[];
 }
 

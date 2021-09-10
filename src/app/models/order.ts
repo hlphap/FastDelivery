@@ -93,17 +93,6 @@ const OrderSchema = new Schema<IOrder>({
             status: StatusSchema,
             chargeStaffID: mongoose.Schema.Types.ObjectId,
         }],
-        default: [{
-            status: {
-                "beforeStatus": [],
-                "afterStatus": [
-                    "612d80bd77d0e053a85bb33e"
-                ],
-                "_id": "612d7fc077d0e053a85bb33b",
-                "name": "Chưa xử lý",
-                "note": "Chưa xử lý đơn hàng"
-            }
-        }]
     }
 },{
     timestamps: true,

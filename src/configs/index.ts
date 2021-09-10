@@ -1,5 +1,6 @@
+import { IStatus } from "../interfaces";
 import connect from "./db";
 
-export default {
-    connect
+export {
+    connect,
 };

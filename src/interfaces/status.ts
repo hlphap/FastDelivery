@@ -3,8 +3,8 @@ import { Document } from "mongoose";
 interface IStatus extends Document {
     name: string,
     note: string,
-    beforeStatus: Array<IStatus>,
-    afterStatus: Array<IStatus>,
+    code: string,
+    afterStatus: Array<string>,
 }
 
 export default IStatus;

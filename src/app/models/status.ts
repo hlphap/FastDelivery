@@ -10,10 +10,10 @@ const StatusSchema = new Schema<IStatus>({
     note: {
         type: String,
     },
-    beforeStatus: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "status",
-    }],
+    code: {
+        type: String,
+        unique: true,
+    },
     afterStatus: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "status",
