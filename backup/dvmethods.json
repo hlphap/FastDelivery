@@ -1,0 +1,127 @@
+[{
+  "_id": {
+    "$oid": "60db3cbb548bb22b1411c5d0"
+  },
+  "name": "Giao hàng nhanh 2",
+  "innerDistrictFee": "23000",
+  "outerDistrictFee": "33000",
+  "feeChangeAddressDelivery": "5000",
+  "feeStorageCharges": "5000",
+  "feeReturn": "10000",
+  "createdAt": {
+    "$date": "2021-06-29T15:31:07.858Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-29T15:31:34.227Z"
+  },
+  "surChargeInner": "10000",
+  "surChargeOuter": "15000"
+},{
+  "_id": {
+    "$oid": "61250157804aba2d6c436593"
+  },
+  "name": "Giao hàng Test 1",
+  "innerDistrictFee": "20000",
+  "outerDistrictFee": "30000",
+  "surChargeInner": "2000",
+  "surChargeOuter": "3000",
+  "feeChangeAddressDelivery": "5000",
+  "feeStorageCharges": "10000",
+  "feeReturn": "10000",
+  "createdAt": {
+    "$date": "2021-08-24T14:25:27.308Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-24T14:25:27.308Z"
+  }
+},{
+  "_id": {
+    "$oid": "61259a4cb0f1f31a5c4db448"
+  },
+  "name": "Giao hàng Test 1",
+  "innerDistrictFee": "20000",
+  "outerDistrictFee": "30000",
+  "surChargeInner": "2000",
+  "surChargeOuter": "3000",
+  "feeChangeAddressDelivery": "5000",
+  "feeStorageCharges": "10000",
+  "feeReturn": "10000",
+  "createdAt": {
+    "$date": "2021-08-25T01:18:04.158Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-25T01:18:04.158Z"
+  }
+},{
+  "_id": {
+    "$oid": "6126131e5daac14d10c54252"
+  },
+  "innerDistrictFee": 20000,
+  "outerDistrictFee": 30000,
+  "surChargeInner": 2000,
+  "surChargeOuter": 3000,
+  "feeChangeAddressDelivery": 5000,
+  "feeStorageCharges": 10000,
+  "feeReturn": 10000,
+  "name": "Giao hàng Test 1",
+  "createdAt": {
+    "$date": "2021-08-25T09:53:34.079Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-25T09:53:34.079Z"
+  }
+},{
+  "_id": {
+    "$oid": "612619c24f21b9362c9b9b7d"
+  },
+  "innerDistrictFee": 20000,
+  "outerDistrictFee": 30000,
+  "surChargeInner": 2000,
+  "surChargeOuter": 3000,
+  "feeChangeAddressDelivery": 5000,
+  "feeStorageCharges": 10000,
+  "feeReturn": 10000,
+  "name": "Giao hàng Test 1",
+  "createdAt": {
+    "$date": "2021-08-25T10:21:54.222Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-25T10:21:54.222Z"
+  }
+},{
+  "_id": {
+    "$oid": "612619cf4f21b9362c9b9b7f"
+  },
+  "innerDistrictFee": 20000,
+  "outerDistrictFee": 30000,
+  "surChargeInner": 2000,
+  "surChargeOuter": 3000,
+  "feeChangeAddressDelivery": 5000,
+  "feeStorageCharges": 10000,
+  "feeReturn": 10000,
+  "name": "1",
+  "createdAt": {
+    "$date": "2021-08-25T10:22:07.061Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-25T10:22:07.061Z"
+  }
+},{
+  "_id": {
+    "$oid": "61263b81f53eb80aec3ceee3"
+  },
+  "innerDistrictFee": 10000,
+  "outerDistrictFee": 10000,
+  "surChargeInner": 10000,
+  "surChargeOuter": 10000,
+  "feeChangeAddressDelivery": 10000,
+  "feeStorageCharges": 10000,
+  "feeReturn": 10000,
+  "name": "123",
+  "createdAt": {
+    "$date": "2021-08-25T12:45:53.400Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-25T12:45:53.400Z"
+  }
+}]
