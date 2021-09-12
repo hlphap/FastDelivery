@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import { ChargeShipping } from "../../functions";
 import { IStatus, IStore } from "../../interfaces";
 import { Order, Staff } from "../models";
 import { Status } from "../models/status";
@@ -80,7 +81,7 @@ const updateStatus = async (req: Request, res: Response, next: NextFunction) => 
     if (!statusNext) {
         return res.status(404).json({
             status: 404,
-            message: "Cannot find status next",
+            message: "Cannot Find Status Next",
         })
     }
 
@@ -106,11 +107,17 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
 
     const newOrder = new Order(order);
 
+    await ChargeShipping(newOrder, {
+        changeAddress: true,
+    }, next);
+
     const statusDefault = await Status.findOne({code: process.env.STATUS_DEFAULT});
 
     newOrder.tracking.unshift({
         status: statusDefault,
     });
+
+    console.log(newOrder);
 
     await newOrder.save();
 
