@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { ChargeShipping } from "../../functions";
-import { IStatus, IStore } from "../../interfaces";
+import { IOrder, IStatus, IStore } from "../../interfaces";
 import { Order, Staff } from "../models";
 import { Status } from "../models/status";
 
@@ -107,17 +107,11 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
 
     const newOrder = new Order(order);
 
-    await ChargeShipping(newOrder, {
-        changeAddress: true,
-    }, next);
-
     const statusDefault = await Status.findOne({code: process.env.STATUS_DEFAULT});
 
     newOrder.tracking.unshift({
         status: statusDefault,
     });
-
-    console.log(newOrder);
 
     await newOrder.save();
 
@@ -160,6 +154,62 @@ const deleteOne = async (req: Request, res: Response, next: NextFunction) => {
     })
 }
 
+const calcFee = async (req: Request, res: Response, next: NextFunction) => {
+    const order: IOrder = req.body;
+
+    const chargeShipping = await ChargeShipping(order);
+
+    return res.status(200).json(chargeShipping);
+}
+
+const statistic = async (req: Request, res: Response, next: NextFunction) => {
+    const ordersPromise = Order.find({});
+    const staffsPromise = Staff.find({});
+
+    const [orders, staffs] = await Promise.all([ordersPromise, staffsPromise]);
+
+    //Revenue
+    const deliveryRevenue = orders.reduce((result, order)=>{
+        if (order.updatedAt.getMonth() == new Date().getMonth()){
+            result.countAllOrders++;
+            result.revenue += order.fee.total;
+            if (order.tracking[0].status.code == process.env.STATUS_DELIVERY_SUCCESSFULLY){
+                result.countOrderSuccess++;
+            }
+            if (order.tracking[0].status.code == process.env.STATUS_DELIVERY_FAILED) {
+                result.countOrderFailed++;
+            }
+
+        }
+        return result;
+    }, {
+        countAllOrders: 0,
+        countOrderSuccess: 0,
+        countOrderFailed: 0,
+        revenue: 0,
+    })
+
+    //Salary
+    const deliveryCost = staffs.reduce((result, staff) => {
+        result.salaryAmount += staff.actualSalary;
+        return result;
+    },{
+        salaryAmount : 0,
+    })
+
+    //Data to Client
+    let profit = deliveryCost.salaryAmount - deliveryRevenue.revenue;
+    const data = {
+        deliveryRevenue: deliveryRevenue.revenue,
+        salaryAmount: deliveryCost.salaryAmount,
+        profit: profit,
+        countAllOrder: deliveryRevenue.countAllOrders,
+        countOrderSuccess: deliveryRevenue.countOrderSuccess,
+        countOrderFailed: deliveryRevenue.countOrderFailed,
+    }
+    res.status(200).json(data)
+}
+
 export default {
     getAll,
     create,
@@ -167,5 +217,7 @@ export default {
     updateStatus,
     deleteOne,
     getOrderNotYetHandle,
+    statistic,
+    calcFee,
 }
 

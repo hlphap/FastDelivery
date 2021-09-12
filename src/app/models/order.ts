@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { ChargeShipping } from "../../functions";
 import { IOrder, IFee } from "../../interfaces";
 import { AddressSchema } from "./address";
 import { DVMethod, DVMethodSchema } from "./dvmethod";
@@ -110,8 +111,9 @@ OrderSchema.pre<IOrder>("save", async function (next) {
         this.useDVMethod = method!;
 
         //Fee
-
-        //Set tracking default
+        this.fee = await ChargeShipping(this, {
+            changeAddress: true,
+        });
 
     } catch (err) {
         next(err);

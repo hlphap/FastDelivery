@@ -30,6 +30,4 @@ router.route("/:staffID")
     )
     .delete(StaffControllers.deleteOne)
 
-
-
 export default router;

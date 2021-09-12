@@ -41,6 +41,9 @@ interface IOrder extends Document {
         status: IStatus,
         chargeStaffID?: mongoose.Schema.Types.ObjectId;
     }[];
+
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 export {

@@ -1,14 +1,13 @@
-import { NextFunction } from "express";
 import { DVMethod, Store } from "../app/models";
 import { IOrder, IFee, IDVMethod } from "../interfaces";
 
 async function ChargeShipping(order: IOrder, options: {
-    changeAddress?: boolean,
-    storage?: boolean,
-} = {
-    changeAddress: false,
-    storage: false,
-}, next: NextFunction) {
+                                                changeAddress?: boolean,
+                                                storage?: boolean,
+                                            } = {
+                                                changeAddress: false,
+                                                storage: false,
+                                            }): Promise<IFee> {
     const fee = <IFee>{
         standard: 0,
         surCharge: 0,
@@ -57,8 +56,7 @@ async function ChargeShipping(order: IOrder, options: {
     //Calc Total Fee
     fee.total = fee.standard + fee.surCharge + fee.commission + fee.changeAddressDelivery + fee.storageCharge + fee.return;
 
-    //Assignment fee to order
-    order.fee = fee;
+    return fee;
 }
 
 export default ChargeShipping;
