@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import { IOrder } from "../../interfaces";
 import { Store } from "../models";
 
 const getAll = async (req: Request, res: Response, next: NextFunction) => {
@@ -53,9 +54,21 @@ const deleteOne = async (req: Request, res: Response, next: NextFunction) => {
     })
 }
 
+const statistics = async (req: Request, res: Response, next: NextFunction) => {
+    const { storeID } = req.params;
+
+    const store = await Store.findOne({})
+                            .populate("orders");
+
+    const orders : Array<IOrder> = <Array<IOrder>>store.orders;
+
+    console.log(orders[0].weight);
+}
+
 export default {
     getAll,
     create,
     update,
     deleteOne,
+    statistics,
 }

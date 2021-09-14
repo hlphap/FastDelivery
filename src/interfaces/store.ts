@@ -1,4 +1,5 @@
-import { Document } from "mongoose";
+import mongoose, { Document } from "mongoose";
+import { IOrder } from ".";
 import IAddress from "./address";
 import IBank from "./bank";
 import ICMStore from "./cmstore";
@@ -14,6 +15,7 @@ interface IStore extends Document {
     bank: IBank,
     commission: ICMStore,
     address: IAddress,
+    orders: Array<IOrder> | Array<mongoose.Schema.Types.ObjectId>
 }
 
 export default IStore;

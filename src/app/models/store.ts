@@ -45,7 +45,11 @@ const StoreSchema = new Schema<IStore>({
     },
     address: {
         type: AddressSchema
-    }
+    },
+    orders: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "orders",
+    }],
 },{
     timestamps: true,
     versionKey: false,

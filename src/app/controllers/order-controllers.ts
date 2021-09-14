@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { ChargeShipping } from "../../functions";
 import { IOrder, IStatus, IStore } from "../../interfaces";
-import { Order, Staff } from "../models";
+import { Order, Staff, Store } from "../models";
 import { Status } from "../models/status";
 
 
@@ -105,15 +105,34 @@ const updateStatus = async (req: Request, res: Response, next: NextFunction) => 
 const create = async (req: Request, res: Response, next: NextFunction) => {
     const order = req.body;
 
-    const newOrder = new Order(order);
-
     const statusDefault = await Status.findOne({code: process.env.STATUS_DEFAULT});
+    const foundStore = await Store.findOne({_id: order.ownerStoreID});
+
+    if (!foundStore) {
+        return res.status(404).json({
+            status: 404,
+            message: 'Store Not Found'
+        })
+    }
+
+    if (!statusDefault) {
+        return res.status(404).json({
+            status: 404,
+            message: 'Cannot Find Status Default To Set For Order',
+        })
+    }
+
+    const newOrder = new Order(order);
 
     newOrder.tracking.unshift({
         status: statusDefault,
     });
 
     await newOrder.save();
+
+    //Save orderID to Store
+    foundStore.orders.unshift(newOrder._id);
+    await foundStore.save();
 
     return res.status(200).json({
         status: 200,

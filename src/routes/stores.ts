@@ -9,6 +9,9 @@ router.route("/")
     .get(StoreControllers.getAll)
     .post(StoreControllers.create);
 
+router.route("/:storeID/statistics")
+    .get(StoreControllers.statistics);
+
 router.route("/:storeID")
     .all(validateParam(storeSchema.id, "storeID"))
     .put(
