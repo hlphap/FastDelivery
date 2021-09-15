@@ -55,7 +55,7 @@ const StaffSchema = new Schema<IStaff>({
     address: {
        type: AddressSchema,
     },
-    work: [{
+    orders: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "orders",
     }],

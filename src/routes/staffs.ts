@@ -22,6 +22,10 @@ router.route("/manager-signin")
         StaffControllers.managerSignIn
     )
 
+router.route("/:staffID/orders")
+    .all(validateParam(staffSchema.id, "staffID"))
+    .get(StaffControllers.orders)
+
 router.route("/:staffID")
     .all(validateParam(staffSchema.id, "staffID"))
     .put(

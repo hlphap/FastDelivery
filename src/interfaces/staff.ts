@@ -2,6 +2,7 @@ import mongoose,{ Document } from "mongoose";
 import ITypeStaff from "./type-staff";
 import ICommission from "./cmstore";
 import IAddress from "./address";
+import { IOrder } from ".";
 
 interface IStaff extends Document {
     [x: string]: any;
@@ -18,7 +19,7 @@ interface IStaff extends Document {
     commission: ICommission,
     address:  IAddress,
 
-    work: Array<mongoose.Schema.Types.ObjectId>,
+    orders: Array<mongoose.Schema.Types.ObjectId> | Array<IOrder>,
 }
 
 export default IStaff;
