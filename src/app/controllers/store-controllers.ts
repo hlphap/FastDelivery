@@ -62,7 +62,52 @@ const statistics = async (req: Request, res: Response, next: NextFunction) => {
 
     const orders : Array<IOrder> = <Array<IOrder>>store.orders;
 
-    console.log(orders[0].weight);
+    const statistic = orders.reduce((result, order) => {
+        if (order.updatedAt.getMonth() == new Date().getMonth()){
+            if (order.tracking[0].status.code == process.env.STATUS_DELIVERY_SUCCESSFULLY || order.tracking[0].status.code == process.env.STATUS_DELIVERY_FAILED) {
+                result.delivered.orderMoney += order.orderMoney;
+                result.delivered.surCharge += order.fee.surCharge;
+                result.delivered.standard += order.fee.standard;
+                result.delivered.commission += order.fee.commission;
+                result.delivered.changeAddressDelivery += order.fee.changeAddressDelivery;
+                result.delivered.storageCharge += order.fee.storageCharge;
+                result.delivered.return += order.fee.return;
+                result.delivered.total += order.fee.total;
+            } else {
+                result.delivering.orderMoney += order.orderMoney;
+                result.delivering.surCharge += order.fee.surCharge;
+                result.delivering.standard += order.fee.standard;
+                result.delivering.commission += order.fee.commission;
+                result.delivering.changeAddressDelivery += order.fee.changeAddressDelivery;
+                result.delivering.storageCharge += order.fee.storageCharge;
+                result.delivering.return += order.fee.return;
+                result.delivering.total += order.fee.total;
+            }
+        }
+        return result;
+    },{
+        delivered: {
+            orderMoney: 0,
+            standard: 0,
+            surCharge: 0,
+            commission: 0,
+            changeAddressDelivery: 0,
+            storageCharge: 0,
+            return: 0,
+            total: 0,
+        },
+        delivering: {
+            orderMoney: 0,
+            standard: 0,
+            surCharge: 0,
+            commission: 0,
+            changeAddressDelivery: 0,
+            storageCharge: 0,
+            return: 0,
+            total: 0,
+        },
+    })
+    return res.status(200).json(statistic);
 }
 
 export default {
