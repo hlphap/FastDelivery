@@ -6,6 +6,7 @@ import dvMethodRouter from './dvmethods';
 import bankRouter from './banks';
 import cmStoreRouter from './cmstores';
 import cmStaffRouter from './cmstaffs';
+import districtRouter from './districts';
 
 const router = express.Router();
 
@@ -29,6 +30,10 @@ const v1Router = [
     {
         path: '/v1/cmstaffs',
         route: cmStaffRouter,
+    },
+    {
+        path: '/v1/districts',
+        route: districtRouter,
     },
 ];
 

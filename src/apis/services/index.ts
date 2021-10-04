@@ -5,3 +5,5 @@ export * as dvMethodService from './dvmethod.service';
 export * as bankService from './bank.service';
 export * as cmStoreService from './cmstore.service';
 export * as cmStaffService from './cmstaff.service';
+export * as districtService from './district.service';
+export * as wardService from './ward.service';
