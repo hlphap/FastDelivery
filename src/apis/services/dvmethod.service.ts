@@ -1,7 +1,7 @@
 import httpStatus from "http-status-codes";
 
 import { DVMethod } from "../models";
-import { IDVMethod } from "apis/types";
+import { IDVMethod } from "../types";
 import { CustomError } from "../../utils/custom-error";
 
 export const getDVMethods = async function (): Promise<Array<IDVMethod>> {
@@ -22,7 +22,7 @@ export const updateDVMethod = async function (dvMethodID: string, dvMethod: IDVM
     });
 };
 
-export const deleteDVMethod = async function (dvMethodID: string) {
+export const deleteDVMethod = async function (dvMethodID: string): Promise<IDVMethod> {
     const foundDVMethod = await DVMethod.findById(dvMethodID);
     if (!foundDVMethod) throw new CustomError(httpStatus.NOT_FOUND, "mongoose", "Delivery method not found");
     return DVMethod.findByIdAndDelete(dvMethodID);

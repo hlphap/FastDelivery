@@ -21,7 +21,6 @@
             "./src/types",
             "./node_modules/@types",
         ],
-        "baseUrl": "src/",
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true
     },

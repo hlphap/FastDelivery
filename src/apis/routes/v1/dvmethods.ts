@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { checkRole } from "middlewares";
 import { dvMethodControllers } from "../../controllers";
 
 const router = Router();
