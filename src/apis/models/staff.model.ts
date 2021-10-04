@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose';
 import bcrypt from 'bcrypt';
 import { IStaff } from '../types';
 
-import { TypeStaffSchema } from './type-staff.model';
+import { TypeStaffSchema } from './typestaff.model';
 import { CMStaffSchema } from './cmstaff.model';
 import { AddressSchema } from './address.model';
 

@@ -5,7 +5,7 @@ import { CustomError } from '../utils/custom-error';
 
 //  Catch 404
 export const catchErrorNotFound = (req: Request, res: Response, next: NextFunction) => {
-    const err = new CustomError(httpStatus.NOT_FOUND, 'Raw', 'Not found');
+    const err = new CustomError(httpStatus.NOT_FOUND, 'Raw', 'API URI Not Found ');
     next(err);
 };
 

@@ -7,3 +7,6 @@ export * as cmStoreService from './cmstore.service';
 export * as cmStaffService from './cmstaff.service';
 export * as districtService from './district.service';
 export * as wardService from './ward.service';
+export * as warehouseService from './warehouse.service';
+export * as statusService from './status.service';
+export * as typeStaffService from './typestaff.service';

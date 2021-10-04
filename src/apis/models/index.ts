@@ -9,6 +9,6 @@ export * from './order.model';
 export * from './staff.model';
 export * from './status.model';
 export * from './store.model';
-export * from './type-staff.model';
+export * from './typestaff.model';
 export * from './ward.model';
 export * from './warehouse.model';

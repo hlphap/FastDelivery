@@ -12,7 +12,7 @@ export const TypeStaffSchema = new Schema<ITypeStaff>(
             type: String,
             required: true,
         },
-        level: {
+        role: {
             type: Number,
             default: 0,
         },
