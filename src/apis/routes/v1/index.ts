@@ -2,7 +2,8 @@ import express from "express";
 
 //  Import route
 import userRouter from "./users";
-import authRouter from "./auths";
+import dvMethodRouter from "./dvmethods";
+import bankRouter from "./banks";
 
 const router = express.Router();
 
@@ -12,8 +13,12 @@ const v1Router = [
         route: userRouter,
     },
     {
-        path: "/v1/auth",
-        route: authRouter,
+        path: "/v1/dvmethods",
+        route: dvMethodRouter,
+    },
+    {
+        path: "/v1/banks",
+        route: bankRouter,
     },
 ];
 

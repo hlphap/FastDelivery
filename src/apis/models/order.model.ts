@@ -1,10 +1,9 @@
 import { Schema, model } from "mongoose";
 
-import { IOrder, IFee } from "apis/types";
-// import { ChargeShipping } from '../../functions';
+import { IOrder, IFee } from "../types";
 import { AddressSchema } from "./address.model";
-import { DVMethodSchema, DVMethod } from "./dvmethod.model";
 import { StatusSchema } from "./status.model";
+import { DVMethodSchema, DVMethod } from "./dvmethod.model";
 
 export const FeeSchema = new Schema<IFee>(
     {

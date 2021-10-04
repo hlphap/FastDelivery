@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import bcrypt from "bcrypt";
 
-import { IStore } from "apis/types";
+import { IStore } from "../types";
 import { AddressSchema } from "./address.model";
 import { BankSchema } from "./bank.model";
 import { CMStoreSchema } from "./cmstore.model";

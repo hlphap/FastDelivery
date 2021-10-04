@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-import { IStatus } from "apis/types";
+import { IStatus } from "../types";
 
 export const StatusSchema = new Schema<IStatus>(
     {

@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 import bcrypt from "bcrypt";
-import { IStaff } from "apis/types";
+import { IStaff } from "../types";
 
 import { TypeStaffSchema } from "./type-staff.model";
 import { CMStaffSchema } from "./cmstaff.model";
@@ -30,11 +30,11 @@ export const StaffSchema = new Schema<IStaff>(
         },
         basicSalary: {
             type: Number,
-            default: "0",
+            default: 0,
         },
         actualSalary: {
             type: Number,
-            default: "0",
+            default: 0,
         },
         email: {
             type: String,

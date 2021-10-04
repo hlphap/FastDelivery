@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { ICMStore } from "apis/types";
+import { ICMStore } from "../types";
 
 export const CMStoreSchema = new Schema<ICMStore>(
     {

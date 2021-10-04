@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-import { IDVMethod } from "apis/types";
+import { IDVMethod } from "../types";
 
 const DVMethodSchema = new Schema(
     {

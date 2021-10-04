@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-import { IWard } from "apis/types";
+import { IWard } from "../types";
 import { DistrictSchema } from "./district.model";
 
 export const WardSchema = new Schema<IWard>(

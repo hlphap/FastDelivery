@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-import { ITypeStaff } from "apis/types";
+import { ITypeStaff } from "../types";
 
 export const TypeStaffSchema = new Schema<ITypeStaff>(
     {

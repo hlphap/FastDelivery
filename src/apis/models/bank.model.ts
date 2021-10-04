@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-import { IBank } from "apis/types";
+import { IBank } from "../types";
 
 export const BankSchema = new Schema<IBank>(
     {

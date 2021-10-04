@@ -10,6 +10,7 @@ export default async () => {
         await mongoose.connect(env.database.connection, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            useCreateIndex: true,
             useFindAndModify: false,
         });
         log.info(`Successfully for MongoDB connected!! ✔️`);

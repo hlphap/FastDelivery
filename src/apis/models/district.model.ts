@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-import { IDistrict } from "apis/types";
+import { IDistrict } from "../types";
 
 export const DistrictSchema = new Schema<IDistrict>(
     {

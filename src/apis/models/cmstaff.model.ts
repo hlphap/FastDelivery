@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { ICMStaff } from "apis/types";
+import { ICMStaff } from "../types";
 
 export const CMStaffSchema = new Schema<ICMStaff>(
     {

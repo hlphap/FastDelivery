@@ -7,7 +7,7 @@ import morgan from "morgan";
 
 import { env } from "../configs/env";
 import routeConfig from "../apis/routes/v1";
-import { errorConverter, errorHandler } from "../middlewares/error";
+import { catchErrorNotFound, errorConverter, errorHandler } from "../middlewares/error";
 
 export default () => {
     const app: Application = express();
@@ -41,6 +41,9 @@ export default () => {
 
     // api routes
     app.use(env.app.routePrefix, routeConfig);
+
+    // handle error not found
+    app.use(catchErrorNotFound);
 
     // convert error to ApiError, if needed
     app.use(errorConverter);
