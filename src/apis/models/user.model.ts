@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
-import validator from "validator";
-import bcrypt from "bcrypt";
+import mongoose from 'mongoose';
+import validator from 'validator';
+import bcrypt from 'bcrypt';
 
-import { IUser, Role, UserModel } from "../types";
+import { IUser, Role, UserModel } from '../types';
 
 const { Schema } = mongoose;
 
@@ -16,7 +16,7 @@ const UserSchema = new Schema<IUser, UserModel>(
             lowercase: true,
             validate(value: string) {
                 if (!validator.isEmail(value)) {
-                    throw new Error("Invalid email");
+                    throw new Error('Invalid email');
                 }
             },
         },
@@ -27,7 +27,7 @@ const UserSchema = new Schema<IUser, UserModel>(
             minlength: 6,
             validate(value: String) {
                 if (!value.match(/\d/) || !value.match(/[a-zA-Z]/)) {
-                    throw new Error("Password must contain at least one letter and one number");
+                    throw new Error('Password must contain at least one letter and one number');
                 }
             },
             private: true,
@@ -39,7 +39,7 @@ const UserSchema = new Schema<IUser, UserModel>(
         },
         role: {
             type: String,
-            default: "STANDARD" as Role,
+            default: 'STANDARD' as Role,
         },
     },
     {
@@ -56,14 +56,14 @@ UserSchema.methods.checkPasswordMatch = function (password: string) {
     return bcrypt.compareSync(password, this.password);
 };
 
-UserSchema.pre("save", async function (next) {
+UserSchema.pre('save', async function (next) {
     const user = this;
-    if (user.isModified("password")) {
+    if (user.isModified('password')) {
         user.password = await bcrypt.hash(user.password, 10);
     }
     next();
 });
 
-const User = mongoose.model<IUser, UserModel>("users", UserSchema);
+const User = mongoose.model<IUser, UserModel>('users', UserSchema);
 
 export { UserSchema, User };

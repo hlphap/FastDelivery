@@ -29,7 +29,7 @@ function toNumber(value: string) {
 }
 
 function toBool(value: string) {
-    return value === "true";
+    return value === 'true';
 }
 
 export { getOsEnv, normalizePort, toNumber, toBool };

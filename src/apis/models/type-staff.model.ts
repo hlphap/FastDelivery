@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { ITypeStaff } from "../types";
+import { ITypeStaff } from '../types';
 
 export const TypeStaffSchema = new Schema<ITypeStaff>(
     {
@@ -23,4 +23,4 @@ export const TypeStaffSchema = new Schema<ITypeStaff>(
     },
 );
 
-export const TypeStaff = model<ITypeStaff>("typestaffs", TypeStaffSchema);
+export const TypeStaff = model<ITypeStaff>('typestaffs', TypeStaffSchema);

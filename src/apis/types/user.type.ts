@@ -1,6 +1,6 @@
-import { Model, Document } from "mongoose";
+import { Model, Document } from 'mongoose';
 
-export type Role = "ADMINISTRATOR" | "STANDARD";
+export type Role = 'ADMINISTRATOR' | 'STANDARD';
 
 export interface IUser extends Document {
     email: string;

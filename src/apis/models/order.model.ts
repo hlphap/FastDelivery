@@ -1,9 +1,9 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { IOrder, IFee } from "../types";
-import { AddressSchema } from "./address.model";
-import { StatusSchema } from "./status.model";
-import { DVMethodSchema, DVMethod } from "./dvmethod.model";
+import { IOrder, IFee } from '../types';
+import { AddressSchema } from './address.model';
+import { StatusSchema } from './status.model';
+import { DVMethodSchema, DVMethod } from './dvmethod.model';
 
 export const FeeSchema = new Schema<IFee>(
     {
@@ -46,7 +46,7 @@ export const OrderSchema = new Schema<IOrder>(
     {
         ownerStoreID: {
             type: Schema.Types.ObjectId,
-            ref: "stores",
+            ref: 'stores',
         },
         orderName: {
             type: String,
@@ -62,7 +62,7 @@ export const OrderSchema = new Schema<IOrder>(
         },
         note: {
             type: String,
-            default: "Not Note",
+            default: 'Not Note',
         },
         receiverName: {
             type: String,
@@ -106,7 +106,7 @@ export const OrderSchema = new Schema<IOrder>(
     },
 );
 
-OrderSchema.pre<IOrder>("save", async function (next) {
+OrderSchema.pre<IOrder>('save', async function (next) {
     try {
         // Fill fullAddress
         this.receiverAddress.fullAddress = `${this.receiverAddress.noteAddress}, ${this.receiverAddress.ward.name}, ${this.receiverAddress.ward.district.name}`;
@@ -125,4 +125,4 @@ OrderSchema.pre<IOrder>("save", async function (next) {
     }
 });
 
-export const Order = model<IOrder>("orders", OrderSchema);
+export const Order = model<IOrder>('orders', OrderSchema);

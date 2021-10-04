@@ -1,8 +1,8 @@
-import httpStatus from "http-status-codes";
-import { Request, Response } from "express";
+import httpStatus from 'http-status-codes';
+import { Request, Response } from 'express';
 
-import { userService } from "../services";
-import catchAsync from "../../utils/catch-async";
+import { userService } from '../services';
+import catchAsync from '../../utils/catch-async';
 
 const getUsers = catchAsync(async (req: Request, res: Response) => {
     const users = await userService.getUsers();

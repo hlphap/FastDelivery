@@ -1,5 +1,5 @@
-import { Schema, model } from "mongoose";
-import { ICMStaff } from "../types";
+import { Schema, model } from 'mongoose';
+import { ICMStaff } from '../types';
 
 export const CMStaffSchema = new Schema<ICMStaff>(
     {
@@ -21,11 +21,11 @@ export const CMStaffSchema = new Schema<ICMStaff>(
         },
         image: {
             type: String,
-            default: "None",
+            default: 'None',
         },
         note: {
             type: String,
-            default: "Note Commission Staff",
+            default: 'Note Commission Staff',
         },
     },
     {
@@ -34,4 +34,4 @@ export const CMStaffSchema = new Schema<ICMStaff>(
     },
 );
 
-export const CMStaff = model<ICMStaff>("cmstaffs", CMStaffSchema);
+export const CMStaff = model<ICMStaff>('cmstaffs', CMStaffSchema);

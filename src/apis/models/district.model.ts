@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { IDistrict } from "../types";
+import { IDistrict } from '../types';
 
 export const DistrictSchema = new Schema<IDistrict>(
     {
@@ -15,4 +15,4 @@ export const DistrictSchema = new Schema<IDistrict>(
     },
 );
 
-export const District = model<IDistrict>("districts", DistrictSchema);
+export const District = model<IDistrict>('districts', DistrictSchema);

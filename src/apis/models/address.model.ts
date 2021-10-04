@@ -1,7 +1,7 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { IAddress } from "../types";
-import { WardSchema } from "./ward.model";
+import { IAddress } from '../types';
+import { WardSchema } from './ward.model';
 
 export const AddressSchema = new Schema<IAddress>({
     fullAddress: {
@@ -16,4 +16,4 @@ export const AddressSchema = new Schema<IAddress>({
     },
 });
 
-export const Address = model<IAddress>("addresses", AddressSchema);
+export const Address = model<IAddress>('addresses', AddressSchema);

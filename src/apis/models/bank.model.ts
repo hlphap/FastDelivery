@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { IBank } from "../types";
+import { IBank } from '../types';
 
 export const BankSchema = new Schema<IBank>(
     {
@@ -18,4 +18,4 @@ export const BankSchema = new Schema<IBank>(
     },
 );
 
-export const Bank = model<IBank>("banks", BankSchema);
+export const Bank = model<IBank>('banks', BankSchema);

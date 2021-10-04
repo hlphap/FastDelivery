@@ -1,5 +1,5 @@
-import { Schema, model } from "mongoose";
-import { ICMStore } from "../types";
+import { Schema, model } from 'mongoose';
+import { ICMStore } from '../types';
 
 export const CMStoreSchema = new Schema<ICMStore>(
     {
@@ -21,11 +21,11 @@ export const CMStoreSchema = new Schema<ICMStore>(
         },
         image: {
             type: String,
-            default: "None",
+            default: 'None',
         },
         note: {
             type: String,
-            default: "Note Commission Store",
+            default: 'Note Commission Store',
         },
     },
     {
@@ -34,4 +34,4 @@ export const CMStoreSchema = new Schema<ICMStore>(
     },
 );
 
-export const CMStore = model<ICMStore>("cmstores", CMStoreSchema);
+export const CMStore = model<ICMStore>('cmstores', CMStoreSchema);

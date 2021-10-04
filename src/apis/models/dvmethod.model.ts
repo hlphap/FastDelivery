@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { IDVMethod } from "../types";
+import { IDVMethod } from '../types';
 
 const DVMethodSchema = new Schema(
     {
@@ -43,6 +43,6 @@ const DVMethodSchema = new Schema(
     },
 );
 
-const DVMethod = model<IDVMethod>("dvmethods", DVMethodSchema);
+const DVMethod = model<IDVMethod>('dvmethods', DVMethodSchema);
 
 export { DVMethod, DVMethodSchema };

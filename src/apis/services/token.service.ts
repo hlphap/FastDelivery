@@ -1,13 +1,13 @@
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
 
-import { JwtPayload } from "../../types/jwt-payload.type";
-import { env } from "../../configs/env";
-import { IStaff, IStore, IUser, Role } from "../types";
+import { JwtPayload } from '../../types/jwt-payload.type';
+import { env } from '../../configs/env';
+import { IStaff, IStore, IUser, Role } from '../types';
 
 const generateJwtToken = async (user: IStaff | IStore): Promise<string> => {
     let payload = {} as JwtPayload;
 
-    if (user.kind == "staff") {
+    if (user.kind == 'staff') {
         payload = {
             id: user.id,
             name: user.fullName,

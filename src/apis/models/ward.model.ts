@@ -1,7 +1,7 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { IWard } from "../types";
-import { DistrictSchema } from "./district.model";
+import { IWard } from '../types';
+import { DistrictSchema } from './district.model';
 
 export const WardSchema = new Schema<IWard>(
     {
@@ -20,4 +20,4 @@ export const WardSchema = new Schema<IWard>(
     },
 );
 
-export const Ward = model<IWard>("wards", WardSchema);
+export const Ward = model<IWard>('wards', WardSchema);

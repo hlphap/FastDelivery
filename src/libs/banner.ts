@@ -1,5 +1,5 @@
-import { env } from "../configs/env";
-import { Logger } from "./logger/logger";
+import { env } from '../configs/env';
+import { Logger } from './logger/logger';
 
 export function banner(log: Logger): void {
     if (env.app.banner) {
@@ -7,7 +7,7 @@ export function banner(log: Logger): void {
         log.info(``);
         log.info(`Aloha, your app is ready on ${route()}${env.app.routePrefix}`);
         log.info(`To shut it down, press <CTRL> + C at any time.`);
-        log.info("-------------------------------------------------------");
+        log.info('-------------------------------------------------------');
         log.info(`Environment  : ${env.node}`);
         log.info(`Version      : ${env.app.version}`);
         log.info(`API Info     : ${route()}${env.app.routePrefix}`);
@@ -17,7 +17,7 @@ export function banner(log: Logger): void {
         if (env.monitor.enabled) {
             log.info(`Monitor      : ${route()}${env.monitor.route}`);
         }
-        log.info("-----------------------------------------");
+        log.info('-----------------------------------------');
     } else {
         log.info(`Application is up and running.`);
     }

@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { IStatus } from "../types";
+import { IStatus } from '../types';
 
 export const StatusSchema = new Schema<IStatus>(
     {
@@ -17,7 +17,7 @@ export const StatusSchema = new Schema<IStatus>(
         afterStatus: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "status",
+                ref: 'status',
             },
         ],
     },
@@ -27,4 +27,4 @@ export const StatusSchema = new Schema<IStatus>(
     },
 );
 
-export const Status = model<IStatus>("status", StatusSchema);
+export const Status = model<IStatus>('status', StatusSchema);

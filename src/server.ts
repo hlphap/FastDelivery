@@ -1,9 +1,9 @@
-import { Logger } from "./libs/logger";
-import { banner } from "./libs/banner";
+import { Logger } from './libs/logger';
+import { banner } from './libs/banner';
 
-import expressLoader from "./loaders/express.loader";
-import winstonLoader from "./loaders/winston.loader";
-import mongooseLoader from "./loaders/mongoose.loader";
+import expressLoader from './loaders/express.loader';
+import winstonLoader from './loaders/winston.loader';
+import mongooseLoader from './loaders/mongoose.loader';
 
 const log = new Logger(__filename);
 

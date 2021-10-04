@@ -1,5 +1,5 @@
-import { Document } from "mongoose";
-import { Role } from ".";
+import { Document } from 'mongoose';
+import { Role } from '.';
 
 export interface ITypeStaff extends Document {
     name: string;

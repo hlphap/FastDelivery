@@ -1,9 +1,9 @@
-import { Document, Schema } from "mongoose";
-import { IAddress } from "./address.type";
-import { IStore } from "./store.type";
-import { IDVMethod } from "./dvmethod.type";
-import { IStaff } from "./staff.type";
-import { IStatus } from "./status.type";
+import { Document, Schema } from 'mongoose';
+import { IAddress } from './address.type';
+import { IStore } from './store.type';
+import { IDVMethod } from './dvmethod.type';
+import { IStaff } from './staff.type';
+import { IStatus } from './status.type';
 
 export interface IFee extends Document {
     standard: number;

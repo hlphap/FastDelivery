@@ -1,6 +1,6 @@
-import { configure, format, transports } from "winston";
+import { configure, format, transports } from 'winston';
 
-import { env } from "../configs/env";
+import { env } from '../configs/env';
 
 export default () => {
     configure({
@@ -9,7 +9,7 @@ export default () => {
                 level: env.log.level,
                 handleExceptions: true,
                 format:
-                    env.node !== "development"
+                    env.node !== 'development'
                         ? format.combine(format.json())
                         : format.combine(format.colorize(), format.simple()),
             }),

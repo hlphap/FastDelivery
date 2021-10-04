@@ -1,10 +1,10 @@
-import { Schema, model } from "mongoose";
-import bcrypt from "bcrypt";
-import { IStaff } from "../types";
+import { Schema, model } from 'mongoose';
+import bcrypt from 'bcrypt';
+import { IStaff } from '../types';
 
-import { TypeStaffSchema } from "./type-staff.model";
-import { CMStaffSchema } from "./cmstaff.model";
-import { AddressSchema } from "./address.model";
+import { TypeStaffSchema } from './type-staff.model';
+import { CMStaffSchema } from './cmstaff.model';
+import { AddressSchema } from './address.model';
 
 export const StaffSchema = new Schema<IStaff>(
     {
@@ -14,11 +14,11 @@ export const StaffSchema = new Schema<IStaff>(
         },
         gender: {
             type: String,
-            default: "Male",
+            default: 'Male',
         },
         dateOfBirth: {
             type: String,
-            default: "01/01/2000",
+            default: '01/01/2000',
         },
         idNumber: {
             type: String,
@@ -57,7 +57,7 @@ export const StaffSchema = new Schema<IStaff>(
         orders: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "orders",
+                ref: 'orders',
             },
         ],
     },
@@ -68,7 +68,7 @@ export const StaffSchema = new Schema<IStaff>(
 );
 
 // Pre call save() staff
-StaffSchema.pre<IStaff>("save", { document: true, query: false }, async function (next) {
+StaffSchema.pre<IStaff>('save', { document: true, query: false }, async function (next) {
     try {
         // Generate fullAddress
         this.address.fullAddress = `${this.address.noteAddress}, ${this.address.ward.name}, ${this.address.ward.district.name}`;
@@ -97,4 +97,4 @@ StaffSchema.methods.isValidPassword = async function (newPassword) {
     }
 };
 
-export const Staff = model<IStaff>("staffs", StaffSchema);
+export const Staff = model<IStaff>('staffs', StaffSchema);

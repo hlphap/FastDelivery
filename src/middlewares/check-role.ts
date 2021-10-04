@@ -1,8 +1,8 @@
-import { Request, Response, NextFunction } from "express";
-import httpStatus from "http-status-codes";
+import { Request, Response, NextFunction } from 'express';
+import httpStatus from 'http-status-codes';
 
-import { CustomError } from "../utils/custom-error";
-import { Role } from "../apis/types";
+import { CustomError } from '../utils/custom-error';
+import { Role } from '../apis/types';
 
 /**
  * @param roles: list role authorization
@@ -20,14 +20,14 @@ export const checkRole =
             if (id === userID) {
                 return next();
             }
-            const error = new CustomError(httpStatus.BAD_REQUEST, "Authorization", "Self allowed action");
+            const error = new CustomError(httpStatus.BAD_REQUEST, 'Authorization', 'Self allowed action');
             return next(error);
         }
 
         if (roles.indexOf(role) === -1) {
             const error = new CustomError(
                 httpStatus.UNAUTHORIZED,
-                "Authorization",
+                'Authorization',
                 `Unauthorized - Insufficient user rights. Current role: ${role}. Required role: ${roles.toString()}`,
             );
             return next(error);

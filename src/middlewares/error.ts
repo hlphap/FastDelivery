@@ -1,11 +1,11 @@
-import httpStatus from "http-status-codes";
-import { Request, Response, NextFunction } from "express";
-import mongoose from "mongoose";
-import { CustomError } from "../utils/custom-error";
+import httpStatus from 'http-status-codes';
+import { Request, Response, NextFunction } from 'express';
+import mongoose from 'mongoose';
+import { CustomError } from '../utils/custom-error';
 
 //  Catch 404
 export const catchErrorNotFound = (req: Request, res: Response, next: NextFunction) => {
-    const err = new CustomError(httpStatus.NOT_FOUND, "Raw", "Not found");
+    const err = new CustomError(httpStatus.NOT_FOUND, 'Raw', 'Not found');
     next(err);
 };
 

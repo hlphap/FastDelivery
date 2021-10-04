@@ -1,12 +1,12 @@
-import { Document, Schema } from "mongoose";
-import { IBank } from "./bank.type";
-import { ICMStore } from "./cmstore.type";
-import { IAddress } from "./address.type";
-import { IOrder } from "./order.type";
-import { Role } from ".";
+import { Document, Schema } from 'mongoose';
+import { IBank } from './bank.type';
+import { ICMStore } from './cmstore.type';
+import { IAddress } from './address.type';
+import { IOrder } from './order.type';
+import { Role } from '.';
 
 export interface IStore extends Document {
-    kind: "store";
+    kind: 'store';
     role: Role;
     name: string;
     phone: string;

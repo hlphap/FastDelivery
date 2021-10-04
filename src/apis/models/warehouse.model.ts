@@ -1,7 +1,7 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
-import { IWareHouse } from "../types";
-import { AddressSchema } from "./address.model";
+import { IWareHouse } from '../types';
+import { AddressSchema } from './address.model';
 
 export const WareHouseSchema = new Schema<IWareHouse>(
     {
@@ -20,7 +20,7 @@ export const WareHouseSchema = new Schema<IWareHouse>(
     },
 );
 
-WareHouseSchema.pre<IWareHouse>("save", async function (next) {
+WareHouseSchema.pre<IWareHouse>('save', async function (next) {
     try {
         // Generate fullAddress
         this.address.fullAddress = `${this.address.noteAddress}, ${this.address.ward.name}, ${this.address.ward.district.name}`;
@@ -30,4 +30,4 @@ WareHouseSchema.pre<IWareHouse>("save", async function (next) {
     }
 });
 
-export const WareHouse = model<IWareHouse>("warehouses", WareHouseSchema);
+export const WareHouse = model<IWareHouse>('warehouses', WareHouseSchema);

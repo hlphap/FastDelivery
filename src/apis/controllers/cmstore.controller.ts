@@ -1,7 +1,7 @@
-import { Request, Response } from "express";
-import { StatusCodes } from "http-status-codes";
-import catchAsync from "../../utils/catch-async";
-import { cmStoreService } from "../services";
+import { Request, Response } from 'express';
+import { StatusCodes } from 'http-status-codes';
+import catchAsync from '../../utils/catch-async';
+import { cmStoreService } from '../services';
 
 export const getCMStores = catchAsync(async (req: Request, res: Response) => {
     const cmStores = await cmStoreService.getCMStores();

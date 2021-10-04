@@ -1,7 +1,7 @@
-import { Request, Response } from "express";
-import httpStatus from "http-status-codes";
-import catchAsync from "../../utils/catch-async";
-import { dvMethodService } from "../services";
+import { Request, Response } from 'express';
+import httpStatus from 'http-status-codes';
+import catchAsync from '../../utils/catch-async';
+import { dvMethodService } from '../services';
 
 export const getDVMethods = catchAsync(async (req: Request, res: Response) => {
     const dvMethods = await dvMethodService.getDVMethods();

@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-import { env } from "../configs/env";
-import { Logger } from "../libs/logger";
+import { env } from '../configs/env';
+import { Logger } from '../libs/logger';
 
 const log = new Logger(__filename);
 

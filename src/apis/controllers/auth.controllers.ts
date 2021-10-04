@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
-import httpStatus from "http-status-codes";
+import { Request, Response } from 'express';
+import httpStatus from 'http-status-codes';
 
-import { authService, tokenService, userService } from "../services";
-import catchAsync from "../../utils/catch-async";
+import { authService, tokenService, userService } from '../services';
+import catchAsync from '../../utils/catch-async';
 
 // const login = catchAsync(async (req: Request, res: Response) => {
 //     const { email, password } = req.body;

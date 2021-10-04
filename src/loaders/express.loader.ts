@@ -1,19 +1,19 @@
-import express, { Application } from "express";
-import compression from "compression";
-import cors from "cors";
-import mongoSanitize from "express-mongo-sanitize";
-import helmet from "helmet";
-import morgan from "morgan";
+import express, { Application } from 'express';
+import compression from 'compression';
+import cors from 'cors';
+import mongoSanitize from 'express-mongo-sanitize';
+import helmet from 'helmet';
+import morgan from 'morgan';
 
-import { env } from "../configs/env";
-import routeConfig from "../apis/routes/v1";
-import { catchErrorNotFound, errorConverter, errorHandler } from "../middlewares/error";
+import { env } from '../configs/env';
+import routeConfig from '../apis/routes/v1';
+import { catchErrorNotFound, errorConverter, errorHandler } from '../middlewares/error';
 
 export default () => {
     const app: Application = express();
 
     // set log request
-    app.use(morgan("dev"));
+    app.use(morgan('dev'));
 
     // set security HTTP headers
     app.use(helmet());
@@ -32,7 +32,7 @@ export default () => {
 
     // set cors blocked resources
     app.use(cors());
-    app.options("*", cors);
+    app.options('*', cors);
 
     // setup limits
     if (env.isProduction) {

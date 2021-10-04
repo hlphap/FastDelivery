@@ -1,10 +1,10 @@
-import { Schema, model } from "mongoose";
-import bcrypt from "bcrypt";
+import { Schema, model } from 'mongoose';
+import bcrypt from 'bcrypt';
 
-import { IStore } from "../types";
-import { AddressSchema } from "./address.model";
-import { BankSchema } from "./bank.model";
-import { CMStoreSchema } from "./cmstore.model";
+import { IStore } from '../types';
+import { AddressSchema } from './address.model';
+import { BankSchema } from './bank.model';
+import { CMStoreSchema } from './cmstore.model';
 
 export const StoreSchema = new Schema<IStore>(
     {
@@ -18,7 +18,7 @@ export const StoreSchema = new Schema<IStore>(
         },
         accountName: {
             type: String,
-            default: "Account Name Bank",
+            default: 'Account Name Bank',
         },
         accountNumber: {
             type: String,
@@ -26,7 +26,7 @@ export const StoreSchema = new Schema<IStore>(
         },
         branchBank: {
             type: String,
-            default: "Branch Bank",
+            default: 'Branch Bank',
         },
         email: {
             type: String,
@@ -49,7 +49,7 @@ export const StoreSchema = new Schema<IStore>(
         orders: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "orders",
+                ref: 'orders',
             },
         ],
     },
@@ -59,7 +59,7 @@ export const StoreSchema = new Schema<IStore>(
     },
 );
 
-StoreSchema.pre<IStore>("save", async function (next) {
+StoreSchema.pre<IStore>('save', async function (next) {
     try {
         // Generate fullAddress
         this.address.fullAddress = `${this.address.noteAddress}, ${this.address.ward.name}, ${this.address.ward.district.name}`;
@@ -80,4 +80,4 @@ StoreSchema.pre<IStore>("save", async function (next) {
     }
 });
 
-export const Store = model<IStore>("stores", StoreSchema);
+export const Store = model<IStore>('stores', StoreSchema);

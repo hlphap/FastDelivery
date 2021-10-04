@@ -1,5 +1,5 @@
-import { env } from "../configs/env";
-import { ErrorResponse } from "../types/error";
+import { env } from '../configs/env';
+import { ErrorResponse } from '../types/error';
 
 export class CustomError extends Error {
     private statusCode: number;
@@ -13,7 +13,7 @@ export class CustomError extends Error {
         errorType: string,
         message: string,
         isOperational: boolean = true,
-        stack: string = "",
+        stack: string = '',
     ) {
         super(message);
         this.statusCode = statusCode;
