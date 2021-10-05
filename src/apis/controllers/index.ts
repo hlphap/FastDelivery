@@ -9,3 +9,4 @@ export * as warehouseControllers from './warehouse.controllers';
 export * as statusControllers from './status.controllers';
 export * as typeStaffControllers from './typestaff.controllers';
 export * as storeControllers from './store.controllers';
+export * as staffControllers from './staff.controllers';

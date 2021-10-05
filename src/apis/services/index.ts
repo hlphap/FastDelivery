@@ -11,3 +11,4 @@ export * as warehouseService from './warehouse.service';
 export * as statusService from './status.service';
 export * as typeStaffService from './typestaff.service';
 export * as storeService from './store.service';
+export * as staffService from './staff.service';
