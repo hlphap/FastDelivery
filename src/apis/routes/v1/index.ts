@@ -10,6 +10,7 @@ import districtRouter from './districts';
 import warehouseRouter from './warehouses';
 import statusRouter from './status';
 import typeStaffRouter from './typestaffs';
+import storeRouter from './stores';
 
 const router = express.Router();
 
@@ -49,6 +50,10 @@ const v1Router = [
     {
         path: '/v1/typestaffs',
         route: typeStaffRouter,
+    },
+    {
+        path: '/v1/stores',
+        route: storeRouter,
     },
 ];
 
