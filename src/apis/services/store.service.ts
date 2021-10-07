@@ -37,10 +37,10 @@ export const getStatistics = async function (storeID: string) {
     const orders: Array<IOrder> = <Array<IOrder>>foundStore.orders;
     const statistic = orders.reduce(
         (result, order) => {
-            if (order.updatedAt.getMonth() == new Date().getMonth()) {
+            if (order.updatedAt.getMonth() === new Date().getMonth()) {
                 if (
-                    order.tracking[0].status.code == process.env.STATUS_DELIVERY_SUCCESSFULLY ||
-                    order.tracking[0].status.code == process.env.STATUS_DELIVERY_FAILED
+                    order.tracking[0].status.code === process.env.STATUS_DELIVERY_SUCCESSFULLY ||
+                    order.tracking[0].status.code === process.env.STATUS_DELIVERY_FAILED
                 ) {
                     result.delivered.orderMoney += order.orderMoney;
                     result.delivered.surCharge += order.fee.surCharge;

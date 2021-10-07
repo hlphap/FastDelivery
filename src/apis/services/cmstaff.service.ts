@@ -1,7 +1,7 @@
+import { StatusCodes } from 'http-status-codes';
 import { ICMStaff } from '../types';
 import { CMStaff } from '../models';
 import { CustomError } from '../../utils/custom-error';
-import { StatusCodes } from 'http-status-codes';
 
 export const getCMStaffs = async function (): Promise<Array<ICMStaff>> {
     return CMStaff.find({});

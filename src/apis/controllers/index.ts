@@ -10,3 +10,4 @@ export * as statusControllers from './status.controllers';
 export * as typeStaffControllers from './typestaff.controllers';
 export * as storeControllers from './store.controllers';
 export * as staffControllers from './staff.controllers';
+export * as orderControllers from './orders.controllers';

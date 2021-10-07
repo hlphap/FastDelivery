@@ -5,7 +5,7 @@ import { IDVMethod } from './dvmethod.type';
 import { IStaff } from './staff.type';
 import { IStatus } from './status.type';
 
-export interface IFee extends Document {
+export interface IFee {
     standard: number;
     surCharge: number;
     commission: number;
@@ -15,7 +15,7 @@ export interface IFee extends Document {
     total: number;
 }
 
-export interface IDetailStatus extends Document {
+export interface IDetailStatus {
     status: IStatus;
     chargeStaffID?: Schema.Types.ObjectId | IStaff;
 }

@@ -1,5 +1,5 @@
-import { bankControllers } from '../../controllers';
 import { Router } from 'express';
+import { bankControllers } from '../../controllers';
 
 const router = Router();
 

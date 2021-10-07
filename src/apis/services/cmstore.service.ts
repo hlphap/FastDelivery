@@ -1,7 +1,7 @@
+import { StatusCodes } from 'http-status-codes';
 import { ICMStore } from '../types';
 import { CMStore } from '../models';
 import { CustomError } from '../../utils/custom-error';
-import { StatusCodes } from 'http-status-codes';
 
 export const getCMStores = async function (): Promise<Array<ICMStore>> {
     return CMStore.find({});

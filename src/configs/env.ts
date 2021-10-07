@@ -50,4 +50,15 @@ export const env = {
         username: getOsEnv('SWAGGER_USERNAME'),
         password: getOsEnv('SWAGGER_PASSWORD'),
     },
+    status: {
+        default: getOsEnv('STATUS_DEFAULT'),
+        processing: getOsEnv('STATUS_PROCESSING'),
+        processed: getOsEnv('STATUS_PROCESSED'),
+        comingStoreToGetOrder: getOsEnv('STATUS_COMING_STORE_TO_GET_ORDER'),
+        gettedOrderFromStore: getOsEnv('STATUS_GETTED_ORDER_FROM_STORE'),
+        delivering: getOsEnv('STATUS_DELIVERING'),
+        noReceiveOrder: getOsEnv('STATUS_NO_RECEIVE_ORDER'),
+        deliverySuccessfully: getOsEnv('STATUS_DELIVERY_SUCCESSFULLY'),
+        deliveryFailed: getOsEnv('STATUS_DELIVERY_FAILED'),
+    },
 };

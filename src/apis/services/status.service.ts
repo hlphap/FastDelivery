@@ -7,10 +7,14 @@ export const getStatus = async function (): Promise<Array<IStatus>> {
     return Status.find({}).populate('afterStatus');
 };
 
-export const getNextStatus = async function (statusPresentID: string): Promise<IStatus> {
+export const getNextStatus = async function (statusPresentID: string): Promise<Array<IStatus>> {
     const foundStatusPresent = await Status.findById(statusPresentID).populate('afterStatus');
     if (!foundStatusPresent) {
         throw new CustomError(StatusCodes.NOT_FOUND, 'mongoose', 'Status not found');
     }
-    return foundStatusPresent.afterStatus as IStatus;
+    return foundStatusPresent.afterStatus as Array<IStatus>;
+};
+
+export const getDetailStatus = async function (code: string): Promise<IStatus> {
+    return Status.findOne({ code });
 };

@@ -12,3 +12,4 @@ export * as statusService from './status.service';
 export * as typeStaffService from './typestaff.service';
 export * as storeService from './store.service';
 export * as staffService from './staff.service';
+export * as orderService from './orders.service';

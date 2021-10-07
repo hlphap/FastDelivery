@@ -1,9 +1,12 @@
 import { Schema, model } from 'mongoose';
+import { StatusCodes } from 'http-status-codes';
 
 import { IOrder, IFee } from '../types';
 import { AddressSchema } from './address.model';
 import { StatusSchema } from './status.model';
 import { DVMethodSchema, DVMethod } from './dvmethod.model';
+import { chargeShipping } from '../../middlewares';
+import { CustomError } from '../../utils/custom-error';
 
 export const FeeSchema = new Schema<IFee>(
     {
@@ -108,18 +111,15 @@ export const OrderSchema = new Schema<IOrder>(
 
 OrderSchema.pre<IOrder>('save', async function (next) {
     try {
-        // Fill fullAddress
         this.receiverAddress.fullAddress = `${this.receiverAddress.noteAddress}, ${this.receiverAddress.ward.name}, ${this.receiverAddress.ward.district.name}`;
-
         // Confirm DVMethod
-        const dvMethodID = this.useDVMethod.id;
-        const method = await DVMethod.findOne({ _id: dvMethodID });
-        this.useDVMethod = method!;
-
+        const foundMethod = await DVMethod.findById(this.useDVMethod.id);
+        if (!foundMethod) {
+            throw new CustomError(StatusCodes.NOT_FOUND, 'mongoose', 'DVMethod not found when confirm delivery method');
+        }
+        this.useDVMethod = foundMethod;
         // Fee
-        // this.fee = await ChargeShipping(this, {
-        //     changeAddress: true,
-        // });
+        this.fee = await chargeShipping(this);
     } catch (err) {
         next(err);
     }

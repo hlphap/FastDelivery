@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose';
 
 import { IDVMethod } from '../types';
 
-const DVMethodSchema = new Schema(
+const DVMethodSchema = new Schema<IDVMethod>(
     {
         name: {
             type: String,
