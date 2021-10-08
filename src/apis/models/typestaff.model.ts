@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 
-import { ITypeStaff } from '../types';
+import { ITypeStaff, Role } from '../types';
 
 export const TypeStaffSchema = new Schema<ITypeStaff>(
     {
@@ -13,8 +13,8 @@ export const TypeStaffSchema = new Schema<ITypeStaff>(
             required: true,
         },
         role: {
-            type: Number,
-            default: 0,
+            type: String,
+            default: 'DELIVERY' as Role,
         },
     },
     {

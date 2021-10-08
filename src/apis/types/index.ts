@@ -1,4 +1,3 @@
-export * from './user.type';
 export * from './address.type';
 export * from './ward.type';
 export * from './district.type';
@@ -12,3 +11,4 @@ export * from './status.type';
 export * from './store.type';
 export * from './type-staff.type';
 export * from './warehouse.type';
+export type Role = 'STORE' | 'DELIVERY' | 'MANAGER';

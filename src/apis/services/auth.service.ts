@@ -1,35 +1,35 @@
-import httpStatus from 'http-status-codes';
-import { JwtPayload } from '../../types/jwt-payload.type';
+// import httpStatus from 'http-status-codes';
+// import { JwtPayload } from '../../types/jwt-payload.type';
 
-import { CustomError } from '../../utils/custom-error';
-import { User } from '../models';
-import { IUser } from '../types';
+// import { CustomError } from '../../utils/custom-error';
+// import { User } from '../models';
+// import { IUser } from '../types';
 
-const loginWithEmail = async (email: string, password: string): Promise<IUser> => {
-    const user = await User.findOne({ email });
+// const loginWithEmail = async (email: string, password: string): Promise<IUser> => {
+//     const user = await User.findOne({ email });
 
-    if (!user) {
-        throw new CustomError(httpStatus.NOT_FOUND, 'Authentication', 'User not found');
-    }
+//     if (!user) {
+//         throw new CustomError(httpStatus.NOT_FOUND, 'Authentication', 'User not found');
+//     }
 
-    if (!user.checkPasswordMatch(password)) {
-        throw new CustomError(httpStatus.NON_AUTHORITATIVE_INFORMATION, 'Authentication', 'Password is incorrect');
-    }
+//     if (!user.checkPasswordMatch(password)) {
+//         throw new CustomError(httpStatus.NON_AUTHORITATIVE_INFORMATION, 'Authentication', 'Password is incorrect');
+//     }
 
-    return user;
-};
+//     return user;
+// };
 
-const changePassword = async (payload: JwtPayload, passwordPre: string, passwordNew: string): Promise<IUser> => {
-    const { id } = payload;
-    const user = await User.findById(id);
-    if (!user) {
-        throw new CustomError(httpStatus.NOT_FOUND, 'mongoose', 'User not found');
-    }
-    if (!user.checkPasswordMatch(passwordPre)) {
-        throw new CustomError(httpStatus.UNAUTHORIZED, 'Authentication', 'Incorrect password');
-    }
-    user.password = passwordNew;
-    return user.save();
-};
+// const changePassword = async (payload: JwtPayload, passwordPre: string, passwordNew: string): Promise<IUser> => {
+//     const { id } = payload;
+//     const user = await User.findById(id);
+//     if (!user) {
+//         throw new CustomError(httpStatus.NOT_FOUND, 'mongoose', 'User not found');
+//     }
+//     if (!user.checkPasswordMatch(passwordPre)) {
+//         throw new CustomError(httpStatus.UNAUTHORIZED, 'Authentication', 'Incorrect password');
+//     }
+//     user.password = passwordNew;
+//     return user.save();
+// };
 
-export { loginWithEmail, changePassword };
+// export { loginWithEmail, changePassword };

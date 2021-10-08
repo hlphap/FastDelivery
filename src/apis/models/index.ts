@@ -1,4 +1,3 @@
-export * from './user.model';
 export * from './address.model';
 export * from './bank.model';
 export * from './cmstaff.model';

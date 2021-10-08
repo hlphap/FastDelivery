@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import bcrypt from 'bcrypt';
 
-import { IStore } from '../types';
+import { IStore, Role } from '../types';
 import { AddressSchema } from './address.model';
 import { BankSchema } from './bank.model';
 import { CMStoreSchema } from './cmstore.model';
@@ -11,6 +11,10 @@ export const StoreSchema = new Schema<IStore>(
         name: {
             type: String,
             required: true,
+        },
+        role: {
+            type: String,
+            default: 'STORE' as Role,
         },
         phone: {
             type: String,

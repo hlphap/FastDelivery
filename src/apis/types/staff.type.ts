@@ -1,5 +1,4 @@
 import { Document, Schema } from 'mongoose';
-import { Role } from '.';
 import { IAddress } from './address.type';
 import { ICMStaff } from './cmstaff.type';
 import { IOrder } from './order.type';
