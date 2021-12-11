@@ -24,11 +24,6 @@ export const assignmentOrderToStaffDelivery = CatchAsync(async (req: Request, re
     return res.status(StatusCodes.OK).send({ updatedStatusOrder });
 });
 
-// Update Status by Staff Delivery
-// export const updateStatus = CatchAsync(async (req: Request, res: Response) => {
-//     const updatedStatus = await orderService.updateStatus(req.params.)
-// })
-
 export const createOrder = CatchAsync(async (req: Request, res: Response) => {
     const newOrder = await orderService.createOrder(req.body);
     return res.status(StatusCodes.CREATED).send({ newOrder });

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import CatchAsync from '../../utils/catch-async';
-import { staffService } from '../services';
+import { orderService, staffService } from '../services';
 
 export const getStaffs = CatchAsync(async (req: Request, res: Response) => {
     const staffs = await staffService.getStaffs();
@@ -26,4 +26,10 @@ export const deleteStaff = CatchAsync(async (req: Request, res: Response) => {
 export const getOrdersFromStaff = CatchAsync(async (req: Request, res: Response) => {
     const orders = await staffService.getOrdersFromStaff(req.params.staffID);
     return res.status(StatusCodes.OK).send({ orders });
+});
+
+// Update Status by Staff Delivery
+export const updateStatus = CatchAsync(async (req: Request, res: Response) => {
+    const updatedStatus = await orderService.updateStatus(req.params.orderID, req.params.staffID, req.body.status);
+    return res.status(StatusCodes.OK).send({ updatedStatus });
 });

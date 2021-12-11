@@ -37,7 +37,7 @@ export const updateStatus = async function (
     staff: IStaff | string,
     status?: IStatus,
 ): Promise<IStatus> {
-    const staffID = typeof staff === 'string' ? staff : staff.id;
+    const staffID = typeof staff === 'string' ? staff : staff._id;
     const foundStaff = await Staff.findById(staffID);
     const foundOrder = await Order.findById(orderID);
 
@@ -52,9 +52,9 @@ export const updateStatus = async function (
     const statusPresent = foundOrder.tracking[0].status;
     let statusNext = <IStatus>{};
     if (statusPresent.code === env.status.processing) {
-        statusNext = (await statusService.getNextStatus(statusPresent.id)).at(0);
+        statusNext = (await statusService.getNextStatus(statusPresent._id))[0];
     } else {
-        statusNext = await statusService.getDetailStatus(status.id);
+        statusNext = await statusService.getDetailStatus(status.code);
     }
 
     if (!statusNext) {
