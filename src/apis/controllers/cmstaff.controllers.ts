@@ -8,6 +8,11 @@ export const getCMStaffs = catchAsync(async (req: Request, res: Response) => {
     return res.status(StatusCodes.OK).send({ cmStaffs });
 });
 
+export const getCMStaff = catchAsync(async (req: Request, res: Response) => {
+    const cmStaff = await cmStaffService.getCMStaff(req.params.cmStaffID);
+    res.status(StatusCodes.OK).send({ cmStaff });
+});
+
 export const createCMStaff = catchAsync(async (req: Request, res: Response) => {
     const newCMStaff = await cmStaffService.createCMStaff(req.body);
     return res.status(StatusCodes.CREATED).send({ newCMStaff });

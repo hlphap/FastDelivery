@@ -7,6 +7,14 @@ export const getStaffs = async function (): Promise<Array<IStaff>> {
     return Staff.find({});
 };
 
+export const getStaff = async function (staffID: string): Promise<IStaff> {
+    const foundStaff = await Staff.findById(staffID);
+    if (!foundStaff) {
+        throw new CustomError(StatusCodes.NOT_FOUND, 'mongoose', 'Staff not found');
+    }
+    return foundStaff;
+};
+
 export const createStaff = async function (staff: IStaff): Promise<IStaff> {
     return Staff.create(staff);
 };

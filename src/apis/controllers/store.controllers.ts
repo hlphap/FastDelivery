@@ -8,6 +8,11 @@ export const getStores = CatchAsync(async (req: Request, res: Response) => {
     return res.status(StatusCodes.OK).send({ stores });
 });
 
+export const getStore = CatchAsync(async (req: Request, res: Response) => {
+    const store = await storeService.getStore(req.params.storeID);
+    return res.status(StatusCodes.OK).send({ store });
+});
+
 export const createStore = CatchAsync(async (req: Request, res: Response) => {
     const newStore = await storeService.createStore(req.body);
     return res.status(StatusCodes.CREATED).send({ newStore });

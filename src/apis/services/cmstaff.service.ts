@@ -7,6 +7,14 @@ export const getCMStaffs = async function (): Promise<Array<ICMStaff>> {
     return CMStaff.find({});
 };
 
+export const getCMStaff = async function (cmStaffID: String): Promise<ICMStaff> {
+    const foundCMStaff = await CMStaff.findById(cmStaffID);
+    if (!foundCMStaff) {
+        throw new CustomError(StatusCodes.NOT_FOUND, 'mongoose', 'Commission staff not found');
+    }
+    return foundCMStaff;
+};
+
 export const createCMStaff = async function (cmStaff: ICMStaff): Promise<ICMStaff> {
     return CMStaff.create(cmStaff);
 };

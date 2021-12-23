@@ -8,6 +8,11 @@ export const getWarehouses = CatchAsync(async (req: Request, res: Response) => {
     return res.status(StatusCodes.OK).send({ warehouses });
 });
 
+export const getWarehouse = CatchAsync(async (req: Request, res: Response) => {
+    const warehouse = await warehouseService.getWarehouse(req.params.warehouseID);
+    return res.status(StatusCodes.OK).send({ warehouse });
+});
+
 export const createWarehouse = CatchAsync(async (req: Request, res: Response) => {
     const newWarehouse = await warehouseService.createWarehouse(req.body);
     return res.status(StatusCodes.CREATED).send({ newWarehouse });

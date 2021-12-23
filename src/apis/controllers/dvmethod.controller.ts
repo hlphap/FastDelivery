@@ -8,6 +8,11 @@ export const getDVMethods = catchAsync(async (req: Request, res: Response) => {
     return res.status(httpStatus.OK).send({ dvMethods });
 });
 
+export const getDVMethod = catchAsync(async (req: Request, res: Response) => {
+    const dvMethod = await dvMethodService.getDVMethod(req.params.dvMethodID);
+    return res.status(httpStatus.OK).send({ dvMethod });
+});
+
 export const createDVMethod = catchAsync(async (req: Request, res: Response) => {
     const newDVMethod = await dvMethodService.createDVMethod(req.body);
     return res.status(httpStatus.CREATED).send({ newDVMethod });

@@ -7,6 +7,14 @@ export const getWarehouses = async function (): Promise<Array<IWarehouse>> {
     return Warehouse.find({});
 };
 
+export const getWarehouse = async function (warehouseID: string): Promise<IWarehouse> {
+    const foundWarehouse = await Warehouse.findById(warehouseID);
+    if (!foundWarehouse) {
+        throw new CustomError(StatusCodes.NOT_FOUND, 'mongoose', 'Warehouse not found');
+    }
+    return foundWarehouse;
+};
+
 export const createWarehouse = async function (warehouse: IWarehouse): Promise<IWarehouse> {
     return Warehouse.create(warehouse);
 };

@@ -8,6 +8,11 @@ export const getOrders = CatchAsync(async (req: Request, res: Response) => {
     return res.status(StatusCodes.OK).send({ orders });
 });
 
+export const getOrder = CatchAsync(async (req: Request, res: Response) => {
+    const order = await orderService.getOrder(req.params.orderID);
+    return res.status(StatusCodes.OK).send({ order });
+});
+
 export const orderNotYetHandle = CatchAsync(async (req: Request, res: Response) => {
     const orders = await orderService.orderNotYetHandle();
     return res.status(StatusCodes.OK).send({ orders });

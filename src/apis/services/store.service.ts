@@ -7,6 +7,14 @@ export const getStores = async function (): Promise<Array<IStore>> {
     return Store.find({});
 };
 
+export const getStore = async function (storeID: string): Promise<IStore> {
+    const foundStore = await Store.findById(storeID);
+    if (!foundStore) {
+        throw new CustomError(StatusCodes.NOT_FOUND, 'mongoose', 'Store not found');
+    }
+    return foundStore;
+};
+
 export const createStore = async function (store: IStore): Promise<IStore> {
     return Store.create(store);
 };

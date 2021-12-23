@@ -8,6 +8,11 @@ export const getCMStores = catchAsync(async (req: Request, res: Response) => {
     return res.status(StatusCodes.OK).send({ cmStores });
 });
 
+export const getCMStore = catchAsync(async (req: Request, res: Response) => {
+    const cmStore = await cmStoreService.getCMStore(req.params.cmStoreID);
+    return res.status(StatusCodes.OK).send({ cmStore });
+});
+
 export const createCMStore = catchAsync(async (req: Request, res: Response) => {
     const newCMStore = await cmStoreService.createCMStore(req.body);
     return res.status(StatusCodes.CREATED).send({ newCMStore });

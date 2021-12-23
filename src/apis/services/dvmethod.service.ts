@@ -8,6 +8,14 @@ export const getDVMethods = async function (): Promise<Array<IDVMethod>> {
     return DVMethod.find({});
 };
 
+export const getDVMethod = async function (dvMethodID: string): Promise<IDVMethod> {
+    const foundDVMethod = await DVMethod.findById(dvMethodID);
+    if (!foundDVMethod) {
+        throw new CustomError(httpStatus.NOT_FOUND, 'mongoose', 'Delivery method not found');
+    }
+    return foundDVMethod;
+};
+
 export const createDVMethod = async function (dvMethod: IDVMethod): Promise<IDVMethod> {
     return DVMethod.create(dvMethod);
 };

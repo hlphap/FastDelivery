@@ -7,6 +7,14 @@ export const getCMStores = async function (): Promise<Array<ICMStore>> {
     return CMStore.find({});
 };
 
+export const getCMStore = async function (cmStoreID: string) {
+    const foundCMStore = await CMStore.findById(cmStoreID);
+    if (!foundCMStore) {
+        throw new CustomError(StatusCodes.NOT_FOUND, 'mongoose', 'Commission store not found');
+    }
+    return foundCMStore;
+};
+
 export const createCMStore = async function (cmStore: ICMStore): Promise<ICMStore> {
     return CMStore.create(cmStore);
 };

@@ -10,6 +10,14 @@ export const getOrders = async function (): Promise<Array<IOrder>> {
     return Order.find({});
 };
 
+export const getOrder = async function (orderID: string): Promise<IOrder> {
+    const foundOrder = await Order.findById(orderID);
+    if (!foundOrder) {
+        throw new CustomError(StatusCodes.NOT_FOUND, 'mongoose', 'Order not found');
+    }
+    return foundOrder;
+};
+
 export const orderNotYetHandle = async function (): Promise<Array<IOrder>> {
     const orders = await Order.find({
         $or: [{ tracking: { $size: 1 } }, { tracking: { $size: 2 } }],
