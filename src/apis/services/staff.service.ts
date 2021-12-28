@@ -3,6 +3,20 @@ import { CustomError } from '../../utils/custom-error';
 import { Staff } from '../models';
 import { IOrder, IStaff } from '../types';
 
+export const loginWithEmail = async (email: string, password: string): Promise<IStaff> => {
+    const staff = await Staff.findOne({ email });
+
+    if (!staff) {
+        throw new CustomError(StatusCodes.NOT_FOUND, 'Authentication', 'Staff not found');
+    }
+
+    if (!(await staff.isValidPassword(password))) {
+        throw new CustomError(StatusCodes.NON_AUTHORITATIVE_INFORMATION, 'Authentication', 'Password is incorrect');
+    }
+
+    return staff;
+};
+
 export const getStaffs = async function (): Promise<Array<IStaff>> {
     return Staff.find({});
 };

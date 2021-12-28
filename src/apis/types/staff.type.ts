@@ -20,4 +20,6 @@ export interface IStaff extends Document {
     address: IAddress;
 
     orders: Array<Schema.Types.ObjectId> | Array<IOrder>;
+
+    isValidPassword(password: string): boolean;
 }

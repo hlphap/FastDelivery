@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import CatchAsync from '../../utils/catch-async';
-import { orderService, staffService } from '../services';
+import { orderService, staffService, tokenService } from '../services';
 
 export const getStaffs = CatchAsync(async (req: Request, res: Response) => {
     const staffs = await staffService.getStaffs();
@@ -37,4 +37,12 @@ export const getOrdersFromStaff = CatchAsync(async (req: Request, res: Response)
 export const updateStatus = CatchAsync(async (req: Request, res: Response) => {
     const updatedStatus = await orderService.updateStatus(req.params.orderID, req.params.staffID, req.body.status);
     return res.status(StatusCodes.OK).send({ updatedStatus });
+});
+
+export const login = CatchAsync(async (req: Request, res: Response) => {
+    const { email, password } = req.body;
+    const staff = await staffService.loginWithEmail(email, password);
+    const token = await tokenService.generateJwtToken(staff);
+    res.setHeader('Authorization', token);
+    res.status(StatusCodes.OK).send({ staff, token });
 });

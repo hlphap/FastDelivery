@@ -5,6 +5,7 @@ const router = Router();
 
 router.get('/', staffControllers.getStaffs);
 router.get('/:staffID', staffControllers.getStaff);
+router.post('/login', staffControllers.login);
 router.post('/', staffControllers.createStaff);
 router.put('/:staffID', staffControllers.updateStaff);
 router.delete('/:staffID', staffControllers.deleteStaff);
