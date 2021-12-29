@@ -4,6 +4,7 @@ import { staffControllers } from '../../controllers';
 const router = Router();
 
 router.get('/', staffControllers.getStaffs);
+router.get('/staff-deliveries', staffControllers.getStaffDeliveries);
 router.get('/:staffID', staffControllers.getStaff);
 router.post('/login', staffControllers.login);
 router.post('/', staffControllers.createStaff);

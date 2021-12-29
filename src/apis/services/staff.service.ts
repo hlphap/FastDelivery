@@ -1,4 +1,5 @@
 import { StatusCodes } from 'http-status-codes';
+import { env } from '../../configs/env';
 import { CustomError } from '../../utils/custom-error';
 import { Staff } from '../models';
 import { IOrder, IStaff } from '../types';
@@ -19,6 +20,10 @@ export const loginWithEmail = async (email: string, password: string): Promise<I
 
 export const getStaffs = async function (): Promise<Array<IStaff>> {
     return Staff.find({});
+};
+
+export const getStaffDeliveries = async function (): Promise<Array<IStaff>> {
+    return Staff.find({ 'typeStaff.role': 'DELIVERY' });
 };
 
 export const getStaff = async function (staffID: string): Promise<IStaff> {

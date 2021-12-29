@@ -8,6 +8,11 @@ export const getStaffs = CatchAsync(async (req: Request, res: Response) => {
     return res.status(StatusCodes.OK).send({ staffs });
 });
 
+export const getStaffDeliveries = CatchAsync(async (req: Request, res: Response) => {
+    const staffs = await staffService.getStaffDeliveries();
+    return res.status(StatusCodes.OK).send({ staffs });
+});
+
 export const getStaff = CatchAsync(async (req: Request, res: Response) => {
     const staff = await staffService.getStaff(req.params.staffID);
     return res.status(StatusCodes.OK).send({ staff });
