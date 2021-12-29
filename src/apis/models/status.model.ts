@@ -12,7 +12,6 @@ export const StatusSchema = new Schema<IStatus>(
         },
         code: {
             type: String,
-            unique: true,
         },
         afterStatus: [
             {
