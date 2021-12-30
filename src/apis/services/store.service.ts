@@ -110,3 +110,8 @@ export const loginWithEmail = async (email: string, password: string): Promise<I
 
     return store;
 };
+
+export const getOrdersFromStore = async function (storeID: string): Promise<Array<IOrder>> {
+    const foundStore = await Store.findById(storeID).populate('orders');
+    return <Array<IOrder>>foundStore.orders;
+};

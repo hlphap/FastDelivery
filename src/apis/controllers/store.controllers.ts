@@ -40,3 +40,8 @@ export const login = CatchAsync(async (req: Request, res: Response) => {
     res.setHeader('Authorization', token);
     res.status(StatusCodes.OK).send({ store, token });
 });
+
+export const getOrdersFromStore = CatchAsync(async (req: Request, res: Response) => {
+    const orders = await storeService.getOrdersFromStore(req.params.staffID);
+    return res.status(StatusCodes.OK).send({ orders });
+});
