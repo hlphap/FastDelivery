@@ -105,7 +105,7 @@ export const loginWithEmail = async (email: string, password: string): Promise<I
     }
 
     if (!(await store.isValidPassword(password))) {
-        throw new CustomError(StatusCodes.NON_AUTHORITATIVE_INFORMATION, 'Authentication', 'Password is incorrect');
+        throw new CustomError(StatusCodes.UNAUTHORIZED, 'Authentication', 'Password is incorrect');
     }
 
     return store;
