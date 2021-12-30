@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import CatchAsync from '../../utils/catch-async';
-import { storeService } from '../services';
+import { storeService, tokenService } from '../services';
 
 export const getStores = CatchAsync(async (req: Request, res: Response) => {
     const stores = await storeService.getStores();
@@ -31,4 +31,12 @@ export const deleteStore = CatchAsync(async (req: Request, res: Response) => {
 export const getStatistics = CatchAsync(async (req: Request, res: Response) => {
     const statistics = await storeService.getStatistics(req.params.storeID);
     return res.status(StatusCodes.OK).send({ statistics });
+});
+
+export const login = CatchAsync(async (req: Request, res: Response) => {
+    const { email, password } = req.body;
+    const store = await storeService.loginWithEmail(email, password);
+    const token = await tokenService.generateJwtToken(store);
+    res.setHeader('Authorization', token);
+    res.status(StatusCodes.OK).send({ store, token });
 });

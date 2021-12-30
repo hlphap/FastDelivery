@@ -96,3 +96,17 @@ export const getStatistics = async function (storeID: string) {
     );
     return statistic;
 };
+
+export const loginWithEmail = async (email: string, password: string): Promise<IStore> => {
+    const store = await Store.findOne({ email });
+
+    if (!store) {
+        throw new CustomError(StatusCodes.NOT_FOUND, 'Authentication', 'Store not found');
+    }
+
+    if (!(await store.isValidPassword(password))) {
+        throw new CustomError(StatusCodes.NON_AUTHORITATIVE_INFORMATION, 'Authentication', 'Password is incorrect');
+    }
+
+    return store;
+};

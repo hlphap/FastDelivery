@@ -19,4 +19,6 @@ export interface IStore extends Document {
     commission: ICMStore;
     address: IAddress;
     orders: Array<IOrder> | Array<Schema.Types.ObjectId>;
+
+    isValidPassword(password: string): boolean;
 }

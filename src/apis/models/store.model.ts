@@ -84,4 +84,8 @@ StoreSchema.pre<IStore>('save', async function (next) {
     }
 });
 
+StoreSchema.methods.isValidPassword = async function (password) {
+    return bcrypt.compareSync(password, this.password);
+};
+
 export const Store = model<IStore>('stores', StoreSchema);
