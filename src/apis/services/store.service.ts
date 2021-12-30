@@ -117,22 +117,22 @@ export const getOrdersFromStore = async function (storeID: string, formSearch: a
     const orders = <Array<IOrder>>foundStore.orders;
 
     const filter = orders.filter((order) => {
-        if (formSearch.orderName && order.orderName !== formSearch.orderName) {
+        if (formSearch.orderName !== 'undefined' && order.orderName !== formSearch.orderName) {
             return false;
         }
-        if (formSearch.orderMoney && order.orderMoney !== Number(formSearch.orderMoney)) {
+        if (formSearch.orderMoney !== 'undefined' && order.orderMoney !== Number(formSearch.orderMoney)) {
             return false;
         }
-        if (formSearch.receiverName && order.receiverName !== formSearch.receiverName) {
+        if (formSearch.receiverName !== 'undefined' && order.receiverName !== formSearch.receiverName) {
             return false;
         }
-        if (formSearch.receiverPhone && order.receiverPhone !== formSearch.receiverPhone) {
+        if (formSearch.receiverPhone !== 'undefined' && order.receiverPhone !== formSearch.receiverPhone) {
             return false;
         }
-        if (formSearch.dvMethod && order.useDVMethod.id !== formSearch.dvMethod) {
+        if (formSearch.dvMethod !== 'undefined' && order.useDVMethod.id !== formSearch.dvMethod) {
             return false;
         }
-        if (formSearch.districtID && order.receiverAddress.ward.district.id !== formSearch.districtID) {
+        if (formSearch.districtID !== 'undefined' && order.receiverAddress.ward.district.id !== formSearch.districtID) {
             return false;
         }
         return true;
