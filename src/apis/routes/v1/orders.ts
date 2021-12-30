@@ -4,7 +4,7 @@ import { orderControllers } from '../../controllers';
 const router = Router();
 
 router.patch('/handle', orderControllers.orderNotYetHandle);
-router.get('/fee', orderControllers.calcFee);
+router.post('/fee', orderControllers.calcFee);
 router.get('/statistics', orderControllers.statistics);
 router.put('/:orderID/status', orderControllers.assignmentOrderToStaffDelivery);
 router.get('/:orderID', orderControllers.getOrder);
