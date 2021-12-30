@@ -40,7 +40,6 @@ export const StoreSchema = new Schema<IStore>(
         password: {
             type: String,
             required: true,
-            select: false,
         },
         bank: {
             type: BankSchema,
@@ -69,6 +68,7 @@ StoreSchema.pre<IStore>('save', async function (next) {
         // Generate fullAddress
         this.address.fullAddress = `${this.address.noteAddress}, ${this.address.ward.name}, ${this.address.ward.district.name}`;
 
+        if (!this.isModified('password')) next();
         // Hash password
         // Generate a salt
         const salt = await bcrypt.genSalt(10);

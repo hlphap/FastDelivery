@@ -73,6 +73,7 @@ StaffSchema.pre<IStaff>('save', { document: true, query: false }, async function
         // Generate fullAddress
         this.address.fullAddress = `${this.address.noteAddress}, ${this.address.ward.name}, ${this.address.ward.district.name}`;
 
+        if (!this.isModified('password')) next();
         // Hash password
         // Generate a salt
         const salt = await bcrypt.genSalt(10);
