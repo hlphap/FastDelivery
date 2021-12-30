@@ -111,7 +111,32 @@ export const loginWithEmail = async (email: string, password: string): Promise<I
     return store;
 };
 
-export const getOrdersFromStore = async function (storeID: string): Promise<Array<IOrder>> {
+export const getOrdersFromStore = async function (storeID: string, formSearch: any): Promise<Array<IOrder>> {
     const foundStore = await Store.findById(storeID).populate('orders');
-    return <Array<IOrder>>foundStore.orders;
+
+    const orders = <Array<IOrder>>foundStore.orders;
+
+    const filter = orders.filter((order) => {
+        if (formSearch.orderName && order.orderName !== formSearch.orderName) {
+            return false;
+        }
+        if (formSearch.orderMoney && order.orderMoney !== Number(formSearch.orderMoney)) {
+            return false;
+        }
+        if (formSearch.receiverName && order.receiverName !== formSearch.receiverName) {
+            return false;
+        }
+        if (formSearch.receiverPhone && order.receiverPhone !== formSearch.receiverPhone) {
+            return false;
+        }
+        if (formSearch.dvMethod && order.useDVMethod.id !== formSearch.dvMethod) {
+            return false;
+        }
+        if (formSearch.districtID && order.receiverAddress.ward.district.id !== formSearch.districtID) {
+            return false;
+        }
+        return true;
+    });
+
+    return filter;
 };

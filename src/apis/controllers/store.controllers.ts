@@ -42,6 +42,6 @@ export const login = CatchAsync(async (req: Request, res: Response) => {
 });
 
 export const getOrdersFromStore = CatchAsync(async (req: Request, res: Response) => {
-    const orders = await storeService.getOrdersFromStore(req.params.staffID);
+    const orders = await storeService.getOrdersFromStore(req.params.staffID, req.query);
     return res.status(StatusCodes.OK).send({ orders });
 });
