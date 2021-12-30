@@ -40,6 +40,7 @@ export const StoreSchema = new Schema<IStore>(
         password: {
             type: String,
             required: true,
+            select: false,
         },
         bank: {
             type: BankSchema,
