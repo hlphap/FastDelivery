@@ -1,7 +1,7 @@
 import { StatusCodes } from 'http-status-codes';
 import { statusService } from '.';
 import { Order, Staff, Status, Store } from '../models';
-import { IOrder, IStaff, IStatus, IFee } from '../types';
+import { IOrder, IStaff, IStatus, IFee, IDetailStatus } from '../types';
 import { env } from '../../configs/env';
 import { CustomError } from '../../utils/custom-error';
 import { chargeShipping } from '../../middlewares';
@@ -176,4 +176,9 @@ export const statistic = async function () {
         countOrderSuccess: deliveryRevenue.countOrderSuccess,
         countOrderFailed: deliveryRevenue.countOrderFailed,
     };
+};
+
+export const trackingOrder = async function (orderID: string): Promise<Array<IDetailStatus>> {
+    const order = await Order.findById(orderID);
+    return order.tracking;
 };

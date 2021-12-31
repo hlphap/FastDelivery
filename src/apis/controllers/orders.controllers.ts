@@ -53,3 +53,9 @@ export const statistics = CatchAsync(async (req: Request, res: Response) => {
     const statistic = await orderService.statistic();
     return res.status(StatusCodes.OK).send({ statistic });
 });
+
+export const trackingOrder = CatchAsync(async (req: Request, res: Response) => {
+    const tracking = await orderService.trackingOrder(req.params.orderID);
+    const order = await orderService.getOrder(req.params.orderID);
+    return res.status(StatusCodes.OK).send({ tracking, order });
+});
