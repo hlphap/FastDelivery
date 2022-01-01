@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { StatusCodes } from 'http-status-codes';
+import format from 'date-format';
 
 import { IOrder, IFee } from '../types';
 import { AddressSchema } from './address.model';
@@ -99,6 +100,10 @@ export const OrderSchema = new Schema<IOrder>(
                 {
                     status: StatusSchema,
                     chargeStaffID: Schema.Types.ObjectId,
+                    timeStamp: {
+                        type: String,
+                        default: format('dd/MM/yyyy hh:mm', new Date()),
+                    },
                 },
             ],
         },

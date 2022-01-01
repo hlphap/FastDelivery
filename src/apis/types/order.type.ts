@@ -18,6 +18,7 @@ export interface IFee {
 export interface IDetailStatus {
     status: IStatus;
     chargeStaffID?: Schema.Types.ObjectId | IStaff;
+    timeStamp?: Date;
 }
 
 export interface IOrder extends Document {
